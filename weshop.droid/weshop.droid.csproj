@@ -29,7 +29,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -129,6 +128,10 @@
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\WishlistView.cs" />
     <Compile Include="Bootstrap\CommunitySqlitePluginBootstrap.cs" />
+    <Compile Include="Helpers\BarHelper.cs" />
+    <Compile Include="Helpers\MvxActionBarActivity.cs" />
+    <Compile Include="Helpers\MvxActionBarEventSourceActivity.cs" />
+    <Compile Include="Views\WishsetView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -156,6 +159,10 @@
     <AndroidResource Include="Resources\layout\item_product.axml" />
     <AndroidResource Include="Resources\drawable\buttonshare.png" />
     <AndroidResource Include="Resources\drawable\mask.png" />
+    <AndroidResource Include="Resources\layout\actioinbar.axml" />
+    <AndroidResource Include="Resources\drawable\logotitle.png" />
+    <AndroidResource Include="Resources\layout\view_wishset.axml" />
+    <AndroidResource Include="Resources\menu\search.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -173,5 +180,6 @@
   <ItemGroup>
     <Folder Include="PlatformSpecific\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>
