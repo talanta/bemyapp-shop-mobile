@@ -158,6 +158,7 @@
     <AndroidResource Include="Resources\layout\item_product.axml" />
     <AndroidResource Include="Resources\drawable\buttonshare.png" />
     <AndroidResource Include="Resources\drawable\mask.png" />
+    <AndroidResource Include="Resources\layout\actioinbar.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -3,11 +3,12 @@ using Android.OS;
 using Cirrious.MvvmCross.Droid.Views;
 using weshop.portable.ViewModels;
 using Android.Content.PM;
+using weshop.droid.Helpers;
 
 namespace weshop.droid.Views
 {
 	[Activity(Label = "Wishop", Theme = "@style/AppTheme", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class FirstView : MvxActivity
+	public class FirstView : MvxActionBarActivity
     {
         protected override void OnCreate(Bundle bundle)
         {

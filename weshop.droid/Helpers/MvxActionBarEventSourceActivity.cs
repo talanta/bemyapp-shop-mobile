@@ -27,7 +27,7 @@ using Cirrious.CrossCore.Core;
 
 namespace weshop.droid.Helpers
 {
-	public class MvxActionBarEventSourceActivity : ActionBarActivity
+	public class MvxActionBarEventSourceActivity : Android.App.Activity
 	, IMvxEventSourceActivity
 	{
 		protected override void OnCreate(Bundle bundle)
