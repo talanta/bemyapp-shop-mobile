@@ -5,6 +5,8 @@ namespace weshop.portable
 {
 	public interface IDiscountService
 	{
+		string GetLastError ();
+
 	 Task<ProductResult> 
 				SearchProdudct(SearchRequest request);
 	}

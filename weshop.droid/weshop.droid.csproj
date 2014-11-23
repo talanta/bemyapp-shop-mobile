@@ -29,7 +29,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -129,6 +128,9 @@
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\WishlistView.cs" />
     <Compile Include="Bootstrap\CommunitySqlitePluginBootstrap.cs" />
+    <Compile Include="Helpers\BarHelper.cs" />
+    <Compile Include="Helpers\MvxActionBarActivity.cs" />
+    <Compile Include="Helpers\MvxActionBarEventSourceActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -173,5 +175,6 @@
   <ItemGroup>
     <Folder Include="PlatformSpecific\" />
     <Folder Include="Resources\menu\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 </Project>

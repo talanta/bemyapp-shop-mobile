@@ -45,7 +45,6 @@ namespace weshop.portable.ViewModels
 		{
 			base.InitFromBundle (parameters);
 		   
-
 			await DisplayNextProduct ();
 		}
 
@@ -63,7 +62,7 @@ namespace weshop.portable.ViewModels
 			_dialogService.Dismiss ();
 
 			if (products == null || products.ItemCount == 0) {
-				Mvx.Trace ("Returned nothing");
+				_dialogService.ToastError (_discountService.GetLastError (), 10000);
 				return;
 			}
 			index = 0;
@@ -74,7 +73,10 @@ namespace weshop.portable.ViewModels
 		{
 			if (index % itemPerPage == 0) {
 				await RetrieveItems ();
+				if (_products == null)
+					return;
 			}
+
 			CurrentProduct = _products [index++];
 
 			RaisePropertyChanged (() => CurrentProduct);

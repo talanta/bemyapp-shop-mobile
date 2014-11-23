@@ -5,30 +5,53 @@ using ModernHttpClient;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using Cirrious.CrossCore;
+using System.Collections.Generic;
 
 namespace weshop.portable
 {
+	public class FullRequest 
+	{
+		public string ApiKey { get; set; }
+		public SearchRequest SearchRequest { get; set; }
+	}
 
 
 	public class DiscountService : IDiscountService
 	{
 
 
+		IList<string> errors;
+
+		public DiscountService ()
+		{
+			errors = new List<string> ();
+		}
+
 		#region IDiscountService implementation
+
+		public string GetLastError ()
+		{
+			if (errors.Count == 0)
+				return null;
+			return errors [errors.Count - 1];
+		}
 
 		public async Task<ProductResult> SearchProdudct (SearchRequest request)
 		{
 			//request.ApiKey = Constants.API_KEY;
 			string rawResponse = null;
+			string jsonData = null;
 			Uri url = new Uri(Constants.URL_SEARCH);
+
+			var fullreq = new FullRequest{ ApiKey = Constants.API_KEY, SearchRequest = request };
 			using (var client = new HttpClient(new NativeMessageHandler()))
 			{
 				try
 				{
-				string jsonData = Newtonsoft.Json.JsonConvert
-						.SerializeObject(new {ApiKey = Constants.API_KEY, SearchRequest = request});
+					jsonData = Newtonsoft.Json.JsonConvert
+						.SerializeObject(fullreq);
 				var content = new StringContent(jsonData);
-					Mvx.Trace (jsonData);
+	
 
 				content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
@@ -43,6 +66,7 @@ namespace weshop.portable
 				// to be handled...
 				}
 				catch(Exception ex) {
+					//errors.Add (jsonData);
 					Mvx.Trace (ex.Message);
 				}
 				finally{

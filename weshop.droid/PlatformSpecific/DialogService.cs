@@ -34,6 +34,15 @@ namespace weshop.droid
 					, TimeSpan.FromMilliseconds(xtimeout));
 		}
 
+		public void ToastError (string message, int xtimeout = 2000)
+		{
+			//TimeSpan.FromMilliseconds(
+			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
+			AndroidHUD.AndHUD.Shared.ShowErrorWithStatus (activity, message, 
+				AndroidHUD.MaskType.Black
+				, TimeSpan.FromMilliseconds(xtimeout));
+		}
+
 		#endregion
 
 
