@@ -24,6 +24,16 @@ namespace weshop.droid
 			//throw new NotImplementedException ();
 		}
 
+
+		public void ToastSuccess (string message, int xtimeout = 2000)
+		{
+			//TimeSpan.FromMilliseconds(
+			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
+				AndroidHUD.AndHUD.Shared.ShowSuccessWithStatus (activity, message, 
+				AndroidHUD.MaskType.Black
+					, TimeSpan.FromMilliseconds(xtimeout));
+		}
+
 		#endregion
 
 

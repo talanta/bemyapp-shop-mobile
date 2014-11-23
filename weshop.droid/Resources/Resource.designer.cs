@@ -1284,34 +1284,40 @@ namespace weshop.droid
 			public const int abc_textfield_search_material = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int circular_btn = 2130837555;
+			public const int buttonshare = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int ic_errorstatus = 2130837556;
+			public const int circular_btn = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int ic_successstatus = 2130837557;
+			public const int ic_errorstatus = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int Icon = 2130837558;
+			public const int ic_successstatus = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int logob = 2130837559;
+			public const int Icon = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int monoandroidsplash = 2130837560;
+			public const int logob = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int roundedbg = 2130837561;
+			public const int mask = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int roundedbgdark = 2130837562;
+			public const int monoandroidsplash = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int shadowbox = 2130837563;
+			public const int roundedbg = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int splash = 2130837564;
+			public const int roundedbgdark = 2130837564;
+			
+			// aapt resource value: 0x7f02003d
+			public const int shadowbox = 2130837565;
+			
+			// aapt resource value: 0x7f02003e
+			public const int splash = 2130837566;
 			
 			static Drawable()
 			{
@@ -1428,6 +1434,9 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080026
 			public const int image = 2131230758;
 			
+			// aapt resource value: 0x7f080043
+			public const int imageView = 2131230787;
+			
 			// aapt resource value: 0x7f080042
 			public const int linearLayout = 2131230786;
 			
@@ -1437,23 +1446,23 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080028
 			public const int list_item = 2131230760;
 			
-			// aapt resource value: 0x7f080045
-			public const int loadingImage = 2131230789;
-			
-			// aapt resource value: 0x7f080043
-			public const int loadingProgressBar = 2131230787;
-			
-			// aapt resource value: 0x7f080046
-			public const int loadingProgressWheel = 2131230790;
+			// aapt resource value: 0x7f08004a
+			public const int loadingImage = 2131230794;
 			
 			// aapt resource value: 0x7f080048
-			public const int menu_item_switch = 2131230792;
+			public const int loadingProgressBar = 2131230792;
+			
+			// aapt resource value: 0x7f08004b
+			public const int loadingProgressWheel = 2131230795;
+			
+			// aapt resource value: 0x7f08004d
+			public const int menu_item_switch = 2131230797;
 			
 			// aapt resource value: 0x7f080016
 			public const int middle = 2131230742;
 			
-			// aapt resource value: 0x7f080047
-			public const int myButton = 2131230791;
+			// aapt resource value: 0x7f08004c
+			public const int myButton = 2131230796;
 			
 			// aapt resource value: 0x7f08001a
 			public const int never = 2131230746;
@@ -1525,7 +1534,19 @@ namespace weshop.droid
 			public const int tabMode = 2131230732;
 			
 			// aapt resource value: 0x7f080044
-			public const int textViewStatus = 2131230788;
+			public const int textView = 2131230788;
+			
+			// aapt resource value: 0x7f080045
+			public const int textView2 = 2131230789;
+			
+			// aapt resource value: 0x7f080046
+			public const int textView3 = 2131230790;
+			
+			// aapt resource value: 0x7f080047
+			public const int textView4 = 2131230791;
+			
+			// aapt resource value: 0x7f080049
+			public const int textViewStatus = 2131230793;
 			
 			// aapt resource value: 0x7f08002a
 			public const int title = 2131230762;
@@ -1647,25 +1668,28 @@ namespace weshop.droid
 			public const int FirstView = 2130903063;
 			
 			// aapt resource value: 0x7f030018
-			public const int loading = 2130903064;
+			public const int item_product = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int loadingimage = 2130903065;
+			public const int loading = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int loadingprogress = 2130903066;
+			public const int loadingimage = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int Main = 2130903067;
+			public const int loadingprogress = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int SplashScreen = 2130903068;
+			public const int Main = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int support_simple_spinner_dropdown_item = 2130903069;
+			public const int SplashScreen = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int view_wishlist = 2130903070;
+			public const int support_simple_spinner_dropdown_item = 2130903070;
+			
+			// aapt resource value: 0x7f03001f
+			public const int view_wishlist = 2130903071;
 			
 			static Layout()
 			{
