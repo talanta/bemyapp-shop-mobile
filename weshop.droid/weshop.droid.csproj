@@ -131,6 +131,7 @@
     <Compile Include="Helpers\BarHelper.cs" />
     <Compile Include="Helpers\MvxActionBarActivity.cs" />
     <Compile Include="Helpers\MvxActionBarEventSourceActivity.cs" />
+    <Compile Include="Views\WishsetView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -159,6 +160,9 @@
     <AndroidResource Include="Resources\drawable\buttonshare.png" />
     <AndroidResource Include="Resources\drawable\mask.png" />
     <AndroidResource Include="Resources\layout\actioinbar.axml" />
+    <AndroidResource Include="Resources\drawable\logotitle.png" />
+    <AndroidResource Include="Resources\layout\view_wishset.axml" />
+    <AndroidResource Include="Resources\menu\search.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

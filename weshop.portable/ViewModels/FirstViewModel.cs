@@ -104,5 +104,10 @@ namespace weshop.portable.ViewModels
 		{
 			ShowViewModel<WishlistViewModel> ();
 		}
+
+		public void GoToWishSet()
+		{
+			ShowViewModel<WishsetViewModel> ();
+		}
     }
 }

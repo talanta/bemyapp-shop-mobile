@@ -2,7 +2,7 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 
-namespace weshop.portable
+namespace weshop.portable.ViewModels
 {
 	public class WishlistViewModel
 		: MvxViewModel
@@ -24,6 +24,11 @@ namespace weshop.portable
 			base.InitFromBundle (parameters);
 
 			Products = _wishlistService.GetAllProducts ();
+		}
+
+		public void GoToMeet()
+		{
+			Close (this);
 		}
 	}
 }

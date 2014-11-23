@@ -1302,22 +1302,25 @@ namespace weshop.droid
 			public const int logob = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int mask = 2130837561;
+			public const int logotitle = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int monoandroidsplash = 2130837562;
+			public const int mask = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int roundedbg = 2130837563;
+			public const int monoandroidsplash = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int roundedbgdark = 2130837564;
+			public const int roundedbg = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int shadowbox = 2130837565;
+			public const int roundedbgdark = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int splash = 2130837566;
+			public const int shadowbox = 2130837566;
+			
+			// aapt resource value: 0x7f02003f
+			public const int splash = 2130837567;
 			
 			static Drawable()
 			{
@@ -1457,6 +1460,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f08004d
 			public const int menu_item_switch = 2131230797;
+			
+			// aapt resource value: 0x7f08004e
+			public const int menu_meet = 2131230798;
 			
 			// aapt resource value: 0x7f080016
 			public const int middle = 2131230742;
@@ -1694,6 +1700,9 @@ namespace weshop.droid
 			// aapt resource value: 0x7f030020
 			public const int view_wishlist = 2130903072;
 			
+			// aapt resource value: 0x7f030021
+			public const int view_wishset = 2130903073;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -1709,6 +1718,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f0c0000
 			public const int main = 2131492864;
+			
+			// aapt resource value: 0x7f0c0001
+			public const int search = 2131492865;
 			
 			static Menu()
 			{
