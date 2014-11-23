@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+ <!-- Styles -->
+  <style name="AppTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+   <item name="android:windowBackground">@color/blue_nav</item>
+  </style>
+
+</resources>

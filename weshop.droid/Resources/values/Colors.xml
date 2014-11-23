@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+ <color name="blue_nav">#4285f4</color>
+   <color name="yellow_bg">#fbd556</color>
+   <color name="grey_title">#363636</color>
+   <color name="red_price">#ff0101</color>
+   <color name="grey_bg">#eeeeee</color>
+   <color name="red_dislike">#f44336</color>
+   <color name="green_like">#0f9d58</color>
+
+<color name="gray">#eee</color>
+   <color name="blue">#009</color>
+	<color name="white">#fff</color>
+    <color name="fab_color_1">#ff5252</color>
+    <color name="fab_color_1_muted">#ff8080</color>
+    <color name="fab_color_2">#9c27b0</color>
+    <color name="fab_color_2_muted">#a56ab0</color>
+  </resources>
