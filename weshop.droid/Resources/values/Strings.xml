@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">weshop.droid</string>
+	<string name="app_name">SHOPMOI</string>
+	<string name="app_name">Meet</string>
+	<string name="app_name">Seduction</string>
+	<string name="app_name">Love</string>
 </resources>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
 
- <color name="blue_nav">#4285f4</color>
+ <color name="blue_nav">#db4336</color>
    <color name="yellow_bg">#fbd556</color>
    <color name="grey_title">#363636</color>
    <color name="red_price">#ff0101</color>
@@ -10,7 +10,7 @@
    <color name="green_like">#0f9d58</color>
 
 <color name="gray">#eee</color>
-   <color name="blue">#009</color>
+   <color name="blue">#db4336</color>
 	<color name="white">#fff</color>
     <color name="fab_color_1">#ff5252</color>
     <color name="fab_color_1_muted">#ff8080</color>
