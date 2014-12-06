@@ -11,6 +11,10 @@ namespace weshop.portable
 		void ToastSuccess(string message, int timeout = 2000);
 
 		void ToastError (string message, int timeout = 2000);
+
+		void ShowProduct(string url);
+
+		
 	}
 }
 

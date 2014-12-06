@@ -2,6 +2,7 @@
 using weshop.portable;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Droid.Platform;
+using Android.Content;
 
 namespace weshop.droid
 {
@@ -9,6 +10,18 @@ namespace weshop.droid
 		: IDialogService
 	{
 		#region IDialogService implementation
+
+		public void ShowProduct (string url)
+		{
+	
+			Intent i = new Intent(Intent.ActionView);
+			i.SetData (Android.Net.Uri.Parse (url));
+			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
+
+			activity.StartActivity (i);
+
+		//	startActivity(i);
+		}
 
 		public void ShowProgress ()
 		{

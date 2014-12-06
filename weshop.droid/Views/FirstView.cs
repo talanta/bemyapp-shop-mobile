@@ -18,7 +18,7 @@ namespace weshop.droid.Views
 			this.ActionBar.SetDisplayShowTitleEnabled(false);
 			//this.ActionBar.SetDisplayShowHomeEnabled (false);
 
-			this.ActionBar.SetIcon (Resource.Drawable.Icon);
+			this.ActionBar.SetIcon (Resource.Drawable.magnify);
 			this.ActionBar.SetDisplayHomeAsUpEnabled (true);
 			this.ActionBar.SetCustomView (Resource.Layout.actioinbar);
             SetContentView(Resource.Layout.FirstView);

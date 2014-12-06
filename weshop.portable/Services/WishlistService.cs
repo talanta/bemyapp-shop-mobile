@@ -13,7 +13,12 @@ namespace weshop.portable
 
 		public void AddItem (Product item)
 		{
+			var existing = _connection.Table<Product> ().Any (p => p.Id == item.Id);
+			if (existing)
+				return;
+
 			item.BestOffer.ProductId = item.Id;
+			_connection.Insert (item.BestOffer);
 			_connection.Insert (item);
 		}
 

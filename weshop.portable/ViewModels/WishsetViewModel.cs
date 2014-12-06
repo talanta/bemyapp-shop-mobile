@@ -13,7 +13,10 @@ namespace weshop.portable.ViewModels
 
 		public void GoToMeet()
 		{
-			ShowViewModel<FirstViewModel> ();
+			var bundle = new MvxBundle ();
+
+			bundle.Data.Add ("keyword", "tenues sexy");
+			ShowViewModel<FirstViewModel> (bundle);
 		}
 
 	}

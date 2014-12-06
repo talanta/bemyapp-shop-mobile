@@ -4,6 +4,7 @@
   <!--http://stackoverflow.com/questions/17913084/actionbar-action-items-not-showing-->
   <item android:id="@+id/menu_item_switch"
         android:title="Séduction"
+        android:icon="@drawable/heart"
         android:visible="true"
         android:showAsAction="always"/>
 </menu>

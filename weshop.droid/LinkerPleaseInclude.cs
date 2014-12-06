@@ -29,10 +29,10 @@ namespace weshop.droid
         {
             view.Click += (s, e) => view.ContentDescription = view.ContentDescription + "";
         }
-		public void Include(Android.Support.V7.Widget.CardView  cardview)
-		{
-			cardview.Tag = cardview.Tag;
-		}
+//		public void Include(Android.Support.V7.Widget.CardView  cardview)
+//		{
+//			cardview.Tag = cardview.Tag;
+//		}
         public void Include(TextView text)
         {
             text.TextChanged += (sender, args) => text.Text = "" + text.Text;

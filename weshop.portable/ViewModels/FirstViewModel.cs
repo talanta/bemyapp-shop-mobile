@@ -15,6 +15,8 @@ namespace weshop.portable.ViewModels
 		int index = 0;
 		int itemPerPage = 10;
 
+		string keyword = "Vetement";
+
 		private IList<Product> _products;
 
 		public Product CurrentProduct { get; set; }
@@ -45,6 +47,9 @@ namespace weshop.portable.ViewModels
 		{
 			base.InitFromBundle (parameters);
 		   
+			if (parameters != null && parameters.Data != null && parameters.Data.Count > 0) {
+				keyword = "tenues sexy";
+			}
 			await DisplayNextProduct ();
 		}
 
@@ -52,7 +57,7 @@ namespace weshop.portable.ViewModels
 		{
 			_dialogService.ShowProgress ();
 			var request = new SearchRequest { 
-				Keyword = "Vetements"
+				Keyword = keyword
 			};
 			request.Pagination.ItemsPerPage = itemPerPage;
 			request.Pagination.PageNumber = index / itemPerPage;
@@ -107,6 +112,7 @@ namespace weshop.portable.ViewModels
 
 		public void GoToWishSet()
 		{
+
 			ShowViewModel<WishsetViewModel> ();
 		}
     }
