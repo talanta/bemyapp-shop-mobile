@@ -6,9 +6,11 @@ namespace weshop.portable.ViewModels
 	public class WishsetViewModel
 		: MvxViewModel
 	{
-		public WishsetViewModel ()
-		{
+		public const string TYPENAME = "WishsetViewModel";
 
+		protected override void InitFromBundle (IMvxBundle parameters)
+		{
+			base.InitFromBundle (parameters);
 		}
 
 		public void GoToMeet()

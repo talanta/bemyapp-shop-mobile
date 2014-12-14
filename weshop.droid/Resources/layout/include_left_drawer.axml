@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:weightSum="7"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary">
+        <ImageView
+            android:id="@+id/login_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account_circle_white_48dp"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:text="Connextion"
+            android:textColor="?android:attr/textColorPrimaryInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/login_image"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/colorPrimaryDark">
+        <Mvx.MvxListView
+            android:layout_margin="20dp"
+            local:MvxBind="ItemsSource MenuItems; ItemClick SelectMenuItemCommand"
+            local:MvxItemTemplate="@layout/item_menu"
+            android:id="@+id/drawer_list"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:choiceMode="singleChoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

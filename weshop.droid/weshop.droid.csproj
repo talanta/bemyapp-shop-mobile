@@ -42,12 +42,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
-    <Reference Include="Cirrious.MvvmCross.Droid">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.21.0.0.0-beta1\lib\MonoAndroid\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -114,8 +108,18 @@
     <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
       <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.21.0.0-rc1v2\lib\MonoAndroid10\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v17.Leanback">
-      <HintPath>..\packages\Xamarin.Android.Support.v17.Leanback.21.0.0-rc1v4\lib\MonoAndroid10\Xamarin.Android.Support.v17.Leanback.dll</HintPath>
+    <Reference Include="Cirrious.MvvmCross.Droid">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
+      <HintPath>..\packages\MvvmCross.HotTuna.Droid.Fragging.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="com.refractored.monodroidtoolkit">
+      <HintPath>..\Libs\com.refractored.monodroidtoolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -132,10 +136,14 @@
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\WishlistView.cs" />
     <Compile Include="Bootstrap\CommunitySqlitePluginBootstrap.cs" />
-    <Compile Include="Helpers\BarHelper.cs" />
     <Compile Include="Helpers\MvxActionBarActivity.cs" />
     <Compile Include="Helpers\MvxActionBarEventSourceActivity.cs" />
     <Compile Include="Views\WishsetView.cs" />
+    <Compile Include="Helpers\MyActionBarDrawerToggle.cs" />
+    <Compile Include="Helpers\CustomPresenter.cs" />
+    <Compile Include="Interfaces\ICustomPresenter.cs" />
+    <Compile Include="Views\MainView.cs" />
+    <Compile Include="NativeConverters\MenuIconConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -145,7 +153,6 @@
     <None Include="ToDo-MvvmCross\_ Droid UI.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\FirstView.axml" />
@@ -170,6 +177,29 @@
     <AndroidResource Include="Resources\drawable\heart.png" />
     <AndroidResource Include="Resources\drawable\magnify.png" />
     <AndroidResource Include="Resources\drawable\search.png" />
+    <AndroidResource Include="Resources\layout\fragment_main.axml" />
+    <AndroidResource Include="Resources\layout\item_menu.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\layout\include_left_drawer.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_circle_white.png">
+      <DependentUpon>drawer_shadow_dark.9.png</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\ic_account_circle_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_circle_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_account_circle_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_account_circle_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_https_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_home_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dashboard_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dashboard_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_help_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_help_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_loyalty_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_loyalty_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -188,5 +218,9 @@
     <Folder Include="PlatformSpecific\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="NativeConverters\" />
   </ItemGroup>
 </Project>

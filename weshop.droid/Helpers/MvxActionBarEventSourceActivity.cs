@@ -24,10 +24,11 @@ using Android.OS;
 using Cirrious.CrossCore.Droid.Views;
 using Android.Support.V7.App;
 using Cirrious.CrossCore.Core;
+using Cirrious.MvvmCross.Droid.Fragging;
 
 namespace weshop.droid.Helpers
 {
-	public class MvxActionBarEventSourceActivity : Android.App.Activity
+	public class MvxActionBarEventSourceActivity : ActionBarActivity
 	, IMvxEventSourceActivity
 	{
 		protected override void OnCreate(Bundle bundle)

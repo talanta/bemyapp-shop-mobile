@@ -2,118 +2,42 @@ using Cirrious.MvvmCross.ViewModels;
 using Cirrious.CrossCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace weshop.portable.ViewModels
 {
-    public class FirstViewModel 
+	public class FirstViewModel 
 		: MvxViewModel
-    {
-		readonly IDiscountService _discountService;
-		readonly IDialogService _dialogService;
-		readonly IWishListService _wishlistService;
+	{
+		private MvxCommand<MenuViewModel> selectMenuItemCommand;
+		private List<MenuViewModel> menuItems;
+		private MainViewModel _mainViewModel;
+		private WishsetViewModel _wishSetViewModel;
+		private WishlistViewModel _wishlistViewModel;
 
-		int index = 0;
-		int itemPerPage = 10;
-
-		string keyword = "Vetement";
-
-		private IList<Product> _products;
-
-		public Product CurrentProduct { get; set; }
-
-		private string _hello = "Hello MvvmCross";
-        public string Hello
-		{ 
-			get { return _hello; }
-			set { _hello = value; RaisePropertyChanged(() => Hello); }
-		}
-
-		private IMvxCommand likeCmd;
-		private IMvxCommand dislikeCmd;
-
-		public IMvxCommand DislikeCmd { get {return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
-		public IMvxCommand LikeCmd { get { return likeCmd ?? (likeCmd = new MvxCommand(OnLike)); } }
-
-		public FirstViewModel (IDiscountService discountService,
-			IDialogService dialogService,
-			IWishListService wishlistService)
+		public FirstViewModel ()
 		{
-			_discountService = discountService;
-			_dialogService = dialogService;
-			_wishlistService = wishlistService;
-		}
-
-		protected async override void InitFromBundle (IMvxBundle parameters)
-		{
-			base.InitFromBundle (parameters);
-		   
-			if (parameters != null && parameters.Data != null && parameters.Data.Count > 0) {
-				keyword = "tenues sexy";
-			}
-			await DisplayNextProduct ();
-		}
-
-		protected async Task RetrieveItems()
-		{
-			_dialogService.ShowProgress ();
-			var request = new SearchRequest { 
-				Keyword = keyword
+			this.menuItems = new List<MenuViewModel> {
+				new MenuViewModel{ Section = typeof(MainViewModel), Title = "Séduction" },
+				new MenuViewModel{ Section = typeof(WishsetViewModel), Title = "Catégories" },
+				new MenuViewModel{ Section = typeof(WishlistViewModel), Title = "Mon jardin secret" },
 			};
-			request.Pagination.ItemsPerPage = itemPerPage;
-			request.Pagination.PageNumber = index / itemPerPage;
-			var products = await _discountService.SearchProdudct(request);
+						
+		}
 
+		public WishlistViewModel WishlistViewModel{ get { return _wishlistViewModel ?? (_wishlistViewModel = new WishlistViewModel ()); } }
+		public WishsetViewModel WishSetViewModel{ get { return _wishSetViewModel ?? (_wishSetViewModel = new WishsetViewModel ()); } }
+		public MainViewModel MainViewModel{ get { return _mainViewModel ?? (_mainViewModel = new MainViewModel ()); } }
 
-			_dialogService.Dismiss ();
+		public List<MenuViewModel> MenuItems{ get { return this.menuItems; } }
 
-			if (products == null || products.ItemCount == 0) {
-				_dialogService.ToastError (_discountService.GetLastError (), 10000);
-				return;
+		public ICommand SelectMenuItemCommand {
+			get {
+				return this.selectMenuItemCommand ?? (this.selectMenuItemCommand = new MvxCommand<MenuViewModel> (x => {   
+					this.ShowViewModel (x.Section);                    
+				}));
 			}
-			index = 0;
-			_products = products.Products;
 		}
 
-		protected async Task DisplayNextProduct()
-		{
-			if (index % itemPerPage == 0) {
-				await RetrieveItems ();
-				if (_products == null)
-					return;
-			}
-
-			CurrentProduct = _products [index++];
-
-			RaisePropertyChanged (() => CurrentProduct);
-		}
-
-
-		protected async void OnLike()
-		{
-			// action on like
-			_wishlistService.AddItem (CurrentProduct);
-			_dialogService.ToastSuccess("Ce produit a été ajouté à votre wishlist");
-
-			await Task.Delay (2000);
-			DisplayNextProduct ();
-
-		}
-
-		protected void OnDislike()
-		{
-			DisplayNextProduct ();
-			// action on Dislike
-		}
-
-		public void GoToWishList()
-		{
-			ShowViewModel<WishlistViewModel> ();
-		}
-
-		public void GoToWishSet()
-		{
-
-			ShowViewModel<WishsetViewModel> ();
-		}
-    }
+	}
 }

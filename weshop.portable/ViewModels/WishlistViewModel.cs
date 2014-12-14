@@ -1,23 +1,22 @@
 ﻿using System;
 using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
+using Cirrious.CrossCore;
 
 namespace weshop.portable.ViewModels
 {
 	public class WishlistViewModel
 		: MvxViewModel
 	{
-		readonly IDialogService _dialogService;
-		readonly IWishListService _wishlistService;
+		public const string TYPENAME = "WishlistViewModel";
+
+		IDialogService _dialogService;
+		IWishListService _wishlistService;
 
 		public IList<ProductViewModel> Products { get; private set; }
 
-		public WishlistViewModel (IDialogService dialogService,
-			IWishListService wishlistService)
+		public WishlistViewModel ()
 		{
-			_dialogService = dialogService;
-			_wishlistService = wishlistService;
-
 			Products = new List<ProductViewModel> ();
 		}
 
@@ -25,6 +24,10 @@ namespace weshop.portable.ViewModels
 		{
 			base.InitFromBundle (parameters);
 
+			if (null == _dialogService) {
+				_dialogService = Mvx.Resolve<IDialogService> ();
+				_wishlistService = Mvx.Resolve<IWishListService> ();
+			}
 
 			var ps = _wishlistService.GetAllProducts ();
 			foreach (var p in ps) {

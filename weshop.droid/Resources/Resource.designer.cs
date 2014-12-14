@@ -64,6 +64,111 @@ namespace weshop.droid
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextColor = global::weshop.droid.Resource.Styleable.ProgressWheel_ahTextColor;
 			global::AndroidHUD.Resource.Styleable.ProgressWheel_ahTextSize = global::weshop.droid.Resource.Styleable.ProgressWheel_ahTextSize;
 			global::ModernHttpClient.Resource.String.library_name = global::weshop.droid.Resource.String.library_name;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circleColor = global::weshop.droid.Resource.Attribute.circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circularProgressBarStyle = global::weshop.droid.Resource.Attribute.circularProgressBarStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_gravity = global::weshop.droid.Resource.Attribute.circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate = global::weshop.droid.Resource.Attribute.circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_indeterminate_interval = global::weshop.droid.Resource.Attribute.circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_marker_progress = global::weshop.droid.Resource.Attribute.circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress = global::weshop.droid.Resource.Attribute.circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_background_color = global::weshop.droid.Resource.Attribute.circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_progress_color = global::weshop.droid.Resource.Attribute.circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.circular_stroke_width = global::weshop.droid.Resource.Attribute.circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate = global::weshop.droid.Resource.Attribute.indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.indeterminate_interval = global::weshop.droid.Resource.Attribute.indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.innerSize = global::weshop.droid.Resource.Attribute.innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.max = global::weshop.droid.Resource.Attribute.max;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinned = global::weshop.droid.Resource.Attribute.pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.pinnedDrawable = global::weshop.droid.Resource.Attribute.pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progress = global::weshop.droid.Resource.Attribute.progress;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressButtonStyle = global::weshop.droid.Resource.Attribute.progressButtonStyle;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.progressColor = global::weshop.droid.Resource.Attribute.progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.shadowDrawable = global::weshop.droid.Resource.Attribute.shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Attribute.unpinnedDrawable = global::weshop.droid.Resource.Attribute.unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_circle_color = global::weshop.droid.Resource.Color.progress_default_circle_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.progress_default_progress_color = global::weshop.droid.Resource.Color.progress_default_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_dark = global::weshop.droid.Resource.Color.refractored_background_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_dark = global::weshop.droid.Resource.Color.refractored_background_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_holo_light = global::weshop.droid.Resource.Color.refractored_background_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_background_light = global::weshop.droid.Resource.Color.refractored_background_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark = global::weshop.droid.Resource.Color.refractored_bright_foreground_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_dark_disabled = global::weshop.droid.Resource.Color.refractored_bright_foreground_dark_disabled;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_dark = global::weshop.droid.Resource.Color.refractored_bright_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_disabled_holo_light = global::weshop.droid.Resource.Color.refractored_bright_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_dark = global::weshop.droid.Resource.Color.refractored_bright_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_holo_light = global::weshop.droid.Resource.Color.refractored_bright_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_bright_foreground_light = global::weshop.droid.Resource.Color.refractored_bright_foreground_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_dark = global::weshop.droid.Resource.Color.refractored_dim_foreground_disabled_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_disabled_holo_light = global::weshop.droid.Resource.Color.refractored_dim_foreground_disabled_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_dark = global::weshop.droid.Resource.Color.refractored_dim_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_dim_foreground_holo_light = global::weshop.droid.Resource.Color.refractored_dim_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_dark = global::weshop.droid.Resource.Color.refractored_highlighted_text_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_highlighted_text_holo_light = global::weshop.droid.Resource.Color.refractored_highlighted_text_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_dark = global::weshop.droid.Resource.Color.refractored_hint_foreground_holo_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_hint_foreground_holo_light = global::weshop.droid.Resource.Color.refractored_hint_foreground_holo_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_bright = global::weshop.droid.Resource.Color.refractored_holo_blue_bright;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_dark = global::weshop.droid.Resource.Color.refractored_holo_blue_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_blue_light = global::weshop.droid.Resource.Color.refractored_holo_blue_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_dark = global::weshop.droid.Resource.Color.refractored_holo_green_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_green_light = global::weshop.droid.Resource.Color.refractored_holo_green_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_dark = global::weshop.droid.Resource.Color.refractored_holo_orange_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_orange_light = global::weshop.droid.Resource.Color.refractored_holo_orange_light;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_purple = global::weshop.droid.Resource.Color.refractored_holo_purple;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_dark = global::weshop.droid.Resource.Color.refractored_holo_red_dark;
+			global::com.refractored.monodroidtoolkit.Resource.Color.refractored_holo_red_light = global::weshop.droid.Resource.Color.refractored_holo_red_light;
+			global::com.refractored.monodroidtoolkit.Resource.Dimension.progress_inner_size = global::weshop.droid.Resource.Dimension.progress_inner_size;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_pinned = global::weshop.droid.Resource.Drawable.pin_progress_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_shadow = global::weshop.droid.Resource.Drawable.pin_progress_shadow;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.pin_progress_unpinned = global::weshop.droid.Resource.Drawable.pin_progress_unpinned;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_normal_holo = global::weshop.droid.Resource.Drawable.scrubber_control_normal_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Drawable.scrubber_control_pressed_holo = global::weshop.droid.Resource.Drawable.scrubber_control_pressed_holo;
+			global::com.refractored.monodroidtoolkit.Resource.Id.bottom = global::weshop.droid.Resource.Id.bottom;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center = global::weshop.droid.Resource.Id.center;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_horizontal = global::weshop.droid.Resource.Id.center_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.center_vertical = global::weshop.droid.Resource.Id.center_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip = global::weshop.droid.Resource.Id.clip;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_horizontal = global::weshop.droid.Resource.Id.clip_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.clip_vertical = global::weshop.droid.Resource.Id.clip_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.end = global::weshop.droid.Resource.Id.end;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill = global::weshop.droid.Resource.Id.fill;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_horizontal = global::weshop.droid.Resource.Id.fill_horizontal;
+			global::com.refractored.monodroidtoolkit.Resource.Id.fill_vertical = global::weshop.droid.Resource.Id.fill_vertical;
+			global::com.refractored.monodroidtoolkit.Resource.Id.left = global::weshop.droid.Resource.Id.left;
+			global::com.refractored.monodroidtoolkit.Resource.Id.right = global::weshop.droid.Resource.Id.right;
+			global::com.refractored.monodroidtoolkit.Resource.Id.start = global::weshop.droid.Resource.Id.start;
+			global::com.refractored.monodroidtoolkit.Resource.Id.top = global::weshop.droid.Resource.Id.top;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.circular_indeterminent_interval = global::weshop.droid.Resource.Integer.circular_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Integer.progressbutton_indeterminent_interval = global::weshop.droid.Resource.Integer.progressbutton_indeterminent_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBar = global::weshop.droid.Resource.Style.CircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Style.CircularProgressBarLight = global::weshop.droid.Resource.Style.CircularProgressBarLight;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton = global::weshop.droid.Resource.Style.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Style.ProgressButton_Pin = global::weshop.droid.Resource.Style.ProgressButton_Pin;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_gravity = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_gravity;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_marker_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_progress_background_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_progress_color = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_progress_color;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width = global::weshop.droid.Resource.Styleable.HoloCircularProgressBar_circular_stroke_width;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton = global::weshop.droid.Resource.Styleable.ProgressButton;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_clickable = global::weshop.droid.Resource.Styleable.ProgressButton_android_clickable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_focusable = global::weshop.droid.Resource.Styleable.ProgressButton_android_focusable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_android_selectableItemBackground = global::weshop.droid.Resource.Styleable.ProgressButton_android_selectableItemBackground;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_circleColor = global::weshop.droid.Resource.Styleable.ProgressButton_circleColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate = global::weshop.droid.Resource.Styleable.ProgressButton_indeterminate;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_indeterminate_interval = global::weshop.droid.Resource.Styleable.ProgressButton_indeterminate_interval;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_innerSize = global::weshop.droid.Resource.Styleable.ProgressButton_innerSize;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_max = global::weshop.droid.Resource.Styleable.ProgressButton_max;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinned = global::weshop.droid.Resource.Styleable.ProgressButton_pinned;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_pinnedDrawable = global::weshop.droid.Resource.Styleable.ProgressButton_pinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progress = global::weshop.droid.Resource.Styleable.ProgressButton_progress;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_progressColor = global::weshop.droid.Resource.Styleable.ProgressButton_progressColor;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_shadowDrawable = global::weshop.droid.Resource.Styleable.ProgressButton_shadowDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.ProgressButton_unpinnedDrawable = global::weshop.droid.Resource.Styleable.ProgressButton_unpinnedDrawable;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme = global::weshop.droid.Resource.Styleable.Theme;
+			global::com.refractored.monodroidtoolkit.Resource.Styleable.Theme_circularProgressBarStyle = global::weshop.droid.Resource.Styleable.Theme_circularProgressBarStyle;
 		}
 		
 		public partial class Animation
@@ -100,23 +205,23 @@ namespace weshop.droid
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f0100b5
-			public const int MvxBind = 2130772149;
+			// aapt resource value: 0x7f0100ca
+			public const int MvxBind = 2130772170;
 			
-			// aapt resource value: 0x7f0100b9
-			public const int MvxDropDownItemTemplate = 2130772153;
+			// aapt resource value: 0x7f0100ce
+			public const int MvxDropDownItemTemplate = 2130772174;
 			
-			// aapt resource value: 0x7f0100b8
-			public const int MvxItemTemplate = 2130772152;
+			// aapt resource value: 0x7f0100cd
+			public const int MvxItemTemplate = 2130772173;
 			
-			// aapt resource value: 0x7f0100b6
-			public const int MvxLang = 2130772150;
+			// aapt resource value: 0x7f0100cb
+			public const int MvxLang = 2130772171;
 			
-			// aapt resource value: 0x7f0100ba
-			public const int MvxSource = 2130772154;
+			// aapt resource value: 0x7f0100cf
+			public const int MvxSource = 2130772175;
 			
-			// aapt resource value: 0x7f0100b7
-			public const int MvxTemplate = 2130772151;
+			// aapt resource value: 0x7f0100cc
+			public const int MvxTemplate = 2130772172;
 			
 			// aapt resource value: 0x7f01005a
 			public const int actionBarDivider = 2130772058;
@@ -220,41 +325,41 @@ namespace weshop.droid
 			// aapt resource value: 0x7f010079
 			public const int activityChooserViewStyle = 2130772089;
 			
-			// aapt resource value: 0x7f0100ac
-			public const int ahBarColor = 2130772140;
+			// aapt resource value: 0x7f0100c1
+			public const int ahBarColor = 2130772161;
 			
-			// aapt resource value: 0x7f0100b4
-			public const int ahBarLength = 2130772148;
+			// aapt resource value: 0x7f0100c9
+			public const int ahBarLength = 2130772169;
 			
-			// aapt resource value: 0x7f0100b3
-			public const int ahBarWidth = 2130772147;
+			// aapt resource value: 0x7f0100c8
+			public const int ahBarWidth = 2130772168;
 			
-			// aapt resource value: 0x7f0100b1
-			public const int ahCircleColor = 2130772145;
+			// aapt resource value: 0x7f0100c6
+			public const int ahCircleColor = 2130772166;
 			
-			// aapt resource value: 0x7f0100b0
-			public const int ahDelayMillis = 2130772144;
+			// aapt resource value: 0x7f0100c5
+			public const int ahDelayMillis = 2130772165;
 			
-			// aapt resource value: 0x7f0100b2
-			public const int ahRadius = 2130772146;
+			// aapt resource value: 0x7f0100c7
+			public const int ahRadius = 2130772167;
 			
-			// aapt resource value: 0x7f0100ad
-			public const int ahRimColor = 2130772141;
+			// aapt resource value: 0x7f0100c2
+			public const int ahRimColor = 2130772162;
 			
-			// aapt resource value: 0x7f0100ae
-			public const int ahRimWidth = 2130772142;
+			// aapt resource value: 0x7f0100c3
+			public const int ahRimWidth = 2130772163;
 			
-			// aapt resource value: 0x7f0100af
-			public const int ahSpinSpeed = 2130772143;
+			// aapt resource value: 0x7f0100c4
+			public const int ahSpinSpeed = 2130772164;
 			
-			// aapt resource value: 0x7f0100a9
-			public const int ahText = 2130772137;
+			// aapt resource value: 0x7f0100be
+			public const int ahText = 2130772158;
 			
-			// aapt resource value: 0x7f0100aa
-			public const int ahTextColor = 2130772138;
+			// aapt resource value: 0x7f0100bf
+			public const int ahTextColor = 2130772159;
 			
-			// aapt resource value: 0x7f0100ab
-			public const int ahTextSize = 2130772139;
+			// aapt resource value: 0x7f0100c0
+			public const int ahTextSize = 2130772160;
 			
 			// aapt resource value: 0x7f01000c
 			public const int background = 2130771980;
@@ -276,6 +381,36 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f0100a3
 			public const int buttonGravity = 2130772131;
+			
+			// aapt resource value: 0x7f0100ac
+			public const int circleColor = 2130772140;
+			
+			// aapt resource value: 0x7f0100bd
+			public const int circularProgressBarStyle = 2130772157;
+			
+			// aapt resource value: 0x7f0100b5
+			public const int circular_gravity = 2130772149;
+			
+			// aapt resource value: 0x7f0100bb
+			public const int circular_indeterminate = 2130772155;
+			
+			// aapt resource value: 0x7f0100bc
+			public const int circular_indeterminate_interval = 2130772156;
+			
+			// aapt resource value: 0x7f0100b8
+			public const int circular_marker_progress = 2130772152;
+			
+			// aapt resource value: 0x7f0100b7
+			public const int circular_progress = 2130772151;
+			
+			// aapt resource value: 0x7f0100ba
+			public const int circular_progress_background_color = 2130772154;
+			
+			// aapt resource value: 0x7f0100b9
+			public const int circular_progress_color = 2130772153;
+			
+			// aapt resource value: 0x7f0100b6
+			public const int circular_stroke_width = 2130772150;
 			
 			// aapt resource value: 0x7f010035
 			public const int closeIcon = 2130772021;
@@ -397,11 +532,20 @@ namespace weshop.droid
 			// aapt resource value: 0x7f010033
 			public const int iconifiedByDefault = 2130772019;
 			
+			// aapt resource value: 0x7f0100b3
+			public const int indeterminate = 2130772147;
+			
 			// aapt resource value: 0x7f010012
 			public const int indeterminateProgressStyle = 2130771986;
 			
+			// aapt resource value: 0x7f0100b4
+			public const int indeterminate_interval = 2130772148;
+			
 			// aapt resource value: 0x7f01001d
 			public const int initialActivityCount = 2130771997;
+			
+			// aapt resource value: 0x7f0100b1
+			public const int innerSize = 2130772145;
 			
 			// aapt resource value: 0x7f010002
 			public const int isLightTheme = 2130771970;
@@ -435,6 +579,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f01000a
 			public const int logo = 2130771978;
+			
+			// aapt resource value: 0x7f0100ab
+			public const int max = 2130772139;
 			
 			// aapt resource value: 0x7f0100a1
 			public const int maxButtonHeight = 2130772129;
@@ -472,6 +619,12 @@ namespace weshop.droid
 			// aapt resource value: 0x7f01008f
 			public const int panelMenuListWidth = 2130772111;
 			
+			// aapt resource value: 0x7f0100b2
+			public const int pinned = 2130772146;
+			
+			// aapt resource value: 0x7f0100ae
+			public const int pinnedDrawable = 2130772142;
+			
 			// aapt resource value: 0x7f01007c
 			public const int popupMenuStyle = 2130772092;
 			
@@ -487,11 +640,20 @@ namespace weshop.droid
 			// aapt resource value: 0x7f01002f
 			public const int preserveIconSpacing = 2130772015;
 			
+			// aapt resource value: 0x7f0100aa
+			public const int progress = 2130772138;
+			
 			// aapt resource value: 0x7f010013
 			public const int progressBarPadding = 2130771987;
 			
 			// aapt resource value: 0x7f010011
 			public const int progressBarStyle = 2130771985;
+			
+			// aapt resource value: 0x7f0100a9
+			public const int progressButtonStyle = 2130772137;
+			
+			// aapt resource value: 0x7f0100ad
+			public const int progressColor = 2130772141;
 			
 			// aapt resource value: 0x7f01003d
 			public const int prompt = 2130772029;
@@ -513,6 +675,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f010076
 			public const int selectableItemBackgroundBorderless = 2130772086;
+			
+			// aapt resource value: 0x7f0100b0
+			public const int shadowDrawable = 2130772144;
 			
 			// aapt resource value: 0x7f01002b
 			public const int showAsAction = 2130772011;
@@ -637,6 +802,9 @@ namespace weshop.droid
 			// aapt resource value: 0x7f010041
 			public const int track = 2130772033;
 			
+			// aapt resource value: 0x7f0100af
+			public const int unpinnedDrawable = 2130772143;
+			
 			// aapt resource value: 0x7f010038
 			public const int voiceIcon = 2130772024;
 			
@@ -705,29 +873,29 @@ namespace weshop.droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f06003f
-			public const int abc_background_cache_hint_selector_material_dark = 2131099711;
+			// aapt resource value: 0x7f060062
+			public const int abc_background_cache_hint_selector_material_dark = 2131099746;
 			
-			// aapt resource value: 0x7f060040
-			public const int abc_background_cache_hint_selector_material_light = 2131099712;
+			// aapt resource value: 0x7f060063
+			public const int abc_background_cache_hint_selector_material_light = 2131099747;
 			
 			// aapt resource value: 0x7f060000
 			public const int abc_input_method_navigation_guard = 2131099648;
 			
-			// aapt resource value: 0x7f060041
-			public const int abc_primary_text_disable_only_material_dark = 2131099713;
+			// aapt resource value: 0x7f060064
+			public const int abc_primary_text_disable_only_material_dark = 2131099748;
 			
-			// aapt resource value: 0x7f060042
-			public const int abc_primary_text_disable_only_material_light = 2131099714;
+			// aapt resource value: 0x7f060065
+			public const int abc_primary_text_disable_only_material_light = 2131099749;
 			
-			// aapt resource value: 0x7f060043
-			public const int abc_primary_text_material_dark = 2131099715;
+			// aapt resource value: 0x7f060066
+			public const int abc_primary_text_material_dark = 2131099750;
 			
-			// aapt resource value: 0x7f060044
-			public const int abc_primary_text_material_light = 2131099716;
+			// aapt resource value: 0x7f060067
+			public const int abc_primary_text_material_light = 2131099751;
 			
-			// aapt resource value: 0x7f060045
-			public const int abc_search_url_text = 2131099717;
+			// aapt resource value: 0x7f060068
+			public const int abc_search_url_text = 2131099752;
 			
 			// aapt resource value: 0x7f060001
 			public const int abc_search_url_text_normal = 2131099649;
@@ -738,11 +906,11 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060003
 			public const int abc_search_url_text_selected = 2131099651;
 			
-			// aapt resource value: 0x7f060046
-			public const int abc_secondary_text_material_dark = 2131099718;
+			// aapt resource value: 0x7f060069
+			public const int abc_secondary_text_material_dark = 2131099753;
 			
-			// aapt resource value: 0x7f060047
-			public const int abc_secondary_text_material_light = 2131099719;
+			// aapt resource value: 0x7f06006a
+			public const int abc_secondary_text_material_light = 2131099754;
 			
 			// aapt resource value: 0x7f060004
 			public const int accent_material_dark = 2131099652;
@@ -762,11 +930,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060009
 			public const int background_material_light = 2131099657;
 			
-			// aapt resource value: 0x7f060039
-			public const int blue = 2131099705;
-			
-			// aapt resource value: 0x7f060031
-			public const int blue_nav = 2131099697;
+			// aapt resource value: 0x7f060050
+			public const int blue_nav = 2131099728;
 			
 			// aapt resource value: 0x7f06000a
 			public const int bright_foreground_disabled_material_dark = 2131099658;
@@ -804,29 +969,29 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060015
 			public const int dim_foreground_material_light = 2131099669;
 			
-			// aapt resource value: 0x7f06003b
-			public const int fab_color_1 = 2131099707;
+			// aapt resource value: 0x7f06005b
+			public const int fab_color_1 = 2131099739;
 			
-			// aapt resource value: 0x7f06003c
-			public const int fab_color_1_muted = 2131099708;
+			// aapt resource value: 0x7f06005c
+			public const int fab_color_1_muted = 2131099740;
 			
-			// aapt resource value: 0x7f06003d
-			public const int fab_color_2 = 2131099709;
+			// aapt resource value: 0x7f06005d
+			public const int fab_color_2 = 2131099741;
 			
-			// aapt resource value: 0x7f06003e
-			public const int fab_color_2_muted = 2131099710;
+			// aapt resource value: 0x7f06005e
+			public const int fab_color_2_muted = 2131099742;
 			
-			// aapt resource value: 0x7f060038
-			public const int gray = 2131099704;
+			// aapt resource value: 0x7f060057
+			public const int gray = 2131099735;
 			
-			// aapt resource value: 0x7f060037
-			public const int green_like = 2131099703;
+			// aapt resource value: 0x7f060056
+			public const int green_like = 2131099734;
 			
-			// aapt resource value: 0x7f060035
-			public const int grey_bg = 2131099701;
+			// aapt resource value: 0x7f060054
+			public const int grey_bg = 2131099732;
 			
-			// aapt resource value: 0x7f060033
-			public const int grey_title = 2131099699;
+			// aapt resource value: 0x7f060052
+			public const int grey_title = 2131099730;
 			
 			// aapt resource value: 0x7f060016
 			public const int highlighted_text_material_dark = 2131099670;
@@ -846,6 +1011,12 @@ namespace weshop.droid
 			// aapt resource value: 0x7f06001b
 			public const int link_text_material_light = 2131099675;
 			
+			// aapt resource value: 0x7f06005f
+			public const int material_blue_500 = 2131099743;
+			
+			// aapt resource value: 0x7f060060
+			public const int material_blue_700 = 2131099744;
+			
 			// aapt resource value: 0x7f06001c
 			public const int material_blue_grey_800 = 2131099676;
 			
@@ -860,6 +1031,15 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f060020
 			public const int material_deep_teal_500 = 2131099680;
+			
+			// aapt resource value: 0x7f060061
+			public const int material_green_A200 = 2131099745;
+			
+			// aapt resource value: 0x7f060058
+			public const int material_pink_500 = 2131099736;
+			
+			// aapt resource value: 0x7f060059
+			public const int material_pink_900 = 2131099737;
 			
 			// aapt resource value: 0x7f060021
 			public const int primary_dark_material_dark = 2131099681;
@@ -885,11 +1065,104 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060028
 			public const int primary_text_disabled_material_light = 2131099688;
 			
-			// aapt resource value: 0x7f060036
-			public const int red_dislike = 2131099702;
+			// aapt resource value: 0x7f060031
+			public const int progress_default_circle_color = 2131099697;
+			
+			// aapt resource value: 0x7f060032
+			public const int progress_default_progress_color = 2131099698;
+			
+			// aapt resource value: 0x7f060055
+			public const int red_dislike = 2131099733;
+			
+			// aapt resource value: 0x7f060053
+			public const int red_price = 2131099731;
+			
+			// aapt resource value: 0x7f060033
+			public const int refractored_background_dark = 2131099699;
+			
+			// aapt resource value: 0x7f060038
+			public const int refractored_background_holo_dark = 2131099704;
+			
+			// aapt resource value: 0x7f060039
+			public const int refractored_background_holo_light = 2131099705;
 			
 			// aapt resource value: 0x7f060034
-			public const int red_price = 2131099700;
+			public const int refractored_background_light = 2131099700;
+			
+			// aapt resource value: 0x7f060035
+			public const int refractored_bright_foreground_dark = 2131099701;
+			
+			// aapt resource value: 0x7f060037
+			public const int refractored_bright_foreground_dark_disabled = 2131099703;
+			
+			// aapt resource value: 0x7f06003c
+			public const int refractored_bright_foreground_disabled_holo_dark = 2131099708;
+			
+			// aapt resource value: 0x7f06003d
+			public const int refractored_bright_foreground_disabled_holo_light = 2131099709;
+			
+			// aapt resource value: 0x7f06003a
+			public const int refractored_bright_foreground_holo_dark = 2131099706;
+			
+			// aapt resource value: 0x7f06003b
+			public const int refractored_bright_foreground_holo_light = 2131099707;
+			
+			// aapt resource value: 0x7f060036
+			public const int refractored_bright_foreground_light = 2131099702;
+			
+			// aapt resource value: 0x7f06003f
+			public const int refractored_dim_foreground_disabled_holo_dark = 2131099711;
+			
+			// aapt resource value: 0x7f060042
+			public const int refractored_dim_foreground_disabled_holo_light = 2131099714;
+			
+			// aapt resource value: 0x7f06003e
+			public const int refractored_dim_foreground_holo_dark = 2131099710;
+			
+			// aapt resource value: 0x7f060041
+			public const int refractored_dim_foreground_holo_light = 2131099713;
+			
+			// aapt resource value: 0x7f060044
+			public const int refractored_highlighted_text_holo_dark = 2131099716;
+			
+			// aapt resource value: 0x7f060045
+			public const int refractored_highlighted_text_holo_light = 2131099717;
+			
+			// aapt resource value: 0x7f060040
+			public const int refractored_hint_foreground_holo_dark = 2131099712;
+			
+			// aapt resource value: 0x7f060043
+			public const int refractored_hint_foreground_holo_light = 2131099715;
+			
+			// aapt resource value: 0x7f06004f
+			public const int refractored_holo_blue_bright = 2131099727;
+			
+			// aapt resource value: 0x7f060049
+			public const int refractored_holo_blue_dark = 2131099721;
+			
+			// aapt resource value: 0x7f060046
+			public const int refractored_holo_blue_light = 2131099718;
+			
+			// aapt resource value: 0x7f06004a
+			public const int refractored_holo_green_dark = 2131099722;
+			
+			// aapt resource value: 0x7f060047
+			public const int refractored_holo_green_light = 2131099719;
+			
+			// aapt resource value: 0x7f06004e
+			public const int refractored_holo_orange_dark = 2131099726;
+			
+			// aapt resource value: 0x7f06004d
+			public const int refractored_holo_orange_light = 2131099725;
+			
+			// aapt resource value: 0x7f06004c
+			public const int refractored_holo_purple = 2131099724;
+			
+			// aapt resource value: 0x7f06004b
+			public const int refractored_holo_red_dark = 2131099723;
+			
+			// aapt resource value: 0x7f060048
+			public const int refractored_holo_red_light = 2131099720;
 			
 			// aapt resource value: 0x7f060029
 			public const int ripple_material_dark = 2131099689;
@@ -915,11 +1188,11 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060030
 			public const int switch_thumb_normal_material_light = 2131099696;
 			
-			// aapt resource value: 0x7f06003a
-			public const int white = 2131099706;
+			// aapt resource value: 0x7f06005a
+			public const int white = 2131099738;
 			
-			// aapt resource value: 0x7f060032
-			public const int yellow_bg = 2131099698;
+			// aapt resource value: 0x7f060051
+			public const int yellow_bg = 2131099729;
 			
 			static Color()
 			{
@@ -1062,6 +1335,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f07002a
 			public const int disabled_alpha_material_light = 2131165226;
+			
+			// aapt resource value: 0x7f07002b
+			public const int progress_inner_size = 2131165227;
 			
 			static Dimension()
 			{
@@ -1236,46 +1512,88 @@ namespace weshop.droid
 			public const int circular_btn = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int heart = 2130837557;
+			public const int drawer_shadow_dark = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int ic_errorstatus = 2130837558;
+			public const int heart = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int ic_successstatus = 2130837559;
+			public const int ic_account_circle_white = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int Icon = 2130837560;
+			public const int ic_account_circle_white_48dp = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int logob = 2130837561;
+			public const int ic_dashboard_white_36dp = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int logotitle = 2130837562;
+			public const int ic_drawer_light = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int magnify = 2130837563;
+			public const int ic_errorstatus = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int mask = 2130837564;
+			public const int ic_help_white_36dp = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int monoandroidsplash = 2130837565;
+			public const int ic_home_white_36dp = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int roundedbg = 2130837566;
+			public const int ic_https_white_36dp = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int roundedbgdark = 2130837567;
+			public const int ic_loyalty_white_36dp = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int search = 2130837568;
+			public const int ic_successstatus = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int shadowbox = 2130837569;
+			public const int Icon = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int splash = 2130837570;
+			public const int logob = 2130837570;
+			
+			// aapt resource value: 0x7f020043
+			public const int logotitle = 2130837571;
+			
+			// aapt resource value: 0x7f020044
+			public const int magnify = 2130837572;
+			
+			// aapt resource value: 0x7f020045
+			public const int mask = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public const int monoandroidsplash = 2130837574;
+			
+			// aapt resource value: 0x7f020047
+			public const int pin_progress_pinned = 2130837575;
+			
+			// aapt resource value: 0x7f020048
+			public const int pin_progress_shadow = 2130837576;
+			
+			// aapt resource value: 0x7f020049
+			public const int pin_progress_unpinned = 2130837577;
+			
+			// aapt resource value: 0x7f02004a
+			public const int roundedbg = 2130837578;
+			
+			// aapt resource value: 0x7f02004b
+			public const int roundedbgdark = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int scrubber_control_normal_holo = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int scrubber_control_pressed_holo = 2130837581;
+			
+			// aapt resource value: 0x7f02004e
+			public const int search = 2130837582;
+			
+			// aapt resource value: 0x7f02004f
+			public const int shadowbox = 2130837583;
+			
+			// aapt resource value: 0x7f020050
+			public const int splash = 2130837584;
 			
 			static Drawable()
 			{
@@ -1293,29 +1611,29 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080009
 			public const int MvxBindingTagUnique = 2131230729;
 			
-			// aapt resource value: 0x7f080034
-			public const int action_bar = 2131230772;
+			// aapt resource value: 0x7f080040
+			public const int action_bar = 2131230784;
 			
 			// aapt resource value: 0x7f080000
 			public const int action_bar_activity_content = 2131230720;
 			
-			// aapt resource value: 0x7f080033
-			public const int action_bar_container = 2131230771;
+			// aapt resource value: 0x7f08003f
+			public const int action_bar_container = 2131230783;
 			
-			// aapt resource value: 0x7f08002f
-			public const int action_bar_root = 2131230767;
+			// aapt resource value: 0x7f08003b
+			public const int action_bar_root = 2131230779;
 			
 			// aapt resource value: 0x7f080001
 			public const int action_bar_spinner = 2131230721;
 			
-			// aapt resource value: 0x7f080022
-			public const int action_bar_subtitle = 2131230754;
+			// aapt resource value: 0x7f08002e
+			public const int action_bar_subtitle = 2131230766;
 			
-			// aapt resource value: 0x7f080021
-			public const int action_bar_title = 2131230753;
+			// aapt resource value: 0x7f08002d
+			public const int action_bar_title = 2131230765;
 			
-			// aapt resource value: 0x7f080035
-			public const int action_context_bar = 2131230773;
+			// aapt resource value: 0x7f080041
+			public const int action_context_bar = 2131230785;
 			
 			// aapt resource value: 0x7f080002
 			public const int action_menu_divider = 2131230722;
@@ -1323,17 +1641,17 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080003
 			public const int action_menu_presenter = 2131230723;
 			
-			// aapt resource value: 0x7f080031
-			public const int action_mode_bar = 2131230769;
+			// aapt resource value: 0x7f08003d
+			public const int action_mode_bar = 2131230781;
+			
+			// aapt resource value: 0x7f08003c
+			public const int action_mode_bar_stub = 2131230780;
+			
+			// aapt resource value: 0x7f08002f
+			public const int action_mode_close_button = 2131230767;
 			
 			// aapt resource value: 0x7f080030
-			public const int action_mode_bar_stub = 2131230768;
-			
-			// aapt resource value: 0x7f080023
-			public const int action_mode_close_button = 2131230755;
-			
-			// aapt resource value: 0x7f080024
-			public const int activity_chooser_view_content = 2131230756;
+			public const int activity_chooser_view_content = 2131230768;
 			
 			// aapt resource value: 0x7f080017
 			public const int always = 2131230743;
@@ -1344,17 +1662,38 @@ namespace weshop.droid
 			// aapt resource value: 0x7f08001f
 			public const int bottom = 2131230751;
 			
-			// aapt resource value: 0x7f08002c
-			public const int checkbox = 2131230764;
+			// aapt resource value: 0x7f080021
+			public const int center = 2131230753;
+			
+			// aapt resource value: 0x7f080022
+			public const int center_horizontal = 2131230754;
+			
+			// aapt resource value: 0x7f080023
+			public const int center_vertical = 2131230755;
+			
+			// aapt resource value: 0x7f080038
+			public const int checkbox = 2131230776;
+			
+			// aapt resource value: 0x7f080024
+			public const int clip = 2131230756;
+			
+			// aapt resource value: 0x7f080025
+			public const int clip_horizontal = 2131230757;
+			
+			// aapt resource value: 0x7f080026
+			public const int clip_vertical = 2131230758;
 			
 			// aapt resource value: 0x7f080018
 			public const int collapseActionView = 2131230744;
 			
-			// aapt resource value: 0x7f080032
-			public const int decor_content_parent = 2131230770;
+			// aapt resource value: 0x7f080050
+			public const int content_frame = 2131230800;
 			
-			// aapt resource value: 0x7f080027
-			public const int default_activity_button = 2131230759;
+			// aapt resource value: 0x7f08003e
+			public const int decor_content_parent = 2131230782;
+			
+			// aapt resource value: 0x7f080033
+			public const int default_activity_button = 2131230771;
 			
 			// aapt resource value: 0x7f08001c
 			public const int dialog = 2131230748;
@@ -1362,20 +1701,35 @@ namespace weshop.droid
 			// aapt resource value: 0x7f08000d
 			public const int disableHome = 2131230733;
 			
+			// aapt resource value: 0x7f08004e
+			public const int drawer_layout = 2131230798;
+			
+			// aapt resource value: 0x7f080054
+			public const int drawer_list = 2131230804;
+			
 			// aapt resource value: 0x7f08001d
 			public const int dropdown = 2131230749;
 			
-			// aapt resource value: 0x7f080036
-			public const int edit_query = 2131230774;
+			// aapt resource value: 0x7f080042
+			public const int edit_query = 2131230786;
 			
 			// aapt resource value: 0x7f080015
 			public const int end = 2131230741;
 			
-			// aapt resource value: 0x7f080025
-			public const int expand_activities_button = 2131230757;
+			// aapt resource value: 0x7f080031
+			public const int expand_activities_button = 2131230769;
 			
-			// aapt resource value: 0x7f08002b
-			public const int expanded_menu = 2131230763;
+			// aapt resource value: 0x7f080037
+			public const int expanded_menu = 2131230775;
+			
+			// aapt resource value: 0x7f080027
+			public const int fill = 2131230759;
+			
+			// aapt resource value: 0x7f080028
+			public const int fill_horizontal = 2131230760;
+			
+			// aapt resource value: 0x7f080029
+			public const int fill_vertical = 2131230761;
 			
 			// aapt resource value: 0x7f080004
 			public const int home = 2131230724;
@@ -1383,47 +1737,53 @@ namespace weshop.droid
 			// aapt resource value: 0x7f08000e
 			public const int homeAsUp = 2131230734;
 			
-			// aapt resource value: 0x7f080029
-			public const int icon = 2131230761;
+			// aapt resource value: 0x7f080035
+			public const int icon = 2131230773;
 			
 			// aapt resource value: 0x7f080019
 			public const int ifRoom = 2131230745;
 			
-			// aapt resource value: 0x7f080026
-			public const int image = 2131230758;
+			// aapt resource value: 0x7f080032
+			public const int image = 2131230770;
 			
-			// aapt resource value: 0x7f080043
-			public const int imageView = 2131230787;
+			// aapt resource value: 0x7f080055
+			public const int imageView = 2131230805;
 			
-			// aapt resource value: 0x7f080042
-			public const int linearLayout = 2131230786;
+			// aapt resource value: 0x7f08002a
+			public const int left = 2131230762;
+			
+			// aapt resource value: 0x7f080051
+			public const int left_drawer = 2131230801;
+			
+			// aapt resource value: 0x7f080052
+			public const int linearLayout = 2131230802;
 			
 			// aapt resource value: 0x7f08000a
 			public const int listMode = 2131230730;
 			
-			// aapt resource value: 0x7f080028
-			public const int list_item = 2131230760;
+			// aapt resource value: 0x7f080034
+			public const int list_item = 2131230772;
 			
-			// aapt resource value: 0x7f080049
-			public const int loadingImage = 2131230793;
+			// aapt resource value: 0x7f08005b
+			public const int loadingImage = 2131230811;
 			
-			// aapt resource value: 0x7f080047
-			public const int loadingProgressBar = 2131230791;
+			// aapt resource value: 0x7f080059
+			public const int loadingProgressBar = 2131230809;
 			
-			// aapt resource value: 0x7f08004a
-			public const int loadingProgressWheel = 2131230794;
+			// aapt resource value: 0x7f08005c
+			public const int loadingProgressWheel = 2131230812;
 			
-			// aapt resource value: 0x7f08004c
-			public const int menu_item_switch = 2131230796;
+			// aapt resource value: 0x7f080053
+			public const int login_image = 2131230803;
 			
-			// aapt resource value: 0x7f08004d
-			public const int menu_meet = 2131230797;
+			// aapt resource value: 0x7f08005d
+			public const int menu_item_switch = 2131230813;
+			
+			// aapt resource value: 0x7f08005e
+			public const int menu_meet = 2131230814;
 			
 			// aapt resource value: 0x7f080016
 			public const int middle = 2131230742;
-			
-			// aapt resource value: 0x7f08004b
-			public const int myButton = 2131230795;
 			
 			// aapt resource value: 0x7f08001a
 			public const int never = 2131230746;
@@ -1440,41 +1800,44 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080006
 			public const int progress_horizontal = 2131230726;
 			
-			// aapt resource value: 0x7f08002e
-			public const int radio = 2131230766;
+			// aapt resource value: 0x7f08003a
+			public const int radio = 2131230778;
 			
-			// aapt resource value: 0x7f080038
-			public const int search_badge = 2131230776;
+			// aapt resource value: 0x7f08002b
+			public const int right = 2131230763;
 			
-			// aapt resource value: 0x7f080037
-			public const int search_bar = 2131230775;
+			// aapt resource value: 0x7f080044
+			public const int search_badge = 2131230788;
+			
+			// aapt resource value: 0x7f080043
+			public const int search_bar = 2131230787;
+			
+			// aapt resource value: 0x7f080045
+			public const int search_button = 2131230789;
+			
+			// aapt resource value: 0x7f08004a
+			public const int search_close_btn = 2131230794;
+			
+			// aapt resource value: 0x7f080046
+			public const int search_edit_frame = 2131230790;
+			
+			// aapt resource value: 0x7f08004c
+			public const int search_go_btn = 2131230796;
+			
+			// aapt resource value: 0x7f080047
+			public const int search_mag_icon = 2131230791;
+			
+			// aapt resource value: 0x7f080048
+			public const int search_plate = 2131230792;
+			
+			// aapt resource value: 0x7f080049
+			public const int search_src_text = 2131230793;
+			
+			// aapt resource value: 0x7f08004d
+			public const int search_voice_btn = 2131230797;
 			
 			// aapt resource value: 0x7f080039
-			public const int search_button = 2131230777;
-			
-			// aapt resource value: 0x7f08003e
-			public const int search_close_btn = 2131230782;
-			
-			// aapt resource value: 0x7f08003a
-			public const int search_edit_frame = 2131230778;
-			
-			// aapt resource value: 0x7f080040
-			public const int search_go_btn = 2131230784;
-			
-			// aapt resource value: 0x7f08003b
-			public const int search_mag_icon = 2131230779;
-			
-			// aapt resource value: 0x7f08003c
-			public const int search_plate = 2131230780;
-			
-			// aapt resource value: 0x7f08003d
-			public const int search_src_text = 2131230781;
-			
-			// aapt resource value: 0x7f080041
-			public const int search_voice_btn = 2131230785;
-			
-			// aapt resource value: 0x7f08002d
-			public const int shortcut = 2131230765;
+			public const int shortcut = 2131230777;
 			
 			// aapt resource value: 0x7f080010
 			public const int showCustom = 2131230736;
@@ -1488,26 +1851,32 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080007
 			public const int split_action_bar = 2131230727;
 			
-			// aapt resource value: 0x7f08003f
-			public const int submit_area = 2131230783;
+			// aapt resource value: 0x7f08002c
+			public const int start = 2131230764;
+			
+			// aapt resource value: 0x7f08004b
+			public const int submit_area = 2131230795;
 			
 			// aapt resource value: 0x7f08000c
 			public const int tabMode = 2131230732;
 			
-			// aapt resource value: 0x7f080044
-			public const int textView = 2131230788;
+			// aapt resource value: 0x7f080056
+			public const int textView = 2131230806;
 			
-			// aapt resource value: 0x7f080045
-			public const int textView2 = 2131230789;
+			// aapt resource value: 0x7f080057
+			public const int textView2 = 2131230807;
 			
-			// aapt resource value: 0x7f080046
-			public const int textView4 = 2131230790;
+			// aapt resource value: 0x7f080058
+			public const int textView4 = 2131230808;
 			
-			// aapt resource value: 0x7f080048
-			public const int textViewStatus = 2131230792;
+			// aapt resource value: 0x7f08005a
+			public const int textViewStatus = 2131230810;
 			
-			// aapt resource value: 0x7f08002a
-			public const int title = 2131230762;
+			// aapt resource value: 0x7f080036
+			public const int title = 2131230774;
+			
+			// aapt resource value: 0x7f08004f
+			public const int toolbar = 2131230799;
 			
 			// aapt resource value: 0x7f080020
 			public const int top = 2131230752;
@@ -1539,6 +1908,12 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f090000
 			public const int abc_max_action_buttons = 2131296256;
+			
+			// aapt resource value: 0x7f090002
+			public const int circular_indeterminent_interval = 2131296258;
+			
+			// aapt resource value: 0x7f090001
+			public const int progressbutton_indeterminent_interval = 2131296257;
 			
 			static Integer()
 			{
@@ -1629,31 +2004,40 @@ namespace weshop.droid
 			public const int FirstView = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public const int item_product = 2130903065;
+			public const int fragment_main = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int loading = 2130903066;
+			public const int include_left_drawer = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int loadingimage = 2130903067;
+			public const int item_menu = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int loadingprogress = 2130903068;
+			public const int item_product = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int Main = 2130903069;
+			public const int loading = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int SplashScreen = 2130903070;
+			public const int loadingimage = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int support_simple_spinner_dropdown_item = 2130903071;
+			public const int loadingprogress = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int view_wishlist = 2130903072;
+			public const int SplashScreen = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int view_wishset = 2130903073;
+			public const int support_simple_spinner_dropdown_item = 2130903073;
+			
+			// aapt resource value: 0x7f030022
+			public const int toolbar = 2130903074;
+			
+			// aapt resource value: 0x7f030023
+			public const int view_wishlist = 2130903075;
+			
+			// aapt resource value: 0x7f030024
+			public const int view_wishset = 2130903076;
 			
 			static Layout()
 			{
@@ -1735,11 +2119,26 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0a0011
 			public const int app_name = 2131361809;
 			
+			// aapt resource value: 0x7f0a0013
+			public const int drawer_close = 2131361811;
+			
+			// aapt resource value: 0x7f0a0012
+			public const int drawer_open = 2131361810;
+			
 			// aapt resource value: 0x7f0a0010
 			public const int hello = 2131361808;
 			
 			// aapt resource value: 0x7f0a000f
 			public const int library_name = 2131361807;
+			
+			// aapt resource value: 0x7f0a0015
+			public const int nav_categories = 2131361813;
+			
+			// aapt resource value: 0x7f0a0014
+			public const int nav_home = 2131361812;
+			
+			// aapt resource value: 0x7f0a0016
+			public const int nav_list = 2131361814;
 			
 			static String()
 			{
@@ -1753,9 +2152,6 @@ namespace weshop.droid
 		
 		public partial class Style
 		{
-			
-			// aapt resource value: 0x7f0b00ed
-			public const int AppTheme = 2131427565;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int Base_TextAppearance_AppCompat = 2131427328;
@@ -2084,8 +2480,20 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b0060
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427424;
 			
-			// aapt resource value: 0x7f0b00ec
-			public const int Mono_Android_Theme_Splash = 2131427564;
+			// aapt resource value: 0x7f0b00ed
+			public const int CircularProgressBar = 2131427565;
+			
+			// aapt resource value: 0x7f0b00ee
+			public const int CircularProgressBarLight = 2131427566;
+			
+			// aapt resource value: 0x7f0b00f0
+			public const int Mono_Android_Theme_Splash = 2131427568;
+			
+			// aapt resource value: 0x7f0b00f2
+			public const int MyTheme = 2131427570;
+			
+			// aapt resource value: 0x7f0b00f1
+			public const int MyTheme_Base = 2131427569;
 			
 			// aapt resource value: 0x7f0b0061
 			public const int Platform_AppCompat = 2131427425;
@@ -2098,6 +2506,12 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f0b0064
 			public const int Platform_AppCompat_Light_Dialog = 2131427428;
+			
+			// aapt resource value: 0x7f0b00eb
+			public const int ProgressButton = 2131427563;
+			
+			// aapt resource value: 0x7f0b00ec
+			public const int ProgressButton_Pin = 2131427564;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131427429;
@@ -2297,8 +2711,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b00a6
 			public const int Theme_AppCompat_NoActionBar = 2131427494;
 			
-			// aapt resource value: 0x7f0b00eb
-			public const int Theme_Splash = 2131427563;
+			// aapt resource value: 0x7f0b00ef
+			public const int Theme_Splash = 2131427567;
 			
 			// aapt resource value: 0x7f0b00a7
 			public const int ThemeOverlay_AppCompat = 2131427495;
@@ -2688,6 +3102,41 @@ namespace weshop.droid
 			// aapt resource value: 4
 			public const int DrawerArrowToggle_topBottomBarArrowSize = 4;
 			
+			public static int[] HoloCircularProgressBar = new int[]
+			{
+					2130772149,
+					2130772150,
+					2130772151,
+					2130772152,
+					2130772153,
+					2130772154,
+					2130772155,
+					2130772156};
+			
+			// aapt resource value: 0
+			public const int HoloCircularProgressBar_circular_gravity = 0;
+			
+			// aapt resource value: 6
+			public const int HoloCircularProgressBar_circular_indeterminate = 6;
+			
+			// aapt resource value: 7
+			public const int HoloCircularProgressBar_circular_indeterminate_interval = 7;
+			
+			// aapt resource value: 3
+			public const int HoloCircularProgressBar_circular_marker_progress = 3;
+			
+			// aapt resource value: 2
+			public const int HoloCircularProgressBar_circular_progress = 2;
+			
+			// aapt resource value: 5
+			public const int HoloCircularProgressBar_circular_progress_background_color = 5;
+			
+			// aapt resource value: 4
+			public const int HoloCircularProgressBar_circular_progress_color = 4;
+			
+			// aapt resource value: 1
+			public const int HoloCircularProgressBar_circular_stroke_width = 1;
+			
 			public static int[] LinearLayoutCompat = new int[]
 			{
 					16842927,
@@ -2892,8 +3341,8 @@ namespace weshop.droid
 			
 			public static int[] MvxBinding = new int[]
 			{
-					2130772149,
-					2130772150};
+					2130772170,
+					2130772171};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
@@ -2903,22 +3352,22 @@ namespace weshop.droid
 			
 			public static int[] MvxControl = new int[]
 			{
-					2130772151};
+					2130772172};
 			
 			// aapt resource value: 0
 			public const int MvxControl_MvxTemplate = 0;
 			
 			public static int[] MvxImageView = new int[]
 			{
-					2130772154};
+					2130772175};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[]
 			{
-					2130772152,
-					2130772153};
+					2130772173,
+					2130772174};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
@@ -2944,9 +3393,11 @@ namespace weshop.droid
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
 			
-			public static int[] ProgressWheel = new int[]
+			public static int[] ProgressButton = new int[]
 			{
-					2130772137,
+					16842970,
+					16842981,
+					16843534,
 					2130772138,
 					2130772139,
 					2130772140,
@@ -2958,6 +3409,63 @@ namespace weshop.droid
 					2130772146,
 					2130772147,
 					2130772148};
+			
+			// aapt resource value: 1
+			public const int ProgressButton_android_clickable = 1;
+			
+			// aapt resource value: 0
+			public const int ProgressButton_android_focusable = 0;
+			
+			// aapt resource value: 2
+			public const int ProgressButton_android_selectableItemBackground = 2;
+			
+			// aapt resource value: 5
+			public const int ProgressButton_circleColor = 5;
+			
+			// aapt resource value: 12
+			public const int ProgressButton_indeterminate = 12;
+			
+			// aapt resource value: 13
+			public const int ProgressButton_indeterminate_interval = 13;
+			
+			// aapt resource value: 10
+			public const int ProgressButton_innerSize = 10;
+			
+			// aapt resource value: 4
+			public const int ProgressButton_max = 4;
+			
+			// aapt resource value: 11
+			public const int ProgressButton_pinned = 11;
+			
+			// aapt resource value: 7
+			public const int ProgressButton_pinnedDrawable = 7;
+			
+			// aapt resource value: 3
+			public const int ProgressButton_progress = 3;
+			
+			// aapt resource value: 6
+			public const int ProgressButton_progressColor = 6;
+			
+			// aapt resource value: 9
+			public const int ProgressButton_shadowDrawable = 9;
+			
+			// aapt resource value: 8
+			public const int ProgressButton_unpinnedDrawable = 8;
+			
+			public static int[] ProgressWheel = new int[]
+			{
+					2130772158,
+					2130772159,
+					2130772160,
+					2130772161,
+					2130772162,
+					2130772163,
+					2130772164,
+					2130772165,
+					2130772166,
+					2130772167,
+					2130772168,
+					2130772169};
 			
 			// aapt resource value: 3
 			public const int ProgressWheel_ahBarColor = 3;
@@ -3232,7 +3740,8 @@ namespace weshop.droid
 					2130772118,
 					2130772119,
 					2130772120,
-					2130772121};
+					2130772121,
+					2130772157};
 			
 			// aapt resource value: 19
 			public const int Theme_actionBarDivider = 19;
@@ -3335,6 +3844,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 44
 			public const int Theme_buttonBarStyle = 44;
+			
+			// aapt resource value: 83
+			public const int Theme_circularProgressBarStyle = 83;
 			
 			// aapt resource value: 77
 			public const int Theme_colorAccent = 77;

@@ -19,10 +19,12 @@
  */
 
 using Android.Content;
+using Android.OS;
+using Android.Support.V7.Widget;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Droid.Views;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace weshop.droid.Helpers
 {
@@ -30,42 +32,60 @@ namespace weshop.droid.Helpers
 		: MvxActionBarEventSourceActivity
 	, IMvxAndroidView
 	{
-		protected MvxActionBarActivity()
+		protected MvxActionBarActivity ()
 		{
-			BindingContext = new MvxAndroidBindingContext(this, this);
-			this.AddEventListeners();
+			BindingContext = new MvxAndroidBindingContext (this, this);
+			this.AddEventListeners ();
+		}
+						
+
+		//	public Toolbar Toolbar { get; set; }
+
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreate (bundle);
+			SetContentView (LayoutResource);
+//			Toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
+//			if (Toolbar != null) {
+//				//SetSupportActionBar (Toolbar);
+//				SetActionBar (Toolbar);
+//				ActionBar.SetDisplayHomeAsUpEnabled (true);
+//				ActionBar.SetHomeButtonEnabled (true);
+//
+//			}
 		}
 
-		public object DataContext
-		{
+		protected abstract int LayoutResource{ get; }
+
+		public IMvxBindingContext BindingContext { get; set; }
+
+		public object DataContext {
 			get { return BindingContext.DataContext; }
 			set { BindingContext.DataContext = value; }
 		}
 
-		public IMvxViewModel ViewModel
-		{
+		public IMvxViewModel ViewModel {
 			get { return DataContext as IMvxViewModel; }
-			set
-			{
+			set {
 				DataContext = value;
-				OnViewModelSet();
+				OnViewModelSet ();
 			}
 		}
 
-		public void MvxInternalStartActivityForResult(Intent intent, int requestCode)
+		public void MvxInternalStartActivityForResult (Intent intent, int requestCode)
 		{
-			base.StartActivityForResult(intent, requestCode);
+			base.StartActivityForResult (intent, requestCode);
+		}
+		//
+		//		public IMvxBindingContext BindingContext { get; set; }
+		//
+		public override void SetContentView (int layoutResId)
+		{
+			var view = this.BindingInflate (layoutResId, null);
+			SetContentView (view);
 		}
 
-		public IMvxBindingContext BindingContext { get; set; }
-
-		public override void SetContentView(int layoutResId)
-		{
-			var view = this.BindingInflate(layoutResId, null);
-			SetContentView(view);
-		}
-
-		protected virtual void OnViewModelSet()
+		protected virtual void OnViewModelSet ()
 		{
 		}
 	}

@@ -4,6 +4,10 @@ using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.CrossCore;
 using weshop.portable;
+using Cirrious.MvvmCross.Droid.Views;
+using System.Reflection;
+using System.Collections.Generic;
+using Cirrious.CrossCore.Converters;
 
 namespace weshop.droid
 {
@@ -17,6 +21,19 @@ namespace weshop.droid
         {
 			return new portable.App();
         }
+
+		protected override void FillValueConverters (IMvxValueConverterRegistry registry)
+		{
+			base.FillValueConverters (registry);
+			registry.AddOrOverwrite ("MenuIcon", new MenuIconConverter ());
+		}
+
+		protected override IMvxAndroidViewPresenter CreateViewPresenter()
+		{
+			var customPresenter = new CustomPresenter();
+			Mvx.RegisterSingleton<ICustomPresenter>(customPresenter);
+			return customPresenter;
+		}
 
 		protected override void InitializeLastChance ()
 		{

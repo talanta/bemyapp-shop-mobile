@@ -1,20 +1,25 @@
-﻿using System;
+﻿
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
 using Android.App;
-using Android.Content.PM;
+using Android.Content;
 using Android.OS;
+using Android.Runtime;
+using Android.Util;
 using Android.Views;
+using Android.Widget;
+
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Droid.Fragging.Fragments;
-using Cirrious.MvvmCross.Droid.Views;
-using weshop.portable;
-using weshop.portable.ViewModels;
-using weshop.droid.Helpers;
 
 namespace weshop.droid
 {
-	public class WishlistView : MvxFragment
+	public class MainView : MvxFragment
 	{
-		public WishlistView ()
+		public MainView ()
 		{
 			this.RetainInstance = true;
 		}
@@ -22,7 +27,8 @@ namespace weshop.droid
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			base.OnCreateView (inflater, container, savedInstanceState);
-			return this.BindingInflate (Resource.Layout.view_wishlist, null);
+			return this.BindingInflate (Resource.Layout.fragment_main, null);
 		}
 	}
 }
+

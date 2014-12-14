@@ -5,4 +5,12 @@
 	<string name="app_name">Meet</string>
 	<string name="app_name">Seduction</string>
 	<string name="app_name">Love</string>
+	<string name="drawer_open">Open</string>
+	<string name="drawer_close">Close</string>
+
+	<!--navigation title-->
+	<string name="nav_home">Séduction</string>
+	<string name="nav_categories">Catégories</string>
+	<string name="nav_list">Mon jardin secret</string>
+
 </resources>
