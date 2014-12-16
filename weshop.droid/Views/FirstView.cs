@@ -122,6 +122,7 @@ namespace weshop.droid.Views
 					frag = new MainView();
 					frag.ViewModel = ViewModel.MainViewModel;
 					fragmentTransaction = fragmentTransaction.Replace( Resource.Id.content_frame, frag );
+					frag.ViewModel.Init(null);
 				}
 				else if (request.ViewModelType == typeof(WishsetViewModel))
 				{
@@ -130,6 +131,7 @@ namespace weshop.droid.Views
 					frag.ViewModel = ViewModel.WishSetViewModel; 
 					this._drawerList.SetItemChecked(this.ViewModel.MenuItems.FindIndex(m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace( Resource.Id.content_frame, frag );
+					frag.ViewModel.Init(null);
 				}
 				else if (request.ViewModelType == typeof(WishlistViewModel))
 				{
@@ -138,6 +140,7 @@ namespace weshop.droid.Views
 					frag.ViewModel = ViewModel.WishlistViewModel; 
 					this._drawerList.SetItemChecked(this.ViewModel.MenuItems.FindIndex(m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace( Resource.Id.content_frame, frag );
+					frag.ViewModel.Init(null);
 				}
 
 //				fragmentTransaction = fragmentTransaction

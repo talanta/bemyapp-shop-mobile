@@ -144,6 +144,8 @@
     <Compile Include="Interfaces\ICustomPresenter.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="NativeConverters\MenuIconConverter.cs" />
+    <Compile Include="Adapters\BindablePagerAdapter.cs" />
+    <Compile Include="Views\BindableViewPager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -177,7 +179,6 @@
     <AndroidResource Include="Resources\drawable\heart.png" />
     <AndroidResource Include="Resources\drawable\magnify.png" />
     <AndroidResource Include="Resources\drawable\search.png" />
-    <AndroidResource Include="Resources\layout\fragment_main.axml" />
     <AndroidResource Include="Resources\layout\item_menu.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\drawer_shadow_dark.9.png" />
     <AndroidResource Include="Resources\drawable-mdpi\drawer_shadow_dark.9.png" />
@@ -200,6 +201,15 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_help_white_36dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_loyalty_white_36dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_loyalty_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\view_main.axml" />
+    <AndroidResource Include="Resources\layout\item_pager_product.axml" />
+    <AndroidResource Include="Resources\drawable\circle.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_favorite_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\ic_favorite_outline_white_48dp.png">
+      <DependentUpon>circle.xml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_highlight_remove_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_highlight_remove_white_48dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -222,5 +232,6 @@
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="NativeConverters\" />
+    <Folder Include="Adapters\" />
   </ItemGroup>
 </Project>

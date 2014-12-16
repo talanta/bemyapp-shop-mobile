@@ -20,7 +20,8 @@ namespace weshop.portable
 
 		string keyword = "Vetement";
 
-		private IList<Product> _products;
+		//private IList<Product> _products;
+		public IList<Product> Products { get; private set; }
 
 		public Product CurrentProduct { get; set; }
 
@@ -69,18 +70,19 @@ namespace weshop.portable
 				return;
 			}
 			index = 0;
-			_products = products.Products;
+			this.Products = products.Products;
+			RaisePropertyChanged (() => this.Products);
 		}
 
 		protected async Task DisplayNextProduct()
 		{
 			if (index % itemPerPage == 0) {
 				await RetrieveItems ();
-				if (_products == null)
+				if (this.Products == null)
 					return;
 			}
 
-			CurrentProduct = _products [index++];
+			CurrentProduct = this.Products [index++];
 
 			RaisePropertyChanged (() => CurrentProduct);
 		}
