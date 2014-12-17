@@ -80,6 +80,7 @@
     </LinearLayout>
 -->
     <BindableViewPager
+        android:id="@+id/product_pager"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         local:MvxItemTemplate="@layout/item_pager_product"

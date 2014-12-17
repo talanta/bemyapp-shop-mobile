@@ -16,7 +16,12 @@ namespace weshop.droid
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			base.OnCreateView (inflater, container, savedInstanceState);
-			return this.BindingInflate (Resource.Layout.view_main, null);
+			var view = this.BindingInflate (Resource.Layout.view_main, null);
+
+			var viewPager = view.FindViewById<BindableViewPager> (Resource.Id.product_pager);
+			viewPager.SetPageTransformer (true, new ZoomOutPageTransformer ());
+
+			return view;
 		}
 	}
 }
