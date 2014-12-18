@@ -122,7 +122,7 @@ namespace weshop.droid.Views
 					frag = new MainView();
 					frag.ViewModel = ViewModel.MainViewModel;
 					fragmentTransaction = fragmentTransaction.Replace( Resource.Id.content_frame, frag );
-					frag.ViewModel.Init(null);
+					//frag.ViewModel.Init(null);
 				}
 				else if (request.ViewModelType == typeof(WishsetViewModel))
 				{
