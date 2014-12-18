@@ -12,5 +12,6 @@
 	<string name="nav_home">Séduction</string>
 	<string name="nav_categories">Catégories</string>
 	<string name="nav_list">Mon jardin secret</string>
-
+<!--Subtitle-->
+	<string name="sub_select_categories">Choisir une ou plusieur catégories</string>
 </resources>

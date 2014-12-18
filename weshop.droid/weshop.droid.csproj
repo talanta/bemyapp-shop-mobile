@@ -212,6 +212,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_highlight_remove_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_highlight_remove_white_48dp.png" />
     <AndroidResource Include="Resources\drawable\circle_secondary.xml" />
+    <AndroidResource Include="Resources\layout\item_grid_category.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

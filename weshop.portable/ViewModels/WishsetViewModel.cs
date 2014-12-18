@@ -9,7 +9,9 @@ namespace weshop.portable.ViewModels
 	{
 		public const string TYPENAME = "WishsetViewModel";
 
-		public readonly List<Category> Categories = new List<Category> ();
+		public readonly List<Category> _categories = new List<Category> ();
+
+		public List<Category> Categories { get { return _categories; } }
 
 		public WishsetViewModel ()
 		{
