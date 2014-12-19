@@ -12,6 +12,15 @@
 	<string name="nav_home">Séduction</string>
 	<string name="nav_categories">Catégories</string>
 	<string name="nav_list">Mon jardin secret</string>
-<!--Subtitle-->
+	<!--Subtitle-->
 	<string name="sub_select_categories">Choisir une ou plusieur catégories</string>
+	<!--menu-->
+	<string name="menu_about">A propos</string>
+
+
+	<string name="about_title">ShopMoi</string>
+	<string name="about_description">Make love shopping</string>
+	<string name="about_team">Team ShopMoi</string>
+	<string name="about_made">from Paris with love</string>
+
 </resources>

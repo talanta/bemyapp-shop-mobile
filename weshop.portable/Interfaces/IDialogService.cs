@@ -4,6 +4,8 @@ namespace weshop.portable
 {
 	public interface IDialogService
 	{
+		void ShowAbout();
+
 		void ShowProgress();
 
 		void Dismiss();
@@ -13,8 +15,6 @@ namespace weshop.portable
 		void ToastError (string message, int timeout = 2000);
 
 		void ShowProduct(string url);
-
-		
 	}
 }
 

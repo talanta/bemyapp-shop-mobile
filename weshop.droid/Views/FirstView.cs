@@ -47,7 +47,6 @@ namespace weshop.droid.Views
 			this._leftDrawer = this.FindViewById<View>(Resource.Id.left_drawer);
 
 			this._drawer.SetDrawerShadow(Resource.Drawable.drawer_shadow_dark, (int)GravityFlags.Start);
-
 			//DrawerToggle is the animation that happens with the indicator next to the
 			//ActionBar icon. You can choose not to use this.
 			this._drawerToggle = new MyActionBarDrawerToggle(this, this._drawer,
@@ -55,7 +54,6 @@ namespace weshop.droid.Views
 				//Resource.Drawable.ic_drawer_light,
 				Resource.String.drawer_open,
 				Resource.String.drawer_close);
-
 			//You can alternatively use _drawer.DrawerClosed here
 			this._drawerToggle.DrawerClosed += delegate
 			{
@@ -81,10 +79,6 @@ namespace weshop.droid.Views
 			{
 				this.ViewModel.SelectMenuItemCommand.Execute(this.ViewModel.MenuItems[0]);
 			}
-//			var view = this.LayoutInflater.Inflate(Resource.Layout.actioinbar, null);
-//			this.ActionBar.SetDisplayShowCustomEnabled (true);
-//			this.ActionBar.SetDisplayShowTitleEnabled(false);
-//			//this.ActionBar.SetDisplayShowHomeEnabled (false);
         }
 
 		/// <summary>
@@ -122,7 +116,7 @@ namespace weshop.droid.Views
 					frag = new MainView();
 					frag.ViewModel = ViewModel.MainViewModel;
 					fragmentTransaction = fragmentTransaction.Replace( Resource.Id.content_frame, frag );
-					//frag.ViewModel.Init(null);
+					frag.ViewModel.Init(null);
 				}
 				else if (request.ViewModelType == typeof(WishsetViewModel))
 				{
@@ -185,20 +179,17 @@ namespace weshop.droid.Views
 			this._drawerToggle.OnConfigurationChanged (newConfig);
 		}
 
-//		public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
-//		{
-//			switch (item.ItemId)
-//			{
-//			case Android.Resource.Id.Home:
-//				(this.ViewModel as FirstViewModel).GoToWishSet();
-//				break;
-//			case Resource.Id.menu_item_switch:
-//				(this.ViewModel as FirstViewModel).GoToWishList();
-//				break;
-//			default:
-//				break;
-//			}
-//			return base.OnOptionsItemSelected(item);
-//		}
+		public override bool OnOptionsItemSelected(Android.Views.IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+			case Resource.Id.menu_about:
+				Mvx.Resolve<IDialogService> ().ShowAbout ();
+				break;
+			default:
+				break;
+			}
+			return base.OnOptionsItemSelected(item);
+		}
     }
 }

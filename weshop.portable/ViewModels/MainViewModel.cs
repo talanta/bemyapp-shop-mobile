@@ -50,7 +50,7 @@ namespace weshop.portable
 			if (parameters != null && parameters.Data != null && parameters.Data.Count > 0) {
 				keyword = "tenues sexy";
 			}
-			await DisplayNextProduct ();
+			//await DisplayNextProduct ();
 		}
 		protected async Task RetrieveItems()
 		{

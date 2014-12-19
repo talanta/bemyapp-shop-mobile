@@ -3,6 +3,7 @@ using weshop.portable;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Droid.Platform;
 using Android.Content;
+using Android.App;
 
 namespace weshop.droid
 {
@@ -10,6 +11,15 @@ namespace weshop.droid
 		: IDialogService
 	{
 		#region IDialogService implementation
+
+		public void ShowAbout()
+		{
+			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity 
+				as weshop.droid.Helpers.MvxActionBarActivity;
+
+			var df = new AlertFragment (Resource.Layout.dialog_about);
+			df.Show (activity.SupportFragmentManager, "about");
+		}
 
 		public void ShowProduct (string url)
 		{
@@ -19,8 +29,6 @@ namespace weshop.droid
 			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
 
 			activity.StartActivity (i);
-
-		//	startActivity(i);
 		}
 
 		public void ShowProgress ()
@@ -28,7 +36,6 @@ namespace weshop.droid
 			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
 			AndroidHUD.AndHUD.Shared
 				.Show (activity);
-			//throw new NotImplementedException ();
 		}
 
 		public void Dismiss ()

@@ -9,6 +9,7 @@
 	<color name="green_like">#0f9d58</color>
 	<color name="gray">#eee</color>
 	<color name="white">#fff</color>
+	<color name="white_transparent">#60ffffff</color>
 
 	<color name="md_pink_500">#E91E63</color>
 	<color name="md_pink_50">#FCE4EC</color>

@@ -2,8 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
   <!--http://stackoverflow.com/questions/17913084/actionbar-action-items-not-showing-->
-  <item android:id="@+id/menu_item_switch"
-        android:title="Séduction"
+  <item android:id="@+id/menu_about"
+        android:title="@string/menu_about"
         android:icon="@drawable/heart"
         android:visible="true"
         android:showAsAction="always"/>

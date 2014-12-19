@@ -121,6 +121,12 @@
     <Reference Include="com.refractored.monodroidtoolkit">
       <HintPath>..\Libs\com.refractored.monodroidtoolkit.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.2.2\lib\MonoAndroid\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -147,6 +153,8 @@
     <Compile Include="Adapters\BindablePagerAdapter.cs" />
     <Compile Include="Views\BindableViewPager.cs" />
     <Compile Include="Helpers\ZoomOutPageTransformer.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Views\AlertFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -213,6 +221,9 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_highlight_remove_white_48dp.png" />
     <AndroidResource Include="Resources\drawable\circle_secondary.xml" />
     <AndroidResource Include="Resources\layout\item_grid_category.axml" />
+    <AndroidResource Include="Resources\layout\include_main_title.axml" />
+    <AndroidResource Include="Resources\drawable\bgTitle.xml" />
+    <AndroidResource Include="Resources\layout\dialog_about.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

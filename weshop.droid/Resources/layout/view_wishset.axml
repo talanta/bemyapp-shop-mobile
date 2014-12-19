@@ -12,8 +12,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp" />
     <Mvx.MvxGridView
+        android:layout_margin="1px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:numColumns="2"
         local:MvxBind="ItemsSource Categories;"
         local:MvxItemTemplate="@layout/item_grid_category" />
 </LinearLayout>

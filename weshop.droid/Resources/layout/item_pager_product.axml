@@ -11,7 +11,44 @@
         android:layout_height="fill_parent"
         android:scaleType="fitCenter"
         local:MvxBind="ImageUrl MainImageUrl" />
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10">
+        <FrameLayout
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgTitle">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dp"
+                android:textSize="28sp"
+                android:text="Title of the product with what i call wrap"
+                local:MvxBind="Text Name"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_margin="20dp"
+                android:fontFamily="sans-serif-light" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bgTitle">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp"
+                android:text="00.00"
+                local:MvxBind="Text BestOffer.SalePrice"
+                android:textColor="?android:attr/textColorPrimary"
+                android:layout_margin="20dp"
+                android:fontFamily="sans-serif-light" />
+        </FrameLayout>
+    </LinearLayout>
+<!--    <TextView
         android:layout_margin="20dp"
         android:background="@drawable/circle_secondary"
         android:layout_width="wrap_content"
@@ -26,5 +63,5 @@
         android:layout_height="wrap_content"
         android:hint="Product name"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        local:MvxBind="Text Name" />
+        local:MvxBind="Text Name" />-->
 </RelativeLayout>

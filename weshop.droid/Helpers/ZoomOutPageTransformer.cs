@@ -12,6 +12,8 @@ namespace weshop.droid
 			int pageWidth = view.Width;
 			int pageHeight = view.Height;
 
+
+
 			if (position < -1) { // [-Infinity,-1)
 				// This page is way off-screen to the left.
 				view.Alpha = 0;

@@ -18,8 +18,6 @@ namespace weshop.portable
 
 	public class DiscountService : IDiscountService
 	{
-
-
 		IList<string> errors;
 
 		public DiscountService ()
@@ -58,8 +56,7 @@ namespace weshop.portable
 				var result = await client.PostAsync(url, content);
 					rawResponse = await result.Content.ReadAsStringAsync();
 				if (result.IsSuccessStatusCode)
-				{
-					
+				{					
 					return JsonConvert.DeserializeObject<ProductResult>(rawResponse);
 
 				}
