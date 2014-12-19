@@ -37,8 +37,8 @@ namespace weshop.droid.Views
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-		
-			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+
+ 			var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
 
 			this.SetSupportActionBar(toolbar);
 

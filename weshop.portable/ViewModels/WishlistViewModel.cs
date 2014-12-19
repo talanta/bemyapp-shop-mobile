@@ -17,7 +17,11 @@ namespace weshop.portable.ViewModels
 
 		public WishlistViewModel ()
 		{
-			Products = new List<ProductViewModel> ();
+			Products = new List<ProductViewModel> {
+				new ProductViewModel (),
+				new ProductViewModel ()
+			};
+
 		}
 
 		protected override void InitFromBundle (IMvxBundle parameters)
