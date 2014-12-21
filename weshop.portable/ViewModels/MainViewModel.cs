@@ -16,7 +16,8 @@ namespace weshop.portable
 		IWishListService _wishlistService;
 
 		public int CurrentIndex { get; set; }
-		int itemPerPage = 10;
+
+		int itemPerPage = 20;
 
 		string keyword = "Vetement";
 
@@ -30,9 +31,11 @@ namespace weshop.portable
 		private IMvxCommand dislikeCmd;
 		private IMvxCommand pageSelectedCmd;
 
-		public IMvxCommand DislikeCmd { get {return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
-		public IMvxCommand LikeCmd { get { return likeCmd ?? (likeCmd = new MvxCommand(OnLike)); } }
-		public IMvxCommand PageSelectedCmd { get { return pageSelectedCmd ?? (pageSelectedCmd = new MvxCommand<int>(OnPageChanged)); } }
+		public IMvxCommand DislikeCmd { get { return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
+
+		public IMvxCommand LikeCmd { get { return likeCmd ?? (likeCmd = new MvxCommand (OnLike)); } }
+
+		public IMvxCommand PageSelectedCmd { get { return pageSelectedCmd ?? (pageSelectedCmd = new MvxCommand<int> (OnPageChanged)); } }
 
 		protected async override void InitFromBundle (IMvxBundle parameters)
 		{
@@ -41,9 +44,9 @@ namespace weshop.portable
 			if (null != _discountService)
 				return;
 
-				_discountService = Mvx.Resolve<IDiscountService>();
-				_dialogService = Mvx.Resolve<IDialogService>();
-				_wishlistService = Mvx.Resolve<IWishListService>();
+			_discountService = Mvx.Resolve<IDiscountService> ();
+			_dialogService = Mvx.Resolve<IDialogService> ();
+			_wishlistService = Mvx.Resolve<IWishListService> ();
 
 			if (Products != null && Products.Count > 0)
 				return;
@@ -53,14 +56,15 @@ namespace weshop.portable
 			await DisplayNextProduct ();
 		}
 
-		protected void OnPageChanged(int param)
+		protected void OnPageChanged (int param)
 		{
 			CurrentIndex = param;
-			DisplayNextProduct();
+			if (CurrentIndex > 0)
+				DisplayNextProduct ();
 			//CurrentProduct = Products [CurrentIndex];
 		}
 
-		protected async Task RetrieveItems()
+		protected async Task RetrieveItems ()
 		{
 			_dialogService.ShowProgress ();
 			var request = new SearchRequest { 
@@ -68,7 +72,7 @@ namespace weshop.portable
 			};
 			request.Pagination.ItemsPerPage = itemPerPage;
 			request.Pagination.PageNumber = CurrentIndex / itemPerPage;
-			var products = await _discountService.SearchProdudct(request);
+			var products = await _discountService.SearchProdudct (request);
 
 
 			_dialogService.Dismiss ();
@@ -82,7 +86,7 @@ namespace weshop.portable
 			RaisePropertyChanged (() => this.Products);
 		}
 
-		protected async Task DisplayNextProduct()
+		protected async Task DisplayNextProduct ()
 		{
 			if (CurrentIndex % itemPerPage == 0) {
 				await RetrieveItems ();
@@ -96,17 +100,17 @@ namespace weshop.portable
 		}
 
 
-		protected async void OnLike()
+		protected async void OnLike ()
 		{
 			// action on like
 			_wishlistService.AddItem (CurrentProduct);
-			_dialogService.ToastSuccess("Ce produit a été ajouté à votre wishlist");
+			_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
 
 			await Task.Delay (2000);
 			DisplayNextProduct ();
 		}
 
-		protected void OnDislike()
+		protected void OnDislike ()
 		{
 			DisplayNextProduct ();
 			// action on Dislike

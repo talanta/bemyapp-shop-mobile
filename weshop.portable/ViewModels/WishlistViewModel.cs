@@ -1,7 +1,7 @@
 ﻿using System;
-using Cirrious.MvvmCross.ViewModels;
 using System.Collections.Generic;
 using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace weshop.portable.ViewModels
 {
@@ -17,12 +17,11 @@ namespace weshop.portable.ViewModels
 
 		public WishlistViewModel ()
 		{
-			Products = new List<ProductViewModel> {
-//				new ProductViewModel (),
-//				new ProductViewModel ()
+			Products = new List<ProductViewModel> {		
 			};
-
 		}
+
+		public bool NoItemVisibile { get { return Products.Count == 0; } }
 
 		protected override void InitFromBundle (IMvxBundle parameters)
 		{
@@ -34,6 +33,7 @@ namespace weshop.portable.ViewModels
 			}
 
 			var ps = _wishlistService.GetAllProducts ();
+			Products.Clear ();
 			foreach (var p in ps) {
 				Products.Add (new ProductViewModel { Product = p });
 			}

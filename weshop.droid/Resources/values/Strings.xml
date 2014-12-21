@@ -8,12 +8,12 @@
 	<string name="drawer_open">Open</string>
 	<string name="drawer_close">Close</string>
 	<string name="coming_soon">Coming Soon...</string>
-
+	<string name="no_item">Aucun produit nominé</string>
 
 	<!--navigation title-->
 	<string name="nav_home">Séduction</string>
 	<string name="nav_categories">Catégories</string>
-	<string name="nav_list">Mon jardin secret</string>
+	<string name="nav_list">Mes amours</string>
 	<!--Subtitle-->
 	<string name="sub_select_categories">Choisir une ou plusieur catégories</string>
 	<!--menu-->

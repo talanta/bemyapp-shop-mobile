@@ -10,6 +10,8 @@ namespace weshop.portable.ViewModels
 		: MvxViewModel
 	{
 		private MvxCommand<MenuViewModel> selectMenuItemCommand;
+		private ICommand loginCmd;
+
 		private List<MenuViewModel> menuItems;
 		private MainViewModel _mainViewModel;
 		private WishsetViewModel _wishSetViewModel;
@@ -39,5 +41,13 @@ namespace weshop.portable.ViewModels
 			}
 		}
 
+		public ICommand LoginCmd { get{ return loginCmd ?? (this.loginCmd = new MvxCommand(OnLogin)); } }
+
+
+		protected void OnLogin()
+		{
+			ShowViewModel<LoginViewModel> ();
+		}
+	
 	}
 }
