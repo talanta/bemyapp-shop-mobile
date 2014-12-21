@@ -2,6 +2,7 @@
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Community.Plugins.Sqlite;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace weshop.portable
 {
@@ -31,6 +32,16 @@ namespace weshop.portable
 			}
 
 			return productList;
+		}
+
+		public void FillLikes(IList<Product> products)
+		{
+			foreach (var p in products) {
+				var liked = _connection.Table<Product> ().FirstOrDefault (b => b.Id == p.Id);
+				if (null == liked)
+					continue;
+				p.Like = liked.Like;
+			}
 		}
 
 		#endregion

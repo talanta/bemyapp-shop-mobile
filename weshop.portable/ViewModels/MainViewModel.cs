@@ -34,7 +34,7 @@ namespace weshop.portable
 
 		public IMvxCommand ShowProductCmd {get{ return showProductCmd ?? ( showProductCmd = new MvxCommand(OnShowProduct));  }}
 
-		public IMvxCommand DislikeCmd { get { return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
+		//public IMvxCommand DislikeCmd { get { return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
 
 		public IMvxCommand LikeCmd { get { return likeCmd ?? (likeCmd = new MvxCommand (OnLike)); } }
 
@@ -64,7 +64,10 @@ namespace weshop.portable
 			CurrentIndex = param;
 			if (CurrentIndex > 0)
 				DisplayNextProduct ();
-			//CurrentProduct = Products [CurrentIndex];
+			else {
+				CurrentProduct = this.Products [CurrentIndex];
+				RaisePropertyChanged (() => CurrentProduct);
+			}
 		}
 
 		protected async Task RetrieveItems ()
@@ -75,8 +78,8 @@ namespace weshop.portable
 			};
 			request.Pagination.ItemsPerPage = itemPerPage;
 			request.Pagination.PageNumber = CurrentIndex / itemPerPage;
-			var products = await _discountService.SearchProdudct (request);
 
+			var products = await _discountService.SearchProdudct (request);
 
 			_dialogService.Dismiss ();
 
@@ -84,6 +87,7 @@ namespace weshop.portable
 				_dialogService.ToastError (_discountService.GetLastError (), 10000);
 				return;
 			}
+			_wishlistService.FillLikes (products.Products);
 			CurrentIndex = 0;
 			this.Products = products.Products;
 			RaisePropertyChanged (() => this.Products);
@@ -97,7 +101,7 @@ namespace weshop.portable
 					return;
 			}
 
-			CurrentProduct = this.Products [CurrentIndex + 1];
+			CurrentProduct = this.Products [CurrentIndex];
 
 			RaisePropertyChanged (() => CurrentProduct);
 		}
@@ -105,19 +109,21 @@ namespace weshop.portable
 
 		protected async void OnLike ()
 		{
-			// action on like
-			_wishlistService.AddItem (CurrentProduct);
-			_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
-
-			await Task.Delay (2000);
-			DisplayNextProduct ();
+			if (CurrentProduct.Like.HasValue) {	
+				// action on like
+				_wishlistService.AddItem (CurrentProduct);
+				_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
+				return;
+			}
+			//await Task.Delay (2000);
+			//DisplayNextProduct ();
 		}
 
-		protected void OnDislike ()
-		{
-			DisplayNextProduct ();
-			// action on Dislike
-		}
+//		protected void OnDislike ()
+//		{
+//			DisplayNextProduct ();
+//			// action on Dislike
+//		}
 
 		protected void OnShowProduct()
 		{
