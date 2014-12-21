@@ -24,7 +24,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/imageView"
                     android:scaleType="fitXY"
-                    local:MvxBind="ImageUrl Product.MainImageUrl; Click ShowCmd" />
+                    local:MvxBind="ImageUrl Product.MainImageUrl" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"

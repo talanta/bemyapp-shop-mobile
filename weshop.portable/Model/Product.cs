@@ -12,6 +12,8 @@ namespace weshop.portable
 
 		public string Name { get; set; }
 
+		public string Description { get; set;}
+
 		[PrimaryKey]
 		public string Id { get; set; }
 

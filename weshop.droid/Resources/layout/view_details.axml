@@ -4,10 +4,28 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:text="Voir sur Cdiscount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <LinearLayout
         android:layout_centerInParent="true"
-        local:MvxBind="Click VisitCmd" />
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            local:MvxBind="Text Product.Description" />
+        <Button
+            android:layout_gravity="center"
+            android:text="Voir sur Cdiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Click VisitCmd"
+            android:layout_marginBottom="20dp" />
+        <Button
+            android:layout_gravity="center"
+            android:text="Annuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            local:MvxBind="Click CancelCmd" />
+    </LinearLayout>
 </RelativeLayout>

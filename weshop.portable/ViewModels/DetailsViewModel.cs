@@ -11,8 +11,11 @@ namespace weshop.portable
 		IDialogService _dialogService;
 
 		private IMvxCommand visitCmd;
+		private IMvxCommand cancelCmd;
 
 		public IMvxCommand VisitCmd { get {return visitCmd ?? ( visitCmd = new MvxCommand(OnVisit)); } }
+		public IMvxCommand CancelCmd { get {return cancelCmd ?? ( cancelCmd = new MvxCommand(OnCancel)); } }
+
 		public Product Product { get; set; }
 
 		protected async override void InitFromBundle (IMvxBundle parameters)
@@ -31,11 +34,17 @@ namespace weshop.portable
 			if (productResult == null || productResult.Products.Count == 0)
 				return;
 			this.Product = productResult.Products [0];
+			RaisePropertyChanged (() => this.Product);
 		}
 
 		protected void OnVisit()
 		{
 			_dialogService.ShowProduct (Product.BestOffer.ProductURL);
+		}
+
+		protected void OnCancel()
+		{
+			Close (this);
 		}
 
 	}
