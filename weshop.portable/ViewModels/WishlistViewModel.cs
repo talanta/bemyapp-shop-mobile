@@ -13,6 +13,10 @@ namespace weshop.portable.ViewModels
 		IDialogService _dialogService;
 		IWishListService _wishlistService;
 
+		IMvxCommand selectCmd;
+
+		public IMvxCommand SelectCmd {get {return selectCmd ?? (selectCmd = new MvxCommand<ProductViewModel>(OnSelect)); }}
+
 		public IList<ProductViewModel> Products { get; private set; }
 
 		public WishlistViewModel ()
@@ -42,6 +46,11 @@ namespace weshop.portable.ViewModels
 		public void GoToMeet()
 		{
 			Close (this);
+		}
+
+		public void OnSelect(ProductViewModel productViewModel)
+		{
+			ShowViewModel<DetailsViewModel> (productViewModel.Product);
 		}
 	}
 }

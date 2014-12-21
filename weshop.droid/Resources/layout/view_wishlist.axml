@@ -14,7 +14,7 @@
     <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        local:MvxBind="ItemsSource Products"
+        local:MvxBind="ItemsSource Products; ItemClick SelectCmd"
         local:MvxItemTemplate="@layout/item_product" />
 <!--    <ImageButton
         android:layout_width="wrap_content"

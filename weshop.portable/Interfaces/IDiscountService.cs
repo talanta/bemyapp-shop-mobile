@@ -9,6 +9,8 @@ namespace weshop.portable
 
 	 Task<ProductResult> 
 				SearchProdudct(SearchRequest request);
+
+		Task<ProductResult> GetProduct(ProductRequest request);
 	}
 }
 

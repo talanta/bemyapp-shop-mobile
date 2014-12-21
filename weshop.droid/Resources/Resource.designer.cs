@@ -1869,23 +1869,23 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080034
 			public const int list_item = 2131230772;
 			
+			// aapt resource value: 0x7f080059
+			public const int loadingImage = 2131230809;
+			
+			// aapt resource value: 0x7f080057
+			public const int loadingProgressBar = 2131230807;
+			
 			// aapt resource value: 0x7f08005a
-			public const int loadingImage = 2131230810;
-			
-			// aapt resource value: 0x7f080058
-			public const int loadingProgressBar = 2131230808;
-			
-			// aapt resource value: 0x7f08005b
-			public const int loadingProgressWheel = 2131230811;
+			public const int loadingProgressWheel = 2131230810;
 			
 			// aapt resource value: 0x7f080053
 			public const int login_image = 2131230803;
 			
-			// aapt resource value: 0x7f08005d
-			public const int menu_about = 2131230813;
+			// aapt resource value: 0x7f08005c
+			public const int menu_about = 2131230812;
 			
-			// aapt resource value: 0x7f08005e
-			public const int menu_meet = 2131230814;
+			// aapt resource value: 0x7f08005d
+			public const int menu_meet = 2131230813;
 			
 			// aapt resource value: 0x7f080016
 			public const int middle = 2131230742;
@@ -1899,8 +1899,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f08000b
 			public const int normal = 2131230731;
 			
-			// aapt resource value: 0x7f08005c
-			public const int product_pager = 2131230812;
+			// aapt resource value: 0x7f08005b
+			public const int product_pager = 2131230811;
 			
 			// aapt resource value: 0x7f080005
 			public const int progress_circular = 2131230725;
@@ -1971,11 +1971,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080056
 			public const int textView = 2131230806;
 			
-			// aapt resource value: 0x7f080057
-			public const int textView4 = 2131230807;
-			
-			// aapt resource value: 0x7f080059
-			public const int textViewStatus = 2131230809;
+			// aapt resource value: 0x7f080058
+			public const int textViewStatus = 2131230808;
 			
 			// aapt resource value: 0x7f080036
 			public const int title = 2131230774;

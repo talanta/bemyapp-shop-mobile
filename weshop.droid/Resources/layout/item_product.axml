@@ -61,7 +61,7 @@
                         android:textColor="?attr/colorPrimary" />
                 </LinearLayout>
             </LinearLayout>
-            <LinearLayout
+        <!--            <LinearLayout
                 android:layout_width="33dp"
                 android:orientation="vertical"
                 android:layout_height="match_parent">
@@ -75,7 +75,7 @@
                     android:background="@color/grey_bg"
                     android:textStyle="bold"
                     android:textColor="@color/red_dislike" />
-            </LinearLayout>
+            </LinearLayout>-->
         </LinearLayout>
         <View
             android:layout_width="fill_parent"

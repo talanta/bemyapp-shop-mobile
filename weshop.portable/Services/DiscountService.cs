@@ -34,6 +34,40 @@ namespace weshop.portable
 			return errors [errors.Count - 1];
 		}
 
+
+		public async Task<ProductResult> GetProduct (ProductRequest request)
+		{
+			string rawResponse = null;
+			Uri url = new Uri(Constants.URL_GET_PRODUCT);
+			var fullreq = new { ApiKey = Constants.API_KEY, ProductRequest = request };
+			string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(fullreq);
+			var content = new StringContent(jsonData);
+
+			using (var client = new HttpClient(new NativeMessageHandler()))
+			{
+				try
+				{		
+					content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+					var result = await client.PostAsync(url, content);
+					rawResponse = await result.Content.ReadAsStringAsync();
+					if (result.IsSuccessStatusCode)
+					{					
+						return JsonConvert.DeserializeObject<ProductResult>(rawResponse);
+					}
+					// to be handled...
+				}
+				catch(Exception ex) {
+					//errors.Add (jsonData);
+					Mvx.Trace (ex.Message);
+				}
+				finally{
+					Mvx.Trace (rawResponse);
+				}
+				return null;
+			}
+		}
+
 		public async Task<ProductResult> SearchProdudct (SearchRequest request)
 		{
 			//request.ApiKey = Constants.API_KEY;
