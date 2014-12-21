@@ -83,48 +83,44 @@
         android:id="@+id/product_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="100dp"
         local:MvxItemTemplate="@layout/item_pager_product"
-        local:MvxBind="ItemsSource Products;" />
+        local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex" />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true">
-    <!--        <Button
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Dislike"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:background="@color/red_dislike"
-            local:MvxBind="Click DislikeCmd" />
--->
-        <ImageView
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="100dp"
             android:elevation="6dp"
-            android:src="@drawable/ic_highlight_remove_white_48dp"
-            android:background="@drawable/circle"
-            android:tint="?attr/colorPrimary" />
-        <ImageView
+            android:button="@drawable/circle"
+            android:background="@drawable/checkbox_down" />
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="100dp"
+            android:elevation="6dp"
+            android:button="@drawable/circle"
+            android:background="@drawable/checkbox_up"
+            local:MvxBind="Checked CurrentProduct.Like" />
+    <!--        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="100dp"
             android:elevation="6dp"
             android:src="@drawable/ic_favorite_outline_white_48dp"
+            local:MvxBind="Click LikeCmd"
             android:background="@drawable/circle"
-            android:tint="?attr/colorPrimary" />
-    <!--        <Button
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:text="Like"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:background="@color/green_like"
-            local:MvxBind="Click LikeCmd" />-->
+            android:tint="?attr/colorPrimary" />-->
     </RelativeLayout>
 </RelativeLayout>

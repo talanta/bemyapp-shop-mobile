@@ -18,8 +18,8 @@ namespace weshop.portable.ViewModels
 		public WishlistViewModel ()
 		{
 			Products = new List<ProductViewModel> {
-				new ProductViewModel (),
-				new ProductViewModel ()
+//				new ProductViewModel (),
+//				new ProductViewModel ()
 			};
 
 		}

@@ -4,7 +4,7 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    local:cardElevation="4dp">
+    local:cardElevation="2dp">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -19,19 +19,12 @@
                 android:orientation="vertical"
                 android:layout_width="100dp"
                 android:layout_height="100dp">
-                <FrameLayout
+                <Mvx.MvxImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <Mvx.MvxImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/imageView"
-                        local:MvxBind="ImageUrl Product.MainImageUrl; Click ShowCmd" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/mask" />
-                </FrameLayout>
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView"
+                    android:scaleType="fitXY"
+                    local:MvxBind="ImageUrl Product.MainImageUrl; Click ShowCmd" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -42,16 +35,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
                     local:MvxBind="Text Product.Name"
-                    android:id="@+id/textView"
-                    android:textColor="@color/grey_title" />
-                <TextView
+                    android:id="@+id/textView" />
+            <!--                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:text="Description"
-                    android:id="@+id/textView2" />
+                    android:id="@+id/textView2" />-->
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="wrap_content"
@@ -62,13 +52,13 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         local:MvxBind="Text Product.BestOffer.SalePrice"
                         android:hint="prix"
-                        android:textColor="@color/red_price" />
+                        android:textColor="?attr/colorPrimary" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text=" €"
-                        android:textColor="@color/red_price" />
+                        android:textColor="?attr/colorPrimary" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout

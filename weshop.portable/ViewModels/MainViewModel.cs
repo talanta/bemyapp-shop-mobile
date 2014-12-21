@@ -15,7 +15,7 @@ namespace weshop.portable
 		IDialogService _dialogService;
 		IWishListService _wishlistService;
 
-		int index = 0;
+		public int CurrentIndex { get; set; }
 		int itemPerPage = 10;
 
 		string keyword = "Vetement";
@@ -28,30 +28,38 @@ namespace weshop.portable
 
 		private IMvxCommand likeCmd;
 		private IMvxCommand dislikeCmd;
+		private IMvxCommand pageSelectedCmd;
 
 		public IMvxCommand DislikeCmd { get {return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
 		public IMvxCommand LikeCmd { get { return likeCmd ?? (likeCmd = new MvxCommand(OnLike)); } }
-
-
-	
+		public IMvxCommand PageSelectedCmd { get { return pageSelectedCmd ?? (pageSelectedCmd = new MvxCommand<int>(OnPageChanged)); } }
 
 		protected async override void InitFromBundle (IMvxBundle parameters)
 		{
 			base.InitFromBundle (parameters);
 
-			if (null == _discountService) {
+			if (null != _discountService)
+				return;
 
 				_discountService = Mvx.Resolve<IDiscountService>();
 				_dialogService = Mvx.Resolve<IDialogService>();
 				_wishlistService = Mvx.Resolve<IWishListService>();
-			}
 
-
+			if (Products != null && Products.Count > 0)
+				return;
 			if (parameters != null && parameters.Data != null && parameters.Data.Count > 0) {
 				keyword = "tenues sexy";
 			}
-			//await DisplayNextProduct ();
+			await DisplayNextProduct ();
 		}
+
+		protected void OnPageChanged(int param)
+		{
+			CurrentIndex = param;
+			DisplayNextProduct();
+			//CurrentProduct = Products [CurrentIndex];
+		}
+
 		protected async Task RetrieveItems()
 		{
 			_dialogService.ShowProgress ();
@@ -59,7 +67,7 @@ namespace weshop.portable
 				Keyword = keyword
 			};
 			request.Pagination.ItemsPerPage = itemPerPage;
-			request.Pagination.PageNumber = index / itemPerPage;
+			request.Pagination.PageNumber = CurrentIndex / itemPerPage;
 			var products = await _discountService.SearchProdudct(request);
 
 
@@ -69,20 +77,20 @@ namespace weshop.portable
 				_dialogService.ToastError (_discountService.GetLastError (), 10000);
 				return;
 			}
-			index = 0;
+			CurrentIndex = 0;
 			this.Products = products.Products;
 			RaisePropertyChanged (() => this.Products);
 		}
 
 		protected async Task DisplayNextProduct()
 		{
-			if (index % itemPerPage == 0) {
+			if (CurrentIndex % itemPerPage == 0) {
 				await RetrieveItems ();
 				if (this.Products == null)
 					return;
 			}
 
-			CurrentProduct = this.Products [index++];
+			CurrentProduct = this.Products [CurrentIndex + 1];
 
 			RaisePropertyChanged (() => CurrentProduct);
 		}
@@ -96,7 +104,6 @@ namespace weshop.portable
 
 			await Task.Delay (2000);
 			DisplayNextProduct ();
-
 		}
 
 		protected void OnDislike()

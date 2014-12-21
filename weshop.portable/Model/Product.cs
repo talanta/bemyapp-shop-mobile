@@ -14,6 +14,8 @@ namespace weshop.portable
 
 		[PrimaryKey]
 		public string Id { get; set; }
+
+		public bool? Like { get; set; }
 	}
 }
 

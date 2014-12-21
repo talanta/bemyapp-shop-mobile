@@ -224,6 +224,16 @@
     <AndroidResource Include="Resources\layout\include_main_title.axml" />
     <AndroidResource Include="Resources\drawable\bgTitle.xml" />
     <AndroidResource Include="Resources\layout\dialog_about.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_up_grey600_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_up_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_up_grey600_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_up_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_down_grey600_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_thumb_down_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_down_grey600_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_down_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\checkbox_up.xml" />
+    <AndroidResource Include="Resources\drawable\checkbox_down.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
