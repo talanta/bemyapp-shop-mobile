@@ -55,6 +55,8 @@
     </Compile>
     <Compile Include="Model\Category.cs" />
     <Compile Include="Messenger\NetworkMessage.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\DetailsViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

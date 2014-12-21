@@ -2142,13 +2142,19 @@ namespace weshop.droid
 			public const int toolbar = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int view_main = 2130903078;
+			public const int view_coming_soon = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int view_wishlist = 2130903079;
+			public const int view_details = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int view_wishset = 2130903080;
+			public const int view_main = 2130903080;
+			
+			// aapt resource value: 0x7f030029
+			public const int view_wishlist = 2130903081;
+			
+			// aapt resource value: 0x7f03002a
+			public const int view_wishset = 2130903082;
 			
 			static Layout()
 			{
@@ -2227,20 +2233,23 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b000e
 			public const int abc_shareactionprovider_share_with_application = 2131427342;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int about_description = 2131427354;
+			// aapt resource value: 0x7f0b001b
+			public const int about_description = 2131427355;
+			
+			// aapt resource value: 0x7f0b001d
+			public const int about_made = 2131427357;
 			
 			// aapt resource value: 0x7f0b001c
-			public const int about_made = 2131427356;
+			public const int about_team = 2131427356;
 			
-			// aapt resource value: 0x7f0b001b
-			public const int about_team = 2131427355;
-			
-			// aapt resource value: 0x7f0b0019
-			public const int about_title = 2131427353;
+			// aapt resource value: 0x7f0b001a
+			public const int about_title = 2131427354;
 			
 			// aapt resource value: 0x7f0b0011
 			public const int app_name = 2131427345;
+			
+			// aapt resource value: 0x7f0b0014
+			public const int coming_soon = 2131427348;
 			
 			// aapt resource value: 0x7f0b0013
 			public const int drawer_close = 2131427347;
@@ -2254,20 +2263,20 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b000f
 			public const int library_name = 2131427343;
 			
-			// aapt resource value: 0x7f0b0018
-			public const int menu_about = 2131427352;
-			
-			// aapt resource value: 0x7f0b0015
-			public const int nav_categories = 2131427349;
-			
-			// aapt resource value: 0x7f0b0014
-			public const int nav_home = 2131427348;
+			// aapt resource value: 0x7f0b0019
+			public const int menu_about = 2131427353;
 			
 			// aapt resource value: 0x7f0b0016
-			public const int nav_list = 2131427350;
+			public const int nav_categories = 2131427350;
+			
+			// aapt resource value: 0x7f0b0015
+			public const int nav_home = 2131427349;
 			
 			// aapt resource value: 0x7f0b0017
-			public const int sub_select_categories = 2131427351;
+			public const int nav_list = 2131427351;
+			
+			// aapt resource value: 0x7f0b0018
+			public const int sub_select_categories = 2131427352;
 			
 			static String()
 			{

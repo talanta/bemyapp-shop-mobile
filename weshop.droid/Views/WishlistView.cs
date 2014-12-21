@@ -1,14 +1,7 @@
-﻿using System;
-using Android.App;
-using Android.Content.PM;
-using Android.OS;
+﻿using Android.OS;
 using Android.Views;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Droid.Fragging.Fragments;
-using Cirrious.MvvmCross.Droid.Views;
-using weshop.portable;
-using weshop.portable.ViewModels;
-using weshop.droid.Helpers;
 
 namespace weshop.droid
 {

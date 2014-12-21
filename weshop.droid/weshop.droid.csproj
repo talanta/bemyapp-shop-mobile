@@ -155,6 +155,8 @@
     <Compile Include="Helpers\ZoomOutPageTransformer.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Views\AlertFragment.cs" />
+    <Compile Include="Views\DetailsView.cs" />
+    <Compile Include="Views\LoginView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -234,6 +236,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_thumb_down_white_48dp.png" />
     <AndroidResource Include="Resources\drawable\checkbox_up.xml" />
     <AndroidResource Include="Resources\drawable\checkbox_down.xml" />
+    <AndroidResource Include="Resources\layout\view_coming_soon.axml" />
+    <AndroidResource Include="Resources\layout\view_details.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
