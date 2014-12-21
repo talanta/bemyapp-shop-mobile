@@ -9,6 +9,8 @@ namespace weshop.portable
 
 		void AddItem(Product item);
 
+		void RemoveItem (Product item);
+
 		IList<Product> GetAllProducts();
 	}
 }

@@ -109,11 +109,14 @@ namespace weshop.portable
 
 		protected async void OnLike ()
 		{
-			if (CurrentProduct.Like.HasValue) {	
+			if (CurrentProduct.Like.HasValue && CurrentProduct.Like.Value) {	
 				// action on like
 				_wishlistService.AddItem (CurrentProduct);
 				_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
 				return;
+			}
+			if (CurrentProduct.Like.HasValue && !CurrentProduct.Like.Value) {
+				_wishlistService.RemoveItem (CurrentProduct);
 			}
 			//await Task.Delay (2000);
 			//DisplayNextProduct ();

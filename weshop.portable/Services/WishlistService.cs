@@ -23,6 +23,14 @@ namespace weshop.portable
 			_connection.Insert (item);
 		}
 
+		public void RemoveItem(Product p)
+		{
+			var item  = _connection.Table<Product> ().FirstOrDefault (i => i.Id == p.Id);
+			if (null == item)
+				return;
+			_connection.Delete (item);	
+		}
+
 		public System.Collections.Generic.IList<Product> GetAllProducts ()
 		{
 			var productList = _connection.Table<Product> ().ToList ();
