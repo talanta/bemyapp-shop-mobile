@@ -906,29 +906,29 @@ namespace weshop.droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f06006b
-			public const int abc_background_cache_hint_selector_material_dark = 2131099755;
+			// aapt resource value: 0x7f06006d
+			public const int abc_background_cache_hint_selector_material_dark = 2131099757;
 			
-			// aapt resource value: 0x7f06006c
-			public const int abc_background_cache_hint_selector_material_light = 2131099756;
+			// aapt resource value: 0x7f06006e
+			public const int abc_background_cache_hint_selector_material_light = 2131099758;
 			
 			// aapt resource value: 0x7f060000
 			public const int abc_input_method_navigation_guard = 2131099648;
 			
-			// aapt resource value: 0x7f06006d
-			public const int abc_primary_text_disable_only_material_dark = 2131099757;
-			
-			// aapt resource value: 0x7f06006e
-			public const int abc_primary_text_disable_only_material_light = 2131099758;
-			
 			// aapt resource value: 0x7f06006f
-			public const int abc_primary_text_material_dark = 2131099759;
+			public const int abc_primary_text_disable_only_material_dark = 2131099759;
 			
 			// aapt resource value: 0x7f060070
-			public const int abc_primary_text_material_light = 2131099760;
+			public const int abc_primary_text_disable_only_material_light = 2131099760;
 			
 			// aapt resource value: 0x7f060071
-			public const int abc_search_url_text = 2131099761;
+			public const int abc_primary_text_material_dark = 2131099761;
+			
+			// aapt resource value: 0x7f060072
+			public const int abc_primary_text_material_light = 2131099762;
+			
+			// aapt resource value: 0x7f060073
+			public const int abc_search_url_text = 2131099763;
 			
 			// aapt resource value: 0x7f060001
 			public const int abc_search_url_text_normal = 2131099649;
@@ -939,11 +939,11 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060003
 			public const int abc_search_url_text_selected = 2131099651;
 			
-			// aapt resource value: 0x7f060072
-			public const int abc_secondary_text_material_dark = 2131099762;
+			// aapt resource value: 0x7f060074
+			public const int abc_secondary_text_material_dark = 2131099764;
 			
-			// aapt resource value: 0x7f060073
-			public const int abc_secondary_text_material_light = 2131099763;
+			// aapt resource value: 0x7f060075
+			public const int abc_secondary_text_material_light = 2131099765;
 			
 			// aapt resource value: 0x7f060004
 			public const int accent_material_dark = 2131099652;
@@ -1014,17 +1014,17 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060015
 			public const int dim_foreground_material_light = 2131099669;
 			
-			// aapt resource value: 0x7f060064
-			public const int fab_color_1 = 2131099748;
-			
-			// aapt resource value: 0x7f060065
-			public const int fab_color_1_muted = 2131099749;
-			
 			// aapt resource value: 0x7f060066
-			public const int fab_color_2 = 2131099750;
+			public const int fab_color_1 = 2131099750;
 			
 			// aapt resource value: 0x7f060067
-			public const int fab_color_2_muted = 2131099751;
+			public const int fab_color_1_muted = 2131099751;
+			
+			// aapt resource value: 0x7f060068
+			public const int fab_color_2 = 2131099752;
+			
+			// aapt resource value: 0x7f060069
+			public const int fab_color_2_muted = 2131099753;
 			
 			// aapt resource value: 0x7f06005b
 			public const int gray = 2131099739;
@@ -1056,11 +1056,11 @@ namespace weshop.droid
 			// aapt resource value: 0x7f06001b
 			public const int link_text_material_light = 2131099675;
 			
-			// aapt resource value: 0x7f060068
-			public const int material_blue_500 = 2131099752;
+			// aapt resource value: 0x7f06006a
+			public const int material_blue_500 = 2131099754;
 			
-			// aapt resource value: 0x7f060069
-			public const int material_blue_700 = 2131099753;
+			// aapt resource value: 0x7f06006b
+			public const int material_blue_700 = 2131099755;
 			
 			// aapt resource value: 0x7f06001c
 			public const int material_blue_grey_800 = 2131099676;
@@ -1077,8 +1077,11 @@ namespace weshop.droid
 			// aapt resource value: 0x7f060020
 			public const int material_deep_teal_500 = 2131099680;
 			
-			// aapt resource value: 0x7f06006a
-			public const int material_green_A200 = 2131099754;
+			// aapt resource value: 0x7f06006c
+			public const int material_green_A200 = 2131099756;
+			
+			// aapt resource value: 0x7f060065
+			public const int md_lblue_500 = 2131099749;
 			
 			// aapt resource value: 0x7f06005f
 			public const int md_pink_100 = 2131099743;
@@ -1097,6 +1100,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f060063
 			public const int md_pink_A700_transparent = 2131099747;
+			
+			// aapt resource value: 0x7f060064
+			public const int md_yellow_500 = 2131099748;
 			
 			// aapt resource value: 0x7f060021
 			public const int primary_dark_material_dark = 2131099681;

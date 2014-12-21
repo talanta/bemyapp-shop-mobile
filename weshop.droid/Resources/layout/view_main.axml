@@ -84,8 +84,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="100dp"
         local:MvxItemTemplate="@layout/item_pager_product"
         local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex" />
@@ -93,34 +93,37 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true">
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:elevation="6dp"
-            android:button="@drawable/circle"
-            android:background="@drawable/checkbox_down" />
-        <CheckBox
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp">
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:elevation="6dp"
+                android:button="@null"
+                android:background="@drawable/checkbox_down" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:elevation="6dp"
+                android:button="@null"
+                android:background="@drawable/checkbox_up"
+                local:MvxBind="Checked CurrentProduct.Like" />
+        </LinearLayout>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="100dp"
+            android:layout_marginRight="20dp"
             android:elevation="6dp"
-            android:button="@drawable/circle"
-            android:background="@drawable/checkbox_up"
-            local:MvxBind="Checked CurrentProduct.Like" />
-    <!--        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="100dp"
-            android:elevation="6dp"
-            android:src="@drawable/ic_favorite_outline_white_48dp"
-            local:MvxBind="Click LikeCmd"
-            android:background="@drawable/circle"
-            android:tint="?attr/colorPrimary" />-->
+            android:text=" + "
+            android:background="@drawable/circle_secondary"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            local:MvxBind="Click ShowProductCmd" />
     </RelativeLayout>
 </RelativeLayout>

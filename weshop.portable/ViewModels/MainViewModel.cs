@@ -1,8 +1,8 @@
 ﻿using System;
-using Cirrious.MvvmCross.ViewModels;
-using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace weshop.portable
 {
@@ -30,6 +30,9 @@ namespace weshop.portable
 		private IMvxCommand likeCmd;
 		private IMvxCommand dislikeCmd;
 		private IMvxCommand pageSelectedCmd;
+		private IMvxCommand showProductCmd;
+
+		public IMvxCommand ShowProductCmd {get{ return showProductCmd ?? ( showProductCmd = new MvxCommand(OnShowProduct));  }}
 
 		public IMvxCommand DislikeCmd { get { return dislikeCmd ?? (dislikeCmd = new MvxCommand (OnDislike)); } }
 
@@ -116,7 +119,10 @@ namespace weshop.portable
 			// action on Dislike
 		}
 
-
+		protected void OnShowProduct()
+		{
+			ShowViewModel<DetailsViewModel> (CurrentProduct);
+		}
 	}
 }
 

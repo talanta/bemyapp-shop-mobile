@@ -18,6 +18,9 @@
 	<color name="md_pink_A700">#C51162</color>
 	<color name="md_pink_A700_transparent">#60C51162</color>
 
+	<color name="md_yellow_500">#FFEB3B</color>
+	<color name="md_lblue_500">#03A9F4</color>
+
 	<color name="fab_color_1">#ff5252</color>
 	<color name="fab_color_1_muted">#ff8080</color>
 	<color name="fab_color_2">#9c27b0</color>
