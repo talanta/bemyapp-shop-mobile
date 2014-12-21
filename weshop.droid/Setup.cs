@@ -8,6 +8,7 @@ using Cirrious.MvvmCross.Droid.Views;
 using System.Reflection;
 using System.Collections.Generic;
 using Cirrious.CrossCore.Converters;
+using Cirrious.MvvmCross.Plugins.Visibility;
 
 namespace weshop.droid
 {
@@ -27,6 +28,18 @@ namespace weshop.droid
 			base.FillValueConverters (registry);
 			registry.AddOrOverwrite ("MenuIcon", new MenuIconConverter ());
 		}
+
+		protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies 
+		{
+			get 
+			{
+				var toReturn = base.ValueConverterAssemblies;
+				toReturn.Add(typeof(MvxVisibilityValueConverter).Assembly);
+				return toReturn;
+			}
+		} 
+
+		//override 
 
 		protected override IMvxAndroidViewPresenter CreateViewPresenter()
 		{

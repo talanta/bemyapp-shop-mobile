@@ -15,6 +15,12 @@ namespace weshop.portable
 		public SearchRequest SearchRequest { get; set; }
 	}
 
+	public class FullProductRequest 
+	{
+		public string ApiKey { get; set; }
+		public ProductRequest ProductRequest { get; set; }
+	}
+
 
 	public class DiscountService : IDiscountService
 	{
@@ -39,7 +45,7 @@ namespace weshop.portable
 		{
 			string rawResponse = null;
 			Uri url = new Uri(Constants.URL_GET_PRODUCT);
-			var fullreq = new { ApiKey = Constants.API_KEY, ProductRequest = request };
+			var fullreq = new FullProductRequest{ ApiKey = Constants.API_KEY, ProductRequest = request };
 			string jsonData = Newtonsoft.Json.JsonConvert.SerializeObject(fullreq);
 			var content = new StringContent(jsonData);
 

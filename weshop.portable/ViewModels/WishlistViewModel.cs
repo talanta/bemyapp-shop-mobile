@@ -41,6 +41,7 @@ namespace weshop.portable.ViewModels
 			foreach (var p in ps) {
 				Products.Add (new ProductViewModel { Product = p });
 			}
+			RaisePropertyChanged (() => NoItemVisibile);
 		}
 
 		public void GoToMeet()

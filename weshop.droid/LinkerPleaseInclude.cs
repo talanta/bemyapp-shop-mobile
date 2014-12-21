@@ -28,7 +28,8 @@ namespace weshop.droid
         public void Include(View view)
         {
             view.Click += (s, e) => view.ContentDescription = view.ContentDescription + "";
-        }
+				view.Visibility = view.Visibility ;
+		}
 //		public void Include(Android.Support.V7.Widget.CardView  cardview)
 //		{
 //			cardview.Tag = cardview.Tag;
