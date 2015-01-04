@@ -5,11 +5,12 @@ using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.Attributes;
 using System.Collections;
 using System.Windows.Input;
+using Android.Views;
 
 namespace weshop.droid
 {
 	public class BindableViewPager
-		: Android.Support.V4.View.ViewPager
+		: JazzyViewPager
 	{
 		public BindableViewPager(Context context, IAttributeSet attrs)
 			: this(context, attrs, new MvxBindablePagerAdapter(context))
@@ -21,6 +22,7 @@ namespace weshop.droid
 			var itemTemplateId = MvxAttributeHelpers.ReadListItemTemplateId(context, attrs);
 			adapter.ItemTemplateId = itemTemplateId;
 			Adapter = adapter;
+			this.PageMargin = 30;
 		}
 
 		public new MvxBindablePagerAdapter Adapter
@@ -114,6 +116,8 @@ namespace weshop.droid
 
 			command.Execute(toPage);
 		}
+
+	
 	} 
 }
 

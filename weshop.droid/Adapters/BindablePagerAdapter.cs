@@ -1,19 +1,19 @@
 ﻿using System;
-using Android.Widget;
+using System.Collections;
+using System.Collections.Specialized;
+using Android.Content;
 using Android.Support.V4.App;
 using Android.Support.V4.View;
-using System.Collections;
-using Android.Content;
+using Android.Views;
+using Android.Widget;
+using Cirrious.CrossCore.Exceptions;
+using Cirrious.CrossCore.Platform;
+using Cirrious.CrossCore.WeakSubscription;
+using Cirrious.MvvmCross.Binding;
 using Cirrious.MvvmCross.Binding.Attributes;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.Views;
 using Cirrious.MvvmCross.Binding.ExtensionMethods;
-using Cirrious.CrossCore.Exceptions;
-using Cirrious.MvvmCross.Binding;
-using Cirrious.CrossCore.WeakSubscription;
-using Cirrious.CrossCore.Platform;
-using System.Collections.Specialized;
-using Android.Views;
 
 namespace weshop.droid
 {
@@ -27,6 +27,10 @@ namespace weshop.droid
 		private IDisposable _subscription;
 
 		public bool ReloadAllOnDataSetChange { get; set; }
+	
+
+		public event InstanciateItemEventHandler InstanciateItemEvent; 
+		public event DestroyItemEventHandler DestroyItemEvent;
 
 		public MvxBindablePagerAdapter(Context context)
 			: this(context, MvxAndroidBindingContextHelpers.Current())
@@ -44,15 +48,9 @@ namespace weshop.droid
 			ReloadAllOnDataSetChange = true; // default is to reload all
 		}
 
-		protected Context Context
-		{
-			get { return _context; }
-		}
+		protected Context Context {get { return _context; }}
 
-		protected IMvxAndroidBindingContext BindingContext
-		{
-			get { return _bindingContext; }
-		}
+		protected IMvxAndroidBindingContext BindingContext {get { return _bindingContext; }}
 
 		public int SimpleViewLayoutId { get; set; }
 
@@ -78,10 +76,7 @@ namespace weshop.droid
 			}
 		}
 
-		public override int Count
-		{
-			get { return _itemsSource.Count(); }
-		}
+		public override int Count {get { return _itemsSource.Count(); }}
 
 		protected virtual void SetItemsSource(IEnumerable value)
 		{
@@ -210,19 +205,33 @@ namespace weshop.droid
 
 			container.AddView(view);
 
+			if (InstanciateItemEvent != null)
+				InstanciateItemEvent (this, new InstanciateItemEventArgs (view, position));
+
 			return view;
 		}
 
-		public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object obj)
+//		public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object obj)
+//		{
+//			var view = (View)obj;
+//			container.RemoveView(view);
+//			view.Dispose();
+//		}
+
+		public override void DestroyItem (ViewGroup container, int position, Java.Lang.Object @object)
 		{
-			var view = (View)obj;
-			container.RemoveView(view);
-			view.Dispose();
+			if (DestroyItemEvent == null)
+				throw new InvalidOperationException ("Missing event handler");
+
+			DestroyItemEvent (this, new DestroyItemEventArgs (container, position));
 		}
 
-		public override bool IsViewFromObject(View p0, Java.Lang.Object p1)
+		public override bool IsViewFromObject (View view, Java.Lang.Object @object)
 		{
-			return p0 == p1;
+			if (!(view is OutlineContainer))
+				return view == @object; 
+
+			return ((OutlineContainer)view).GetChildAt(0) == @object;
 		}
 
 		// this as a simple non-performant fix for non-updating views - see http://stackoverflow.com/a/7287121/373321        

@@ -11,5 +11,14 @@ namespace weshop.portable
 			
 		}
 	}
+
+	public class WishlistMessage : MvxMessage
+	{
+		public WishlistMessage (object sender)
+			: base (sender)
+		{
+			
+		}
+	}
 }
 

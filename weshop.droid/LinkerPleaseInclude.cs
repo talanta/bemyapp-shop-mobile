@@ -13,7 +13,12 @@ namespace weshop.droid
         public void Include(Button button)
         {
             button.Click += (s,e) => button.Text = button.Text + "";
-        }
+		}
+
+		public void Include(ImageButton button)
+		{
+			button.Click += (s,e) => button.Tag = button.Tag ;
+		}
 
 		public void Include(Outline outline)
 		{

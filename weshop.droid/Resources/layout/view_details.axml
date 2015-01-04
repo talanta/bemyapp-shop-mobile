@@ -23,6 +23,14 @@
             android:layout_marginBottom="20dp" />
         <Button
             android:layout_gravity="center"
+            android:text="Retirer de mes favoris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            local:MvxBind="Click DislikeCmd; Visibility Visibility(Product.Like)"
+            android:layout_marginBottom="20dp" />
+        <Button
+            android:layout_gravity="center"
             android:text="Annuler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

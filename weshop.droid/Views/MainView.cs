@@ -8,9 +8,22 @@ namespace weshop.droid
 {
 	public class MainView : MvxFragment
 	{
+		BindableViewPager _viewPager;
+		MvxBindablePagerAdapter _pagerAdapter;
+
 		public MainView ()
 		{
 			this.RetainInstance = true;
+		}
+
+		protected void onViewPagerInstanciateItem(object sender, InstanciateItemEventArgs args)
+		{
+			_viewPager.setObjectForPosition (args.View, args.Position);
+		}
+
+		protected void onViewPagerDestroyItem(object sender, DestroyItemEventArgs args)
+		{
+			args.ViewGroup.RemoveView (_viewPager.findViewFromObject (args.Position));
 		}
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -18,8 +31,14 @@ namespace weshop.droid
 			base.OnCreateView (inflater, container, savedInstanceState);
 			var view = this.BindingInflate (Resource.Layout.view_main, null);
 
-			var viewPager = view.FindViewById<BindableViewPager> (Resource.Id.product_pager);
-			viewPager.SetPageTransformer (true, new ZoomOutPageTransformer ());
+			_viewPager = view.FindViewById<BindableViewPager> (Resource.Id.product_pager);
+			_viewPager.setTransitionEffect(TransitionEffect.Stack);
+			_pagerAdapter = new MvxBindablePagerAdapter (Activity, 
+				(IMvxAndroidBindingContext) this.BindingContext);
+
+			_pagerAdapter.InstanciateItemEvent += onViewPagerInstanciateItem;
+			_pagerAdapter.DestroyItemEvent += onViewPagerDestroyItem;
+			_viewPager.Adapter = _pagerAdapter;
 
 			return view;
 		}

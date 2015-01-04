@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.Community.Plugins.Sqlite;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace weshop.portable
 {
@@ -14,7 +14,8 @@ namespace weshop.portable
 
 		public void AddItem (Product item)
 		{
-			var existing = _connection.Table<Product> ().Any (p => p.Id == item.Id);
+			var existing = _connection.Table<Product> ()
+				.Any (p => p.Id == item.Id);
 			if (existing)
 				return;
 
@@ -25,9 +26,14 @@ namespace weshop.portable
 
 		public void RemoveItem(Product p)
 		{
-			var item  = _connection.Table<Product> ().FirstOrDefault (i => i.Id == p.Id);
+			var item  = _connection.Table<Product> ()
+				.FirstOrDefault (i => i.Id == p.Id);
 			if (null == item)
 				return;
+			var bo = _connection.Table<BestOffer> ()
+				.FirstOrDefault (b => b.ProductId == p.Id);
+			if (bo != null)
+				_connection.Delete (bo);
 			_connection.Delete (item);	
 		}
 
@@ -36,7 +42,8 @@ namespace weshop.portable
 			var productList = _connection.Table<Product> ().ToList ();
 		
 			foreach (var product in productList) {
-				product.BestOffer = _connection.Table<BestOffer> ().FirstOrDefault (b => b.ProductId == product.Id);
+				product.BestOffer = _connection.Table<BestOffer> ()
+					.FirstOrDefault (b => b.ProductId == product.Id);
 			}
 
 			return productList;
@@ -45,7 +52,8 @@ namespace weshop.portable
 		public void FillLikes(IList<Product> products)
 		{
 			foreach (var p in products) {
-				var liked = _connection.Table<Product> ().FirstOrDefault (b => b.Id == p.Id);
+				var liked = _connection.Table<Product> ()
+					.FirstOrDefault (b => b.Id == p.Id);
 				if (null == liked)
 					continue;
 				p.Like = liked.Like;
@@ -62,7 +70,6 @@ namespace weshop.portable
 			// ensure our tables exist
 			_connection.CreateTable<BestOffer> ();
 			_connection.CreateTable<Product>();
-
 		}
 	}
 }

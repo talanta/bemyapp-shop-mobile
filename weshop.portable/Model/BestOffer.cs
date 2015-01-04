@@ -7,7 +7,6 @@ namespace weshop.portable
 	{
 		[PrimaryKey]
 		public string Id { get; set; }
-
 		[Indexed]
 		public string ProductId { get; set; }
 

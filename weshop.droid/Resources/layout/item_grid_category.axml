@@ -4,12 +4,21 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="150dp"
-    android:background="@color/md_pink_50"
-    android:layout_margin="1px">
+    android:layout_margin="1px"
+    android:background="@drawable/bg_category">
     <TextView
         android:layout_margin="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="this is the text"
-        local:MvxBind="Text Display" />
+        local:MvxBind="Text Display"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check_circle_black_48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        local:MvxBind="Visibility Visibility(IsVisible)" />
 </RelativeLayout>

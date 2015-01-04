@@ -13,7 +13,10 @@
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
   <data name="JSON" xml:space="preserve">
-    <value>[{ "display": "Mes Gros Outils", "keyword":"Electromenager", "imageUri":"res:XX"},
+    <value>[
+{ "display": "Ma GardeRobe", "keyword":"Vetement", "imageUri":"res:XX"},
+{ "display": "Pour Mes Petits", "keyword":"Bebe Puericulture", "imageUri":"res:XX"},
+{ "display": "Mes Gros Outils", "keyword":"Electromenager", "imageUri":"res:XX"},
 { "display": "Mon Territoire", "keyword":"Maison déco", "imageUri":"res:XX"},
 { "display": "Ma caisse a outils", "keyword":"Bricolage", "imageUri":"res:XX"},
 { "display": "Mon jardin secret", "keyword":"Jardin Animaler", "imageUri":"res:XX"},
@@ -22,9 +25,7 @@
 { "display": "Ma Douce Voix", "keyword":"Telephonie", "imageUri":"res:XX"},
 { "display": "Mes Images", "keyword":"Photo et Camescope", "imageUri":"res:XX"},
 { "display": "Ma Direction", "keyword":"Auto Moto et GPS", "imageUri":"res:XX"},
-{ "display": "Ma GardeRobe", "keyword":"Vetement Chaussures", "imageUri":"res:XX"},
 { "display": "Mes Précieuses", "keyword":"Bagages et  Bijouterie", "imageUri":"res:XX"},
-{ "display": "Pour Mes Petits", "keyword":"Bebe Puericulture", "imageUri":"res:XX"},
 { "display": "Mes Toys", "keyword":"Jeux Jouets", "imageUri":"res:XX"},
 { "display": "Mon Geek", "keyword":"Jeux Video Culture", "imageUri":"res:XX"},
 { "display": "Mon Corps", "keyword":"Sport", "imageUri":"res:XX"},
