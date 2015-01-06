@@ -14,6 +14,7 @@
 	<string name="nav_home">Séduction</string>
 	<string name="nav_categories">Catégories</string>
 	<string name="nav_list">Mes amours</string>
+	<string name="nav_settings">Paramètres</string>
 	<!--Subtitle-->
 	<string name="sub_select_categories">Choisir une ou plusieur catégories</string>
 	<!--menu-->

@@ -18,6 +18,8 @@ namespace weshop.droid
 				return "res:ic_dashboard_white_36dp";
 			case WishlistViewModel.TYPENAME:
 				return "res:ic_loyalty_white_36dp";
+			case SettingsViewModel.TYPENAME:
+				return "res:ic_settings_applications_white_36dp";
 			default:
 				break;
 			}

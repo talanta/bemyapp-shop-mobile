@@ -14,6 +14,11 @@ namespace weshop.portable
 			get { return this._Title; }
 			set { this._Title = value; this.RaisePropertyChanged(() => this.Title); }
 		}
+
+		public void Close()
+		{
+			this.Close (this);
+		}
 	}
 }
 

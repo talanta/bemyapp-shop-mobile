@@ -105,26 +105,23 @@ namespace weshop.droid.Views
 //
 				if (request.ViewModelType == typeof(MainViewModel)) {
 					_title = GetString (Resource.String.nav_home);
-					frag = new MainView ();
-					frag.ViewModel = ViewModel.MainViewModel;
+					frag = new MainView {ViewModel = ViewModel.MainViewModel};
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
-					frag.ViewModel.Init (null);
+					ViewModel.MainViewModel.Init (null);
 				} else if (request.ViewModelType == typeof(WishsetViewModel)) {
 					_title = GetString (Resource.String.nav_categories);
-					frag = new WishsetView ();
-					frag.ViewModel = ViewModel.WishSetViewModel; 
+					frag = new WishsetView {ViewModel = ViewModel.WishSetViewModel};
 					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
-					frag.ViewModel.Init (null);
+					ViewModel.WishSetViewModel.Init (null);
 				} else if (request.ViewModelType == typeof(WishlistViewModel)) {
 					_title = GetString (Resource.String.nav_list);
-					frag = new WishlistView ();
-					frag.ViewModel = ViewModel.WishlistViewModel; 
+					frag = new WishlistView {ViewModel = ViewModel.WishlistViewModel};
+
 					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
-					frag.ViewModel.Init (null);
+					ViewModel.WishlistViewModel.Init (null);
 				}
-
 //				fragmentTransaction = fragmentTransaction
 //					.SetCustomAnimations(Resource.Animation.slide_in_bottom,Android.Resource.Animation.FadeOut,Android.Resource.Animation.FadeIn, Resource.Animation.slide_out_bottom)
 //					.Replace(Resource.Id.content_frame, frag)
@@ -144,6 +141,7 @@ namespace weshop.droid.Views
 		public override bool OnCreateOptionsMenu (Android.Views.IMenu menu)
 		{
 			MenuInflater.Inflate (Resource.Menu.main, menu);
+		
 			return base.OnCreateOptionsMenu (menu);
 		}
 
@@ -164,6 +162,9 @@ namespace weshop.droid.Views
 			switch (item.ItemId) {
 			case Resource.Id.menu_about:
 				Mvx.Resolve<IDialogService> ().ShowAbout ();
+				break;
+			case Resource.Id.menu_search:
+				this.ViewModel.GoToSearch ();
 				break;
 			default:
 				break;

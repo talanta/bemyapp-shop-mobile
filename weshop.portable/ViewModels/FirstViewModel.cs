@@ -16,6 +16,7 @@ namespace weshop.portable.ViewModels
 		private MainViewModel _mainViewModel;
 		private WishsetViewModel _wishSetViewModel;
 		private WishlistViewModel _wishlistViewModel;
+		private SettingsViewModel _settingsViewModel;
 
 		public FirstViewModel ()
 		{
@@ -23,12 +24,15 @@ namespace weshop.portable.ViewModels
 				new MenuViewModel{ Section = typeof(MainViewModel), Title = "Séduction" },
 				new MenuViewModel{ Section = typeof(WishsetViewModel), Title = "Catégories" },
 				new MenuViewModel{ Section = typeof(WishlistViewModel), Title = "Mes amours" },
+				new MenuViewModel{ Section = typeof(SettingsViewModel), Title = "Paramètres" },
 			};
 						
 		}
 
 		public WishlistViewModel WishlistViewModel{ get { return _wishlistViewModel ?? (_wishlistViewModel = new WishlistViewModel ()); } }
+
 		public WishsetViewModel WishSetViewModel{ get { return _wishSetViewModel ?? (_wishSetViewModel = new WishsetViewModel ()); } }
+
 		public MainViewModel MainViewModel{ get { return _mainViewModel ?? (_mainViewModel = new MainViewModel ()); } }
 
 		public List<MenuViewModel> MenuItems{ get { return this.menuItems; } }
@@ -41,10 +45,15 @@ namespace weshop.portable.ViewModels
 			}
 		}
 
-		public ICommand LoginCmd { get{ return loginCmd ?? (this.loginCmd = new MvxCommand(OnLogin)); } }
+		public ICommand LoginCmd { get { return loginCmd ?? (this.loginCmd = new MvxCommand (OnLogin)); } }
 
 
-		protected void OnLogin()
+		public void GoToSearch()
+		{
+			ShowViewModel<SearchViewModel> ();
+		}
+
+		protected void OnLogin ()
 		{
 			ShowViewModel<LoginViewModel> ();
 		}

@@ -172,6 +172,8 @@
     <Compile Include="Views\FakePager.cs" />
     <Compile Include="Adapters\InstanciateItemEventHandler.cs" />
     <Compile Include="Views\PaletteImageView.cs" />
+    <Compile Include="Views\SettingsView.cs" />
+    <Compile Include="Views\SearchView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -267,6 +269,15 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_info_white_36dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_info_white_36dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_favorite_white_36dp.png" />
+    <AndroidResource Include="Resources\layout\view_settings.axml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_applications_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_applications_white_36dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_search_white_24dp.png" />
+    <AndroidResource Include="Resources\layout\view_search.axml" />
+    <AndroidResource Include="Resources\layout\toolbar_search.axml" />
+    <AndroidResource Include="Resources\xml\searchable.xml" />
+    <AndroidResource Include="Resources\menu\search_activity.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -290,5 +301,6 @@
     <Folder Include="Resources\drawable-mdpi\" />
     <Folder Include="NativeConverters\" />
     <Folder Include="Adapters\" />
+    <Folder Include="Resources\xml\" />
   </ItemGroup>
 </Project>
