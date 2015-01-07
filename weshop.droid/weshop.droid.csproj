@@ -160,7 +160,6 @@
     <Compile Include="NativeConverters\MenuIconConverter.cs" />
     <Compile Include="Adapters\BindablePagerAdapter.cs" />
     <Compile Include="Views\BindableViewPager.cs" />
-    <Compile Include="Helpers\ZoomOutPageTransformer.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Views\AlertFragment.cs" />
     <Compile Include="Views\MainView.cs" />

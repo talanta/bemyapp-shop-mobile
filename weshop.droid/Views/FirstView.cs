@@ -27,9 +27,9 @@ namespace weshop.droid.Views
 		private MyActionBarDrawerToggle _drawerToggle;
 		private FirstViewModel m_ViewModel;
 
-		public new FirstViewModel ViewModel {
-			get { return this.m_ViewModel ?? (this.m_ViewModel = base.ViewModel as FirstViewModel); }
-		}
+		public new FirstViewModel ViewModel { get { return this.m_ViewModel ?? (this.m_ViewModel = base.ViewModel as FirstViewModel); } }
+
+		protected override int ToolbarResourceId { get { return Resource.Id.toolbar; } }
 
 		protected override int LayoutResource{ get { return  Resource.Layout.FirstView; } }
 
@@ -37,19 +37,14 @@ namespace weshop.droid.Views
 		{
 			base.OnCreate (bundle);
 
-			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-
-			this.SetSupportActionBar (toolbar);
-
 			this._drawer = this.FindViewById<DrawerLayout> (Resource.Id.drawer_layout);
 			this._drawerList = this.FindViewById<MvxListView> (Resource.Id.drawer_list);
 			this._leftDrawer = this.FindViewById<View> (Resource.Id.left_drawer);
 
 			this._drawer.SetDrawerShadow (Resource.Drawable.drawer_shadow_dark, (int)GravityFlags.Start);
 			//DrawerToggle is the animation that happens with the indicator next to the
-			//ActionBar icon. You can choose not to use this.
 			this._drawerToggle = new MyActionBarDrawerToggle (this, this._drawer,
-				toolbar,
+				this.Toolbar,
 				//Resource.Drawable.ic_drawer_light,
 				Resource.String.drawer_open,
 				Resource.String.drawer_close);
@@ -58,10 +53,8 @@ namespace weshop.droid.Views
 				this.SupportActionBar.Title = this._title;
 				this.InvalidateOptionsMenu ();
 			};
-
 			//You can alternatively use _drawer.DrawerOpened here
 			this._drawerToggle.DrawerOpened += delegate {
-				this.SupportActionBar.Title = this._drawerTitle;
 				this.InvalidateOptionsMenu ();
 			};
 
@@ -105,23 +98,23 @@ namespace weshop.droid.Views
 //
 				if (request.ViewModelType == typeof(MainViewModel)) {
 					_title = GetString (Resource.String.nav_home);
-					frag = new MainView {ViewModel = ViewModel.MainViewModel};
+					frag = new MainView { ViewModel = ViewModel.MainViewModel };
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
 					ViewModel.MainViewModel.Init (null);
 				} else if (request.ViewModelType == typeof(WishsetViewModel)) {
 					_title = GetString (Resource.String.nav_categories);
-					frag = new WishsetView {ViewModel = ViewModel.WishSetViewModel};
+					frag = new WishsetView { ViewModel = ViewModel.WishSetViewModel };
 					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
 					ViewModel.WishSetViewModel.Init (null);
 				} else if (request.ViewModelType == typeof(WishlistViewModel)) {
 					_title = GetString (Resource.String.nav_list);
-					frag = new WishlistView {ViewModel = ViewModel.WishlistViewModel};
-
+					frag = new WishlistView { ViewModel = ViewModel.WishlistViewModel };
 					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
 					ViewModel.WishlistViewModel.Init (null);
 				}
+
 //				fragmentTransaction = fragmentTransaction
 //					.SetCustomAnimations(Resource.Animation.slide_in_bottom,Android.Resource.Animation.FadeOut,Android.Resource.Animation.FadeIn, Resource.Animation.slide_out_bottom)
 //					.Replace(Resource.Id.content_frame, frag)

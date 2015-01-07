@@ -37,23 +37,24 @@ namespace weshop.droid.Helpers
 			BindingContext = new MvxAndroidBindingContext (this, this);
 			this.AddEventListeners ();
 		}
-						
 
-		//	public Toolbar Toolbar { get; set; }
+		public Toolbar Toolbar { get; protected set; }
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (LayoutResource);
-//			Toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
-//			if (Toolbar != null) {
-//				//SetSupportActionBar (Toolbar);
+			Toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
+			if (Toolbar != null) {
+				SetSupportActionBar (Toolbar);
 //				SetActionBar (Toolbar);
 //				ActionBar.SetDisplayHomeAsUpEnabled (true);
 //				ActionBar.SetHomeButtonEnabled (true);
 //
-//			}
+			}
 		}
+
+		protected abstract int ToolbarResourceId { get; }
 
 		protected abstract int LayoutResource{ get; }
 

@@ -1,7 +1,6 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
-using Android.Support.V7.Widget;
 using weshop.portable;
 using weshop.droid.Helpers;
 
@@ -13,18 +12,15 @@ namespace weshop.droid
 	[MetaData ("android.app.searchable", Resource = "@xml/searchable")]
 	public class SearchView : MvxActionBarActivity
 	{
+		protected override int ToolbarResourceId { get { return Resource.Id.toolbar_search; } }
+
 		protected override int LayoutResource { get { return Resource.Layout.view_search; } }
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			var toolbar = FindViewById<Toolbar> (Resource.Id.toolbar_search);
-			if (toolbar != null) {
-				SetSupportActionBar (toolbar);
-				this.SupportActionBar.SetHomeButtonEnabled (true);
-				this.SupportActionBar.SetDisplayHomeAsUpEnabled (true);
-			}
+			this.SupportActionBar.SetHomeButtonEnabled (true);
+			this.SupportActionBar.SetDisplayHomeAsUpEnabled (true);	
 		}
 
 		public override bool OnCreateOptionsMenu (Android.Views.IMenu menu)
@@ -36,7 +32,6 @@ namespace weshop.droid
 			var searchInfo = searchManager.GetSearchableInfo (ComponentName);
 			searchView.SetSearchableInfo (searchInfo);
 			searchView.SetIconifiedByDefault (false);
-			//searchView.acces
 			return base.OnCreateOptionsMenu (menu);
 		}
 

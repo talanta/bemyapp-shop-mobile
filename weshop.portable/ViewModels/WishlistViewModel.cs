@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross.Plugins.Messenger;
+using System.Collections.ObjectModel;
 
 namespace weshop.portable.ViewModels
 {
@@ -10,6 +11,7 @@ namespace weshop.portable.ViewModels
 		: MvxViewModel
 	{
 		public const string TYPENAME = "WishlistViewModel";
+
 		IList<Product> _productCache;
 		IDialogService _dialogService;
 		IWishListService _wishlistService;
@@ -21,13 +23,13 @@ namespace weshop.portable.ViewModels
 
 		public IList<ProductViewModel> Products { get; private set; }
 
+		public bool NoItemVisibile { get { return Products.Count == 0; } }
+
 		public WishlistViewModel ()
 		{
-			Products = new System.Collections.ObjectModel.ObservableCollection<ProductViewModel> {		
+			Products = new ObservableCollection<ProductViewModel> {		
 			};
 		}
-
-		public bool NoItemVisibile { get { return Products.Count == 0; } }
 
 		protected override void InitFromBundle (IMvxBundle parameters)
 		{
@@ -40,14 +42,7 @@ namespace weshop.portable.ViewModels
 
 				_messenger.Subscribe<WishlistMessage> (OnWishlistMessage);
 			}
-
 			OnWishlistMessage (null);
-		//	RaisePropertyChanged (() => NoItemVisibile);
-		}
-
-		public void GoToMeet()
-		{
-			Close (this);
 		}
 
 		public void OnSelect(ProductViewModel productViewModel)
@@ -59,11 +54,9 @@ namespace weshop.portable.ViewModels
 		{
 			_productCache = _wishlistService.GetAllProducts ();
 			Products.Clear ();
-			//Products = new System.Collections.ObjectModel.ObservableCollection<ProductViewModel> ();
 			foreach (var p in _productCache) {
 				Products.Add (new ProductViewModel { Product = p });
 			}
-			//RaisePropertyChanged (() => Products);
 			RaisePropertyChanged (() => NoItemVisibile);
 		}
 	}

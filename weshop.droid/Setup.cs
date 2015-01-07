@@ -1,14 +1,14 @@
+using System.Collections.Generic;
+using System.Reflection;
 using Android.Content;
+using Cirrious.CrossCore;
+using Cirrious.CrossCore.Converters;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Droid.Platform;
-using Cirrious.MvvmCross.ViewModels;
-using Cirrious.CrossCore;
-using weshop.portable;
 using Cirrious.MvvmCross.Droid.Views;
-using System.Reflection;
-using System.Collections.Generic;
-using Cirrious.CrossCore.Converters;
 using Cirrious.MvvmCross.Plugins.Visibility;
+using Cirrious.MvvmCross.ViewModels;
+using weshop.portable;
 
 namespace weshop.droid
 {
@@ -38,8 +38,6 @@ namespace weshop.droid
 				return toReturn;
 			}
 		} 
-
-		//override 
 
 		protected override IMvxAndroidViewPresenter CreateViewPresenter()
 		{

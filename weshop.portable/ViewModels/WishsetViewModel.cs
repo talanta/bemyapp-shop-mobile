@@ -23,15 +23,6 @@ namespace weshop.portable.ViewModels
 		{
 			base.InitFromBundle (parameters);
 		}
-
-		public void GoToMeet()
-		{
-			var bundle = new MvxBundle ();
-
-			bundle.Data.Add ("keyword", "tenues sexy");
-			ShowViewModel<FirstViewModel> (bundle);
-		}
-
 	}
 }
 
