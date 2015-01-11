@@ -44,7 +44,7 @@ namespace weshop.droid.Helpers
 		{
 			base.OnCreate (bundle);
 			SetContentView (LayoutResource);
-			Toolbar = FindViewById<Toolbar> (Resource.Id.toolbar);
+			Toolbar = FindViewById<Toolbar> (ToolbarResourceId);
 			if (Toolbar != null) {
 				SetSupportActionBar (Toolbar);
 //				SetActionBar (Toolbar);
