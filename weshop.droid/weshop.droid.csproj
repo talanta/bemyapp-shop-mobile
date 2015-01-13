@@ -136,6 +136,9 @@
     <Reference Include="Xamarin.Android.Support.v7.Palette">
       <HintPath>..\packages\Xamarin.Android.Support.v7.Palette.21.0.3.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.Palette.dll</HintPath>
     </Reference>
+    <Reference Include="Cheesebaron.SlidingUpPanel">
+      <HintPath>..\Components\slidinguppanel-1.0.1\lib\android\Cheesebaron.SlidingUpPanel.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -173,6 +176,7 @@
     <Compile Include="Views\PaletteImageView.cs" />
     <Compile Include="Views\SettingsView.cs" />
     <Compile Include="Views\SearchView.cs" />
+    <Compile Include="PreviewCategoryTargetBinding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -264,10 +268,6 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_check_circle_black_48dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_info_grey600_36dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_info_grey600_36dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_favorite_white_36dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_info_white_36dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_info_white_36dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_favorite_white_36dp.png" />
     <AndroidResource Include="Resources\layout\view_settings.axml" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_settings_applications_white_36dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_settings_applications_white_36dp.png" />
@@ -277,6 +277,10 @@
     <AndroidResource Include="Resources\layout\toolbar_search.axml" />
     <AndroidResource Include="Resources\xml\searchable.xml" />
     <AndroidResource Include="Resources\menu\search_activity.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_favorite_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_info_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_info_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_favorite_white_48dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -290,6 +294,10 @@
       <Version>1.3.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="slidinguppanel">
+      <Version>1.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PlatformSpecific\" />
@@ -301,5 +309,6 @@
     <Folder Include="NativeConverters\" />
     <Folder Include="Adapters\" />
     <Folder Include="Resources\xml\" />
+    <Folder Include="SlidingMenu\" />
   </ItemGroup>
 </Project>

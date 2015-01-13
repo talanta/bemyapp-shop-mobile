@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <cheesebaron.slidinguppanel.SlidingUpPanelLayout
+        android:gravity="bottom"
+        android:id="@+id/slidingPanel"
+        local:collapsedHeight="68dp"
+        local:dragView="@+id/bottom_panel"
+        local:shadowHeight="4dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="match_parent">
+    <!--    main content-->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="70dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/shadowbox" />
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:background="@drawable/shadowbox" />
-        <LinearLayout
-            android:layout_centerHorizontal="true"
-            android:layout_width="match_parent"
-            android:layout_height="330dp"
-            android:orientation="vertical"
-            android:id="@+id/linearLayout"
-            android:background="@drawable/shadowbox"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="10dp">
-        <!--        <LinearLayout
+            android:clickable="true"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/ext_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shadowbox" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:background="@drawable/shadowbox" />
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout"
+                android:background="@drawable/shadowbox"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp">
+            <!--        <LinearLayout
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
@@ -49,34 +62,16 @@
                 android:textColor="@color/grey_title"
                 android:textStyle="bold" />
         </LinearLayout>-->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <BindableViewPager
-                    local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex"
-                    local:MvxItemTemplate="@layout/item_pager_product"
-                    android:id="@+id/product_pager"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_alignParentRight="true">
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_favorite_white_36dp"
-                        android:tint="?attr/colorPrimary"
-                        local:MvxBind="Click LikeCmd" />
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_info_white_36dp"
-                        android:tint="?attr/colorPrimary"
-                        local:MvxBind="Click ShowProductCmd" />
-                </LinearLayout>
-            <!--            <Mvx.MvxImageView
+                    android:layout_height="match_parent">
+                    <BindableViewPager
+                        local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex"
+                        local:MvxItemTemplate="@layout/item_pager_product"
+                        android:id="@+id/product_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                <!--            <Mvx.MvxImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 local:MvxBind="ImageUrl CurrentProduct.MainImageUrl" />
@@ -101,53 +96,67 @@
                     android:textColor="@color/red_price"
                     android:textStyle="bold" />
             </LinearLayout>-->
-            </RelativeLayout>
-        </LinearLayout>
-    </RelativeLayout>
-    <Mvx.MvxGridView
-        android:layout_margin="1px"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3"
-        android:layout_alignParentBottom="true"
-        local:MvxBind="ItemsSource Categories; ItemClick SelectCategoryCmd"
-        local:MvxItemTemplate="@layout/item_grid_category" />
-<!--    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true">
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/ext_layout"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+                <ImageButton
+                    android:background="@null"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorite_white_48dp"
+                    android:tint="?attr/colorPrimary"
+                    local:MvxBind="Click LikeCmd" />
+                <ImageButton
+                    android:background="@null"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_info_white_48dp"
+                    android:tint="?attr/colorPrimary"
+                    local:MvxBind="Click ShowProductCmd" />
+            </LinearLayout>
+        </RelativeLayout>
+    <!-- Sliding panel -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp">
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:elevation="6dp"
-                android:button="@null"
-                android:background="@drawable/checkbox_down"
-                local:MvxBind="Click LikeCmd" />
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                android:elevation="6dp"
-                android:button="@null"
-                android:background="@drawable/checkbox_up"
-                local:MvxBind="Checked CurrentProduct.Like; Click LikeCmd" />
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/bottom_panel"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                local:MvxBind="PreviewCategory SelectedCategory">
+            <!--add toolbar here...-->
+            <!--                <android.support.v7.widget.Toolbar
+                    android:id="@+id/preview_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:background="#fff"
+                    local:theme="@style/ThemeOverlay.AppCompat"
+                    local:popupTheme="@style/ThemeOverlay.AppCompat.Light" >-->
+            <!--                    </android.support.v7.widget.Toolbar>-->
+                <Mvx.MvxGridView
+                    android:layout_margin="1px"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="3"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:layout_alignParentBottom="true"
+                    local:MvxBind="ItemsSource Categories; ItemClick SelectCategoryCmd"
+                    local:MvxItemTemplate="@layout/item_grid_category" />
+            </LinearLayout>
         </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:elevation="6dp"
-            android:text=" + "
-            android:background="@drawable/circle_secondary"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            local:MvxBind="Click ShowProductCmd" />
-    </RelativeLayout>-->
-</LinearLayout>
+    </cheesebaron.slidinguppanel.SlidingUpPanelLayout>
+</RelativeLayout>

@@ -9,6 +9,8 @@ using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.Plugins.Visibility;
 using Cirrious.MvvmCross.ViewModels;
 using weshop.portable;
+using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
+using Android.Support.V7.Widget;
 
 namespace weshop.droid
 {
@@ -27,6 +29,12 @@ namespace weshop.droid
 		{
 			base.FillValueConverters (registry);
 			registry.AddOrOverwrite ("MenuIcon", new MenuIconConverter ());
+		}
+
+		protected override void FillTargetFactories (IMvxTargetBindingFactoryRegistry registry)
+		{
+			registry.RegisterCustomBindingFactory<Android.Widget.LinearLayout> ("PreviewCategory", (t) => new PreviewCategoryTargetBinding (t));
+			base.FillTargetFactories (registry);
 		}
 
 		protected override System.Collections.Generic.List<System.Reflection.Assembly> ValueConverterAssemblies 

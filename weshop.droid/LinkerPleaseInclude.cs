@@ -24,6 +24,12 @@ namespace weshop.droid
 		{
 		}
 
+//		public void Include(Android.Support.V7.Widget.Toolbar toolbar)
+//		{
+//			var test = new PreviewCategoryTargetBinding (toolbar);
+//			if (test != null) {
+//			}
+//		}
 
         public void Include(CheckBox checkBox)
         {
@@ -34,6 +40,8 @@ namespace weshop.droid
         {
             view.Click += (s, e) => view.ContentDescription = view.ContentDescription + "";
 				view.Visibility = view.Visibility ;
+
+		
 		}
 //		public void Include(Android.Support.V7.Widget.CardView  cardview)
 //		{

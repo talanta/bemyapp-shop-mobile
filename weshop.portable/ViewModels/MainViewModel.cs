@@ -64,8 +64,10 @@ namespace weshop.portable
 			cat.IsVisible = true;
 
 			CurrentIndex = 0;
+
 			RaisePropertyChanged (() => CurrentIndex);
 			await DisplayNextProduct ();
+			RaisePropertyChanged (() => SelectedCategory);
 		}
 
 		protected async override void InitFromBundle (IMvxBundle parameters)
