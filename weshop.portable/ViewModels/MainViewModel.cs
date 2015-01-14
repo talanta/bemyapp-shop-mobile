@@ -31,6 +31,16 @@ namespace weshop.portable
 
 		public Category SelectedCategory { get; set; }
 
+		public bool ShowLike 
+		{ 
+			get
+			{
+				if (CurrentProduct == null)
+					return true;
+				return !CurrentProduct.Like.HasValue || !CurrentProduct.Like.Value;
+			} 
+		}
+
 		private IMvxCommand likeCmd;
 		//private IMvxCommand dislikeCmd;
 		private IMvxCommand pageSelectedCmd;
@@ -95,6 +105,7 @@ namespace weshop.portable
 			else {
 				CurrentProduct = this.Products [CurrentIndex];
 				RaisePropertyChanged (() => CurrentProduct);
+				RaisePropertyChanged (() => ShowLike);
 			}
 		}
 
@@ -128,6 +139,8 @@ namespace weshop.portable
 			}
 
 			CurrentProduct = this.Products [CurrentIndex];
+
+			RaisePropertyChanged (() => ShowLike);
 			RaisePropertyChanged (() => CurrentProduct);
 		}
 
@@ -141,9 +154,11 @@ namespace weshop.portable
 				_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
 				return;
 			}
-			if (CurrentProduct.Like.HasValue && !CurrentProduct.Like.Value) {
+			if (CurrentProduct.Like.HasValue && CurrentProduct.Like.Value) {
 				_wishlistService.RemoveItem (CurrentProduct);
+				CurrentProduct.Like = null;
 			}
+			RaisePropertyChanged (() => ShowLike);
 			//await Task.Delay (2000);
 			//DisplayNextProduct ();
 		}

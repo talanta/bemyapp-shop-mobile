@@ -8,7 +8,7 @@
     <cheesebaron.slidinguppanel.SlidingUpPanelLayout
         android:gravity="bottom"
         android:id="@+id/slidingPanel"
-        local:collapsedHeight="68dp"
+        local:collapsedHeight="70dp"
         local:dragView="@+id/bottom_panel"
         local:shadowHeight="4dp"
         android:layout_width="match_parent"
@@ -100,25 +100,36 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_below="@id/ext_layout"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_centerHorizontal="true">
+                <RelativeLayout
+                    android:layout_marginRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageButton
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_favorite_outline_white_48dp"
+                        android:tint="?attr/colorPrimary"
+                        local:MvxBind="Click LikeCmd; Visibility Visibility(ShowLike)" />
+                    <ImageButton
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_favorite_white_48dp"
+                        android:tint="?attr/colorPrimary"
+                        local:MvxBind="Click LikeCmd; Visibility InvertedVisibility(ShowLike)" />
+                </RelativeLayout>
                 <ImageButton
                     android:background="@null"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_favorite_white_48dp"
-                    android:tint="?attr/colorPrimary"
-                    local:MvxBind="Click LikeCmd" />
-                <ImageButton
-                    android:background="@null"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_info_white_48dp"
+                    android:src="@drawable/ic_info_outline_white_48dp"
                     android:tint="?attr/colorPrimary"
                     local:MvxBind="Click ShowProductCmd" />
             </LinearLayout>

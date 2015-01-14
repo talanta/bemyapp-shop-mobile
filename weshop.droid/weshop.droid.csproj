@@ -281,6 +281,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_info_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_info_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_favorite_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_favorite_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_info_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_info_outline_white_48dp.png" />
+    <AndroidResource Include="Resources\drawable\checkbox_like.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

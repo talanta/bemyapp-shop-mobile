@@ -18,6 +18,7 @@ namespace weshop.droid
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
+
         }
 
         protected override IMvxApplication CreateApp()
