@@ -10,6 +10,7 @@ namespace weshop.portable
 		: MvxViewModel
 	{
 		public const string TYPENAME = "MainViewModel";
+		readonly List<Category> _categories = new List<Category> ();
 
 		int itemPerPage = 20;
 
@@ -19,16 +20,10 @@ namespace weshop.portable
 		IDialogService _dialogService;
 		IWishListService _wishlistService;
 
-		readonly List<Category> _categories = new List<Category> ();
-
-		public int CurrentIndex { get; set; }
-
 		public IList<Product> Products { get; private set; }
-
-		public Product CurrentProduct { get; set; }
-
 		public List<Category> Categories { get { return _categories; } }
-
+		public int CurrentIndex { get; set; }
+		public Product CurrentProduct { get; set; }
 		public Category SelectedCategory { get; set; }
 
 		public bool ShowLike 
@@ -152,9 +147,9 @@ namespace weshop.portable
 				CurrentProduct.Like = true;
 				_wishlistService.AddItem (CurrentProduct);
 				_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
-				return;
+
 			}
-			if (CurrentProduct.Like.HasValue && CurrentProduct.Like.Value) {
+			else {
 				_wishlistService.RemoveItem (CurrentProduct);
 				CurrentProduct.Like = null;
 			}

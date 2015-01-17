@@ -285,6 +285,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_info_outline_white_48dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_info_outline_white_48dp.png" />
     <AndroidResource Include="Resources\drawable\checkbox_like.xml" />
+    <AndroidResource Include="Resources\drawable\pager_img1.png" />
+    <AndroidResource Include="Resources\layout\include_detail_panel.axml" />
+    <AndroidResource Include="Resources\layout\item_size_template.axml" />
+    <AndroidResource Include="Resources\layout\item_dropdown_size_template.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

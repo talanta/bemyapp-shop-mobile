@@ -4,36 +4,34 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout
-        android:layout_centerInParent="true"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            local:MvxBind="Text Product.Description" />
-        <Button
-            android:layout_gravity="center"
-            android:text="Voir sur Cdiscount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            local:MvxBind="Click VisitCmd"
-            android:layout_marginBottom="20dp" />
-        <Button
-            android:layout_gravity="center"
-            android:text="Retirer de mes favoris"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            local:MvxBind="Click DislikeCmd; Visibility Visibility(Product.Like)"
-            android:layout_marginBottom="20dp" />
-        <Button
-            android:layout_gravity="center"
-            android:text="Annuler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            local:MvxBind="Click CancelCmd" />
-    </LinearLayout>
+    <cheesebaron.slidinguppanel.SlidingUpPanelLayout
+        android:gravity="bottom"
+        local:dragView="@+id/bottom_panel"
+        local:shadowHeight="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--        use a view pager here-->
+            <Mvx.MvxImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                local:MvxBind="ImageUrl Product.MainImageUrl"
+                android:scaleType="centerCrop" />
+        <!--            use a pager indicator here-->
+            <android.support.v7.widget.CardView
+                android:layout_below="@id/image"
+                android:id="@+id/bottom_panel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                local:cardElevation="2dp">
+                <include
+                    layout="@layout/include_detail_panel" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </cheesebaron.slidinguppanel.SlidingUpPanelLayout>
 </RelativeLayout>

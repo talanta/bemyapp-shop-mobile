@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/TextAppearance.Large"
+        android:hint="Description de l'article"
+        local:MvxBind="Text Product.Description" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:hint="Prix du produit"
+        style="@android:style/TextAppearance.Large"
+        local:MvxBind="Text Product.BestOffer.SalePrice"
+        android:layout_gravity="right" />
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:isIndicator="true" />
+    <Mvx.MvxSpinner
+        android:prompt="@string/prompt_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        local:MvxBind="ItemsSource Product.Sizes;"
+        local:MvxDropDownItemTemplate="@layout/item_dropdown_size_template"
+        local:MvxItemTemplate="@layout/item_size_template" />
+<!--            bind product sizes here-->
+    <Button
+        android:layout_gravity="center"
+        android:text="Voir sur Cdiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click VisitCmd"
+        android:layout_marginBottom="20dp" />
+    <Button
+        android:layout_gravity="center"
+        android:text="Retirer de mes favoris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        local:MvxBind="Click DislikeCmd; Visibility Visibility(Product.Like)"
+        android:layout_marginBottom="20dp" />
+    <Button
+        android:layout_gravity="center"
+        android:text="Annuler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        local:MvxBind="Click CancelCmd" />
+</LinearLayout>

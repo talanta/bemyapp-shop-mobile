@@ -26,6 +26,8 @@
 	<string name="about_made">from Paris with love</string>
 
 
+	<string name="prompt_size">Tailles</string>
+
 	  <string-array name="jazzy_effects">
         <item>Standard</item>
         <item>Tablet</item>
