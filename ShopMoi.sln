@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weshop.portable", "weshop.portable\weshop.portable.csproj", "{0A151614-0EB7-446B-B7F1-7FEECF8CD904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "weshop.droid", "weshop.droid\weshop.droid.csproj", "{936B5C6A-8D9F-46CC-8DA0-0E05917B4BE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xam.ui", "xam.ui", "{4D5B7BA9-12DA-4818-957C-7781030DCDC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.UI.FloatingActionButton", "..\..\GIT\Xam.UI.Lib\Xam.UI.FloatingActionButton\Xam.UI.FloatingActionButton.csproj", "{A0A86911-473B-4F1F-A569-380724706990}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.UI.ObservableScroll", "..\..\GIT\Xam.UI.Lib\Xam.UI.ObservableScroll\Xam.UI.ObservableScroll.csproj", "{4DD82A35-4A0B-41F9-A847-5020A93A0A53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.UI.SlidingTabLayout", "..\..\GIT\Xam.UI.Lib\Xam.UI.SlidingTabLayout\Xam.UI.SlidingTabLayout.csproj", "{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xam.UI.Samples.ObservableScrollView", "..\..\GIT\Xam.UI.Lib\Xam.UI.Samples.ObservableScrollView\Xam.UI.Samples.ObservableScrollView.csproj", "{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A151614-0EB7-446B-B7F1-7FEECF8CD904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A151614-0EB7-446B-B7F1-7FEECF8CD904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A151614-0EB7-446B-B7F1-7FEECF8CD904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A151614-0EB7-446B-B7F1-7FEECF8CD904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD82A35-4A0B-41F9-A847-5020A93A0A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD82A35-4A0B-41F9-A847-5020A93A0A53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD82A35-4A0B-41F9-A847-5020A93A0A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD82A35-4A0B-41F9-A847-5020A93A0A53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936B5C6A-8D9F-46CC-8DA0-0E05917B4BE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936B5C6A-8D9F-46CC-8DA0-0E05917B4BE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936B5C6A-8D9F-46CC-8DA0-0E05917B4BE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936B5C6A-8D9F-46CC-8DA0-0E05917B4BE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A86911-473B-4F1F-A569-380724706990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A86911-473B-4F1F-A569-380724706990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A86911-473B-4F1F-A569-380724706990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A86911-473B-4F1F-A569-380724706990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0A86911-473B-4F1F-A569-380724706990} = {4D5B7BA9-12DA-4818-957C-7781030DCDC9}
+		{4DD82A35-4A0B-41F9-A847-5020A93A0A53} = {4D5B7BA9-12DA-4818-957C-7781030DCDC9}
+		{B02A2F01-85B8-4A8C-8A72-7C260E74C6D9} = {4D5B7BA9-12DA-4818-957C-7781030DCDC9}
+		{CE0C0537-2182-47A4-BB9A-9BFFC7AF07C8} = {4D5B7BA9-12DA-4818-957C-7781030DCDC9}
+	EndGlobalSection
+EndGlobal

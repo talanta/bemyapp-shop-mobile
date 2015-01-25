@@ -1756,43 +1756,40 @@ namespace weshop.droid
 			public const int mask = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int monoandroidsplash = 2130837595;
+			public const int pager_bg = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int pager_bg = 2130837596;
+			public const int pager_img1 = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int pager_img1 = 2130837597;
+			public const int pin_progress_pinned = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int pin_progress_pinned = 2130837598;
+			public const int pin_progress_shadow = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int pin_progress_shadow = 2130837599;
+			public const int pin_progress_unpinned = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int pin_progress_unpinned = 2130837600;
+			public const int roundedbg = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int roundedbg = 2130837601;
+			public const int roundedbgdark = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int roundedbgdark = 2130837602;
+			public const int scrubber_control_normal_holo = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int scrubber_control_normal_holo = 2130837603;
+			public const int scrubber_control_pressed_holo = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int scrubber_control_pressed_holo = 2130837604;
+			public const int search = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int search = 2130837605;
+			public const int shadowbox = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int shadowbox = 2130837606;
-			
-			// aapt resource value: 0x7f020067
-			public const int splash = 2130837607;
+			public const int splash = 2130837606;
 			
 			static Drawable()
 			{
@@ -2826,17 +2823,14 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0c00f1
 			public const int CircularProgressBarLight = 2131493105;
 			
-			// aapt resource value: 0x7f0c00f6
-			public const int LoginTheme = 2131493110;
-			
-			// aapt resource value: 0x7f0c00f3
-			public const int Mono_Android_Theme_Splash = 2131493107;
-			
 			// aapt resource value: 0x7f0c00f5
-			public const int MyTheme = 2131493109;
+			public const int LoginTheme = 2131493109;
 			
 			// aapt resource value: 0x7f0c00f4
-			public const int MyTheme_Base = 2131493108;
+			public const int MyTheme = 2131493108;
+			
+			// aapt resource value: 0x7f0c00f3
+			public const int MyTheme_Base = 2131493107;
 			
 			// aapt resource value: 0x7f0c0061
 			public const int Platform_AppCompat = 2131492961;
