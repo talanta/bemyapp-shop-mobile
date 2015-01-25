@@ -21,15 +21,19 @@ namespace weshop.portable
 		IWishListService _wishlistService;
 
 		public IList<Product> Products { get; private set; }
+
 		public List<Category> Categories { get { return _categories; } }
+
 		public int CurrentIndex { get; set; }
+
 		public Product CurrentProduct { get; set; }
+
 		public Category SelectedCategory { get; set; }
 
-		public bool ShowLike 
-		{ 
-			get
-			{
+		public string SearchInput { get; set; }
+
+		public bool ShowLike { 
+			get {
 				if (CurrentProduct == null)
 					return true;
 				return !CurrentProduct.Like.HasValue || !CurrentProduct.Like.Value;
@@ -59,7 +63,7 @@ namespace weshop.portable
 			this.Categories.AddRange (cat);
 		}
 
-		protected async void OnSelectCategory(Category cat)
+		protected async void OnSelectCategory (Category cat)
 		{
 			if (cat == SelectedCategory)
 				return;
@@ -148,8 +152,7 @@ namespace weshop.portable
 				_wishlistService.AddItem (CurrentProduct);
 				_dialogService.ToastSuccess ("Ce produit a été ajouté à votre wishlist");
 
-			}
-			else {
+			} else {
 				_wishlistService.RemoveItem (CurrentProduct);
 				CurrentProduct.Like = null;
 			}
@@ -157,11 +160,27 @@ namespace weshop.portable
 			//await Task.Delay (2000);
 			//DisplayNextProduct ();
 		}
-			
+
 
 		protected void OnShowProduct ()
 		{
 			ShowViewModel<DetailsViewModel> (CurrentProduct);
+		}
+
+		public async void Search ()
+		{
+			_dialogService.ShowProgress ();
+			var request = new SearchRequest { Keyword = SearchInput };
+			request.Pagination.ItemsPerPage = itemPerPage;
+			request.Pagination.PageNumber = CurrentIndex / itemPerPage;
+
+			bool hasresult = await _discountService.AppendResultFromSearchProdudct (request);
+
+			_dialogService.Dismiss ();
+
+			if (!hasresult)
+				return;
+			ShowViewModel<SearchViewModel> ();
 		}
 	}
 }

@@ -7,8 +7,11 @@ namespace weshop.portable
 	{
 		string GetLastError ();
 
-	 Task<ProductResult> 
-				SearchProdudct(SearchRequest request);
+		ProductResult GetLastResult ();
+
+		Task<bool> AppendResultFromSearchProdudct(SearchRequest request);
+
+		Task<ProductResult> SearchProdudct(SearchRequest request);
 
 		Task<ProductResult> GetProduct(ProductRequest request);
 	}

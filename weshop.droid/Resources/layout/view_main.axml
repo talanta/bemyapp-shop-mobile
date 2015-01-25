@@ -14,126 +14,102 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <!--    main content-->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:clickable="true"
             android:focusable="false"
             android:focusableInTouchMode="true"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:id="@+id/ext_layout"
-                android:orientation="vertical"
+            <android.support.v7.widget.CardView
+                android:layout_margin="@dimen/card_pad"
                 android:layout_width="match_parent"
-                android:layout_height="350dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="70dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shadowbox" />
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="340dp"
-                android:background="@drawable/shadowbox" />
-            <LinearLayout
-                android:layout_centerHorizontal="true"
-                android:layout_width="match_parent"
-                android:layout_height="330dp"
-                android:orientation="vertical"
-                android:id="@+id/linearLayout"
-                android:background="@drawable/shadowbox"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp">
-            <!--        <LinearLayout
-            android:orientation="vertical"
-            android:layout_centerHorizontal="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/yellow_bg">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="test"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                local:MvxBind="Text CurrentProduct.Name"
-                android:layout_margin="10dp"
-                android:textColor="@color/grey_title"
-                android:textStyle="bold" />
-        </LinearLayout>-->
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <BindableViewPager
-                        local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex"
-                        local:MvxItemTemplate="@layout/item_pager_product"
-                        android:id="@+id/product_pager"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
-                <!--            <Mvx.MvxImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                local:MvxBind="ImageUrl CurrentProduct.MainImageUrl" />
-            <LinearLayout
-                android:layout_margin="10dp"
-                android:layout_width="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_height="wrap_content">
-                <TextView
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/search_view"
+                    local:queryHint="@android:string/search_go"
+                    local:iconifiedByDefault="false"
+                    android:background="@android:color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/ext_layout"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/shadowbox" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:background="@drawable/shadowbox" />
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="330dp"
+                    android:orientation="vertical"
+                    android:id="@+id/linearLayout"
+                    android:background="@drawable/shadowbox"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="6dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <BindableViewPager
+                            local:MvxBind="ItemsSource Products; PageSelected PageSelectedCmd; CurrentItem CurrentIndex"
+                            local:MvxItemTemplate="@layout/item_pager_product"
+                            android:id="@+id/product_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_below="@id/ext_layout"
+                    android:layout_marginTop="20dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    local:MvxBind="Text Format(CurrentProduct.BestOffer.SalePrice,'{0:0.00}')"
-                    android:hint="Prix"
-                    android:textColor="@color/red_price"
-                    android:textStyle="bold" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text=" €"
-                    android:textColor="@color/red_price"
-                    android:textStyle="bold" />
-            </LinearLayout>-->
-                </RelativeLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_below="@id/ext_layout"
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerHorizontal="true">
-                <RelativeLayout
-                    android:layout_marginRight="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:background="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_favorite_outline_white_48dp"
+                            android:tint="?attr/colorPrimary"
+                            local:MvxBind="Click LikeCmd; Visibility Visibility(ShowLike)" />
+                        <ImageButton
+                            android:background="@null"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_favorite_white_48dp"
+                            android:tint="?attr/colorPrimary"
+                            local:MvxBind="Click LikeCmd; Visibility InvertedVisibility(ShowLike)" />
+                    </RelativeLayout>
                     <ImageButton
                         android:background="@null"
+                        android:layout_marginLeft="15dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_favorite_outline_white_48dp"
+                        android:src="@drawable/ic_info_outline_white_48dp"
                         android:tint="?attr/colorPrimary"
-                        local:MvxBind="Click LikeCmd; Visibility Visibility(ShowLike)" />
-                    <ImageButton
-                        android:background="@null"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_favorite_white_48dp"
-                        android:tint="?attr/colorPrimary"
-                        local:MvxBind="Click LikeCmd; Visibility InvertedVisibility(ShowLike)" />
-                </RelativeLayout>
-                <ImageButton
-                    android:background="@null"
-                    android:layout_marginLeft="15dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_info_outline_white_48dp"
-                    android:tint="?attr/colorPrimary"
-                    local:MvxBind="Click ShowProductCmd" />
-            </LinearLayout>
-        </RelativeLayout>
+                        local:MvxBind="Click ShowProductCmd" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
     <!-- Sliding panel -->
         <LinearLayout
             android:layout_width="match_parent"

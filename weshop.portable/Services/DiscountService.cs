@@ -24,22 +24,41 @@ namespace weshop.portable
 
 	public class DiscountService : IDiscountService
 	{
-		IList<string> errors;
+		IList<string> _errors;
+		ProductResult _lastResult;
 
 		public DiscountService ()
 		{
-			errors = new List<string> ();
+			_errors = new List<string> ();
 		}
 
 		#region IDiscountService implementation
 
-		public string GetLastError ()
+		public ProductResult GetLastResult ()
 		{
-			if (errors.Count == 0)
-				return null;
-			return errors [errors.Count - 1];
+			var result = _lastResult;
+			_lastResult = null;
+			return result;
 		}
 
+
+		public string GetLastError ()
+		{
+			if (_errors.Count == 0)
+				return null;
+			return _errors [_errors.Count - 1];
+		}
+
+		public async Task<bool> AppendResultFromSearchProdudct (SearchRequest request)
+		{
+			var result = await SearchProdudct (request);
+
+			if (result.ItemCount > 0) {
+				_lastResult = result;
+				return true;
+			}
+			return false;
+		}
 
 		public async Task<ProductResult> GetProduct (ProductRequest request)
 		{

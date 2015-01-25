@@ -8,8 +8,6 @@ namespace weshop.droid
 {
 	[Activity (Theme = "@style/MyTheme", ScreenOrientation = ScreenOrientation.Portrait)]	
 	[IntentFilter (new [] { "android.intent.action.SEARCH" })]
-	[MetaData ("android.app.default_searchable", Value = "weshop.droid.SearchView")]
-	[MetaData ("android.app.searchable", Resource = "@xml/searchable")]
 	public class SearchView : MvxActionBarActivity
 	{
 		protected override int ToolbarResourceId { get { return Resource.Id.toolbar_search; } }
@@ -27,10 +25,10 @@ namespace weshop.droid
 		{
 			MenuInflater.Inflate (Resource.Menu.search_activity, menu);
 			var item = menu.FindItem (Resource.Id.menu_search);
-			var searchManager = (Android.App.SearchManager)GetSystemService (Android.Content.Context.SearchService);
+			//var searchManager = (Android.App.SearchManager)GetSystemService (Android.Content.Context.SearchService);
 			var searchView = (Android.Widget.SearchView)item.ActionView;
-			var searchInfo = searchManager.GetSearchableInfo (ComponentName);
-			searchView.SetSearchableInfo (searchInfo);
+			//var searchInfo = searchManager.GetSearchableInfo (ComponentName);
+			//searchView.SetSearchableInfo (searchInfo);
 			searchView.SetIconifiedByDefault (false);
 			return base.OnCreateOptionsMenu (menu);
 		}

@@ -156,8 +156,8 @@ namespace weshop.droid.Views
 			case Resource.Id.menu_about:
 				Mvx.Resolve<IDialogService> ().ShowAbout ();
 				break;
-			case Resource.Id.menu_search:
-				this.ViewModel.GoToSearch ();
+			case Resource.Id.menu_car:
+				//this.ViewModel.GoToSearch ();
 				break;
 			default:
 				break;

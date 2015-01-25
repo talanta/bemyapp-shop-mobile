@@ -279,6 +279,9 @@
     <AndroidResource Include="Resources\layout\item_dropdown_size_template.axml" />
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_shopping_cart_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_shopping_cart_white_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -1439,6 +1439,9 @@ namespace weshop.droid
 			// aapt resource value: 0x7f080024
 			public const int abc_text_size_title_material_toolbar = 2131230756;
 			
+			// aapt resource value: 0x7f08002f
+			public const int card_pad = 2131230767;
+			
 			// aapt resource value: 0x7f08002b
 			public const int cardview_compat_inset_shadow = 2131230763;
 			
@@ -1726,70 +1729,73 @@ namespace weshop.droid
 			public const int ic_settings_applications_white_36dp = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ic_successstatus = 2130837585;
+			public const int ic_shopping_cart_white_24dp = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_thumb_down_grey600_48dp = 2130837586;
+			public const int ic_successstatus = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_thumb_down_white_48dp = 2130837587;
+			public const int ic_thumb_down_grey600_48dp = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ic_thumb_up_grey600_48dp = 2130837588;
+			public const int ic_thumb_down_white_48dp = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int ic_thumb_up_white_48dp = 2130837589;
+			public const int ic_thumb_up_grey600_48dp = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int Icon = 2130837590;
+			public const int ic_thumb_up_white_48dp = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int logob = 2130837591;
+			public const int Icon = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int logotitle = 2130837592;
+			public const int logob = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int magnify = 2130837593;
+			public const int logotitle = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int mask = 2130837594;
+			public const int magnify = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int pager_bg = 2130837595;
+			public const int mask = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int pager_img1 = 2130837596;
+			public const int pager_bg = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int pin_progress_pinned = 2130837597;
+			public const int pager_img1 = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int pin_progress_shadow = 2130837598;
+			public const int pin_progress_pinned = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int pin_progress_unpinned = 2130837599;
+			public const int pin_progress_shadow = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int roundedbg = 2130837600;
+			public const int pin_progress_unpinned = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int roundedbgdark = 2130837601;
+			public const int roundedbg = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int scrubber_control_normal_holo = 2130837602;
+			public const int roundedbgdark = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int scrubber_control_pressed_holo = 2130837603;
+			public const int scrubber_control_normal_holo = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int search = 2130837604;
+			public const int scrubber_control_pressed_holo = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int shadowbox = 2130837605;
+			public const int search = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int splash = 2130837606;
+			public const int shadowbox = 2130837606;
+			
+			// aapt resource value: 0x7f020067
+			public const int splash = 2130837607;
 			
 			static Drawable()
 			{
@@ -1930,8 +1936,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090043
 			public const int expanded_menu = 2131296323;
 			
-			// aapt resource value: 0x7f09006a
-			public const int ext_layout = 2131296362;
+			// aapt resource value: 0x7f09006b
+			public const int ext_layout = 2131296363;
 			
 			// aapt resource value: 0x7f090026
 			public const int fill = 2131296294;
@@ -1972,8 +1978,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09005e
 			public const int left_drawer = 2131296350;
 			
-			// aapt resource value: 0x7f09006b
-			public const int linearLayout = 2131296363;
+			// aapt resource value: 0x7f09006c
+			public const int linearLayout = 2131296364;
 			
 			// aapt resource value: 0x7f09000a
 			public const int listMode = 2131296266;
@@ -1993,11 +1999,14 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090060
 			public const int login_image = 2131296352;
 			
-			// aapt resource value: 0x7f09006e
-			public const int menu_about = 2131296366;
-			
 			// aapt resource value: 0x7f09006f
-			public const int menu_search = 2131296367;
+			public const int menu_about = 2131296367;
+			
+			// aapt resource value: 0x7f090070
+			public const int menu_car = 2131296368;
+			
+			// aapt resource value: 0x7f090071
+			public const int menu_search = 2131296369;
 			
 			// aapt resource value: 0x7f090016
 			public const int middle = 2131296278;
@@ -2011,8 +2020,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09000b
 			public const int normal = 2131296267;
 			
-			// aapt resource value: 0x7f09006c
-			public const int product_pager = 2131296364;
+			// aapt resource value: 0x7f09006d
+			public const int product_pager = 2131296365;
 			
 			// aapt resource value: 0x7f090005
 			public const int progress_circular = 2131296261;
@@ -2061,6 +2070,9 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f090055
 			public const int search_src_text = 2131296341;
+			
+			// aapt resource value: 0x7f09006a
+			public const int search_view = 2131296362;
 			
 			// aapt resource value: 0x7f090059
 			public const int search_voice_btn = 2131296345;
@@ -2113,8 +2125,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09005c
 			public const int toolbar = 2131296348;
 			
-			// aapt resource value: 0x7f09006d
-			public const int toolbar_search = 2131296365;
+			// aapt resource value: 0x7f09006e
+			public const int toolbar_search = 2131296366;
 			
 			// aapt resource value: 0x7f09002c
 			public const int top = 2131296300;
