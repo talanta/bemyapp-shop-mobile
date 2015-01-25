@@ -2,6 +2,7 @@
 using Cirrious.CrossCore;
 using System.Collections.Generic;
 using System.Linq;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace weshop.portable
 {
@@ -9,6 +10,10 @@ namespace weshop.portable
 		:BaseViewModel
 	{
 		IDiscountService _discountService;
+
+		IMvxCommand selectCmd;
+
+		public IMvxCommand SelectCmd {get {return selectCmd ?? (selectCmd = new MvxCommand<ProductViewModel>(OnSelect)); }}
 
 		public IList<ProductViewModel> Products { get; private set; }
 			
@@ -26,6 +31,11 @@ namespace weshop.portable
 			this.Products = lastResult.Products
 				.Select (p => new ProductViewModel{ Product = p })
 				.ToList();
+		}
+
+		protected void OnSelect(ProductViewModel productViewModel)
+		{
+			ShowViewModel<DetailsViewModel> (productViewModel.Product);
 		}
 	}
 }
