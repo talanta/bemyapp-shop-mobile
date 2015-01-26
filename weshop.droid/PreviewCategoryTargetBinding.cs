@@ -36,8 +36,7 @@ namespace weshop.droid
 			toolbar.LayoutParameters= (new LinearLayout.LayoutParams (
 				LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.WrapContent));
 			view.AddView (toolbar, 0);
-//			if (null == toolbar)
-//				return;
+
 
 			toolbar.Title = category.Display;
 			toolbar.Subtitle = "information a completer";

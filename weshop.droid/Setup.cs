@@ -34,7 +34,8 @@ namespace weshop.droid
 
 		protected override void FillTargetFactories (IMvxTargetBindingFactoryRegistry registry)
 		{
-			registry.RegisterCustomBindingFactory<Android.Widget.LinearLayout> ("PreviewCategory", (t) => new PreviewCategoryTargetBinding (t));
+			registry.RegisterCustomBindingFactory<Android.Widget.LinearLayout> ("PreviewCategory", 
+				(t) => new PreviewCategoryTargetBinding (t));
 			base.FillTargetFactories (registry);
 		}
 

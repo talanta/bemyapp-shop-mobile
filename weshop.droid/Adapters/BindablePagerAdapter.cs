@@ -211,12 +211,6 @@ namespace weshop.droid
 			return view;
 		}
 
-//		public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object obj)
-//		{
-//			var view = (View)obj;
-//			container.RemoveView(view);
-//			view.Dispose();
-//		}
 
 		public override void DestroyItem (ViewGroup container, int position, Java.Lang.Object @object)
 		{

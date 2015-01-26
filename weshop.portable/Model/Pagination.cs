@@ -11,7 +11,6 @@ namespace weshop.portable
 		{
 			ItemsPerPage = 10;
 		}
-
 	}
 }
 

@@ -28,8 +28,8 @@ using Cirrious.MvvmCross.Droid.Fragging;
 
 namespace weshop.droid.Helpers
 {
-	public class MvxActionBarEventSourceActivity : ActionBarActivity
-	, IMvxEventSourceActivity
+	public class MvxActionBarEventSourceActivity 
+		: ActionBarActivity, IMvxEventSourceActivity
 	{
 		protected override void OnCreate(Bundle bundle)
 		{

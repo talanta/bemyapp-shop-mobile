@@ -13,8 +13,8 @@ namespace weshop.droid
 
 		public DestroyItemEventArgs (ViewGroup container, int position)
 		{
-			this._position = position;
-			this._viewGroup = container;
+			_position = position;
+			_viewGroup = container;
 		}
 		public int Position {get{ return _position; }}
 		public ViewGroup ViewGroup {get{ return _viewGroup; }}

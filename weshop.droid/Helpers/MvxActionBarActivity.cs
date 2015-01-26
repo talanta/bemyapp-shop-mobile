@@ -47,10 +47,6 @@ namespace weshop.droid.Helpers
 			Toolbar = FindViewById<Toolbar> (ToolbarResourceId);
 			if (Toolbar != null) {
 				SetSupportActionBar (Toolbar);
-//				SetActionBar (Toolbar);
-//				ActionBar.SetDisplayHomeAsUpEnabled (true);
-//				ActionBar.SetHomeButtonEnabled (true);
-//
 			}
 		}
 
@@ -77,9 +73,7 @@ namespace weshop.droid.Helpers
 		{
 			base.StartActivityForResult (intent, requestCode);
 		}
-		//
-		//		public IMvxBindingContext BindingContext { get; set; }
-		//
+
 		public override void SetContentView (int layoutResId)
 		{
 			var view = this.BindingInflate (layoutResId, null);

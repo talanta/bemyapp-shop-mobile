@@ -22,8 +22,7 @@ namespace weshop.droid
 		}
 
 		public void ShowProduct (string url)
-		{
-	
+		{	
 			Intent i = new Intent(Intent.ActionView);
 			i.SetData (Android.Net.Uri.Parse (url));
 			var activity = Mvx.Resolve<IMvxAndroidCurrentTopActivity> ().Activity;
@@ -41,7 +40,6 @@ namespace weshop.droid
 		public void Dismiss ()
 		{
 			AndroidHUD.AndHUD.Shared.Dismiss ();
-			//throw new NotImplementedException ();
 		}
 
 
