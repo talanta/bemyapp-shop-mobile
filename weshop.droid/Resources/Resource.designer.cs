@@ -181,6 +181,7 @@ namespace weshop.droid
 			global::Cheesebaron.SlidingUpPanel.Resource.Styleable.SlidingUpPanelLayout_fadeColor = global::weshop.droid.Resource.Styleable.SlidingUpPanelLayout_fadeColor;
 			global::Cheesebaron.SlidingUpPanel.Resource.Styleable.SlidingUpPanelLayout_flingVelocity = global::weshop.droid.Resource.Styleable.SlidingUpPanelLayout_flingVelocity;
 			global::Cheesebaron.SlidingUpPanel.Resource.Styleable.SlidingUpPanelLayout_shadowHeight = global::weshop.droid.Resource.Styleable.SlidingUpPanelLayout_shadowHeight;
+			global::Xam.UI.ObservableScroll.Resource.String.library_name = global::weshop.droid.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -1469,6 +1470,18 @@ namespace weshop.droid
 			// aapt resource value: 0x7f08002a
 			public const int disabled_alpha_material_light = 2131230762;
 			
+			// aapt resource value: 0x7f080032
+			public const int flexible_space_image_height = 2131230770;
+			
+			// aapt resource value: 0x7f080031
+			public const int header_bar_height = 2131230769;
+			
+			// aapt resource value: 0x7f080033
+			public const int intersection_height = 2131230771;
+			
+			// aapt resource value: 0x7f080030
+			public const int margin_standard = 2131230768;
+			
 			// aapt resource value: 0x7f08002e
 			public const int progress_inner_size = 2131230766;
 			
@@ -1867,8 +1880,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09001f
 			public const int bottom = 2131296287;
 			
-			// aapt resource value: 0x7f090068
-			public const int bottom_panel = 2131296360;
+			// aapt resource value: 0x7f09006e
+			public const int bottom_panel = 2131296366;
 			
 			// aapt resource value: 0x7f090020
 			public const int center = 2131296288;
@@ -1936,8 +1949,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090043
 			public const int expanded_menu = 2131296323;
 			
-			// aapt resource value: 0x7f09006b
-			public const int ext_layout = 2131296363;
+			// aapt resource value: 0x7f090070
+			public const int ext_layout = 2131296368;
 			
 			// aapt resource value: 0x7f090026
 			public const int fill = 2131296294;
@@ -1953,6 +1966,15 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f090031
 			public const int flipvertical = 2131296305;
+			
+			// aapt resource value: 0x7f09006a
+			public const int header = 2131296362;
+			
+			// aapt resource value: 0x7f09006b
+			public const int header_background = 2131296363;
+			
+			// aapt resource value: 0x7f09006c
+			public const int header_bar = 2131296364;
 			
 			// aapt resource value: 0x7f090004
 			public const int home = 2131296260;
@@ -1978,8 +2000,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09005e
 			public const int left_drawer = 2131296350;
 			
-			// aapt resource value: 0x7f09006c
-			public const int linearLayout = 2131296364;
+			// aapt resource value: 0x7f090071
+			public const int linearLayout = 2131296369;
 			
 			// aapt resource value: 0x7f09000a
 			public const int listMode = 2131296266;
@@ -1999,14 +2021,14 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090060
 			public const int login_image = 2131296352;
 			
-			// aapt resource value: 0x7f09006f
-			public const int menu_about = 2131296367;
+			// aapt resource value: 0x7f090074
+			public const int menu_about = 2131296372;
 			
-			// aapt resource value: 0x7f090070
-			public const int menu_car = 2131296368;
+			// aapt resource value: 0x7f090075
+			public const int menu_car = 2131296373;
 			
-			// aapt resource value: 0x7f090071
-			public const int menu_search = 2131296369;
+			// aapt resource value: 0x7f090076
+			public const int menu_search = 2131296374;
 			
 			// aapt resource value: 0x7f090016
 			public const int middle = 2131296278;
@@ -2020,8 +2042,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09000b
 			public const int normal = 2131296267;
 			
-			// aapt resource value: 0x7f09006d
-			public const int product_pager = 2131296365;
+			// aapt resource value: 0x7f090072
+			public const int product_pager = 2131296370;
 			
 			// aapt resource value: 0x7f090005
 			public const int progress_circular = 2131296261;
@@ -2043,6 +2065,12 @@ namespace weshop.droid
 			
 			// aapt resource value: 0x7f090033
 			public const int rotateup = 2131296307;
+			
+			// aapt resource value: 0x7f090069
+			public const int scroll = 2131296361;
+			
+			// aapt resource value: 0x7f090068
+			public const int scroll_wrapper = 2131296360;
 			
 			// aapt resource value: 0x7f090050
 			public const int search_badge = 2131296336;
@@ -2071,8 +2099,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090055
 			public const int search_src_text = 2131296341;
 			
-			// aapt resource value: 0x7f09006a
-			public const int search_view = 2131296362;
+			// aapt resource value: 0x7f09006f
+			public const int search_view = 2131296367;
 			
 			// aapt resource value: 0x7f090059
 			public const int search_voice_btn = 2131296345;
@@ -2089,8 +2117,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f090012
 			public const int showTitle = 2131296274;
 			
-			// aapt resource value: 0x7f090069
-			public const int slidingPanel = 2131296361;
+			// aapt resource value: 0x7f09006d
+			public const int slidingPanel = 2131296365;
 			
 			// aapt resource value: 0x7f090007
 			public const int split_action_bar = 2131296263;
@@ -2125,8 +2153,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f09005c
 			public const int toolbar = 2131296348;
 			
-			// aapt resource value: 0x7f09006e
-			public const int toolbar_search = 2131296366;
+			// aapt resource value: 0x7f090073
+			public const int toolbar_search = 2131296371;
 			
 			// aapt resource value: 0x7f09002c
 			public const int top = 2131296300;
@@ -2450,6 +2478,12 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b0013
 			public const int drawer_open = 2131427347;
 			
+			// aapt resource value: 0x7f0b0021
+			public const int h_price = 2131427361;
+			
+			// aapt resource value: 0x7f0b0022
+			public const int h_product_title = 2131427362;
+			
 			// aapt resource value: 0x7f0b0011
 			public const int hello = 2131427345;
 			
@@ -2474,8 +2508,8 @@ namespace weshop.droid
 			// aapt resource value: 0x7f0b0016
 			public const int no_item = 2131427350;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int prompt_size = 2131427361;
+			// aapt resource value: 0x7f0b0023
+			public const int prompt_size = 2131427363;
 			
 			// aapt resource value: 0x7f0b001b
 			public const int sub_select_categories = 2131427355;

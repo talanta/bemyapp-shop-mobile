@@ -1,4 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <resources>
 	<dimen name="card_pad">4dp</dimen>
+	<dimen name="margin_standard">16dp</dimen>
+	<dimen name="header_bar_height">72dp</dimen>
+
+	<dimen name="flexible_space_image_height">440dp</dimen>
+	<dimen name="intersection_height">16dp</dimen>
 </resources>

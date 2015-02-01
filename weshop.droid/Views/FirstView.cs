@@ -76,7 +76,7 @@ namespace weshop.droid.Views
 		{
 			var customPresenter = Mvx.Resolve<ICustomPresenter> ();
 			customPresenter.Register (typeof(MainViewModel), this);
-			customPresenter.Register (typeof(WishsetViewModel), this);
+			//customPresenter.Register (typeof(WishsetViewModel), this);
 			customPresenter.Register (typeof(WishlistViewModel), this);
 		}
 
@@ -101,12 +101,12 @@ namespace weshop.droid.Views
 					frag = new MainView { ViewModel = ViewModel.MainViewModel };
 					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
 					ViewModel.MainViewModel.Init (null);
-				} else if (request.ViewModelType == typeof(WishsetViewModel)) {
-					_title = GetString (Resource.String.nav_categories);
-					frag = new WishsetView { ViewModel = ViewModel.WishSetViewModel };
-					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
-					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
-					ViewModel.WishSetViewModel.Init (null);
+//				} else if (request.ViewModelType == typeof(WishsetViewModel)) {
+//					_title = GetString (Resource.String.nav_categories);
+//					frag = new WishsetView { ViewModel = ViewModel.WishSetViewModel };
+//					this._drawerList.SetItemChecked (this.ViewModel.MenuItems.FindIndex (m => m.Section == request.ViewModelType), true);
+//					fragmentTransaction = fragmentTransaction.Replace (Resource.Id.content_frame, frag);
+//					ViewModel.WishSetViewModel.Init (null);
 				} else if (request.ViewModelType == typeof(WishlistViewModel)) {
 					_title = GetString (Resource.String.nav_list);
 					frag = new WishlistView { ViewModel = ViewModel.WishlistViewModel };

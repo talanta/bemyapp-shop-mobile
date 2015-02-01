@@ -5,3 +5,6 @@ obj
 *.apk
 .DS_Store
 *.userprefs
+*.sublime-project
+*.sublime-workspace
+

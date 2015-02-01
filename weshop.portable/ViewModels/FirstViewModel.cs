@@ -22,7 +22,7 @@ namespace weshop.portable.ViewModels
 		{
 			this.menuItems = new List<MenuViewModel> {
 				new MenuViewModel{ Section = typeof(MainViewModel), Title = "Séduction" },
-				new MenuViewModel{ Section = typeof(WishsetViewModel), Title = "Catégories" },
+				//new MenuViewModel{ Section = typeof(WishsetViewModel), Title = "Catégories" },
 				new MenuViewModel{ Section = typeof(WishlistViewModel), Title = "Mes amours" },
 				new MenuViewModel{ Section = typeof(SettingsViewModel), Title = "Paramètres" },
 			};

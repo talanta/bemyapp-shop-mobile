@@ -25,6 +25,7 @@ using Cirrious.MvvmCross.Binding.BindingContext;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
 using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.ViewModels;
+using Android.Util;
 
 namespace weshop.droid.Helpers
 {
@@ -44,10 +45,22 @@ namespace weshop.droid.Helpers
 		{
 			base.OnCreate (bundle);
 			SetContentView (LayoutResource);
+			if (0 == ToolbarResourceId)
+				return;
 			Toolbar = FindViewById<Toolbar> (ToolbarResourceId);
 			if (Toolbar != null) {
 				SetSupportActionBar (Toolbar);
 			}
+		}
+
+		protected int GetActionBarSize() {
+			var typedValue = new TypedValue();
+			int[] textSizeAttr = new int[]{ Android.Resource.Attribute.ActionBarSize};
+			int indexOfAttrTextSize = 0;
+			var a = ObtainStyledAttributes(typedValue.Data, textSizeAttr);
+			int actionBarSize = a.GetDimensionPixelSize(indexOfAttrTextSize, -1);
+			a.Recycle();
+			return actionBarSize;
 		}
 
 		protected abstract int ToolbarResourceId { get; }
